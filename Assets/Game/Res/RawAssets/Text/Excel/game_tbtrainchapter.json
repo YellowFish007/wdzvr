@@ -1,0 +1,1190 @@
+[
+  {
+    "id": 100001,
+    "desc": "角色-1-章节1",
+    "role_id": 400000,
+    "number": 1,
+    "train_chapter_type": {
+      "chapter_type": 2,
+      "connect_id": 100001
+    },
+    "name": "DateChapterName_100001",
+    "unlock_condition": [
+      {
+        "condition_type": 1,
+        "condition_value": 6
+      }
+    ],
+    "spend": 100,
+    "goal_condition": {
+      "condition_type": 5,
+      "condition_value": 400
+    }
+  },
+  {
+    "id": 100002,
+    "desc": "角色-1-章节2",
+    "role_id": 400000,
+    "number": 2,
+    "train_chapter_type": {
+      "chapter_type": 2,
+      "connect_id": 100001
+    },
+    "name": "DateChapterName_100002",
+    "unlock_condition": [
+      {
+        "condition_type": 1,
+        "condition_value": 10
+      },
+      {
+        "condition_type": 2,
+        "condition_value": 3
+      },
+      {
+        "condition_type": 3,
+        "condition_value": 100001
+      }
+    ],
+    "spend": 200,
+    "goal_condition": {
+      "condition_type": 5,
+      "condition_value": 1000
+    }
+  },
+  {
+    "id": 100003,
+    "desc": "角色-1-章节3",
+    "role_id": 400000,
+    "number": 3,
+    "train_chapter_type": {
+      "chapter_type": 1,
+      "connect_id": 0
+    },
+    "name": "DateChapterName_100003",
+    "unlock_condition": [
+      {
+        "condition_type": 1,
+        "condition_value": 15
+      },
+      {
+        "condition_type": 3,
+        "condition_value": 100002
+      }
+    ],
+    "spend": 300,
+    "goal_condition": {
+      "condition_type": 5,
+      "condition_value": 1400
+    }
+  },
+  {
+    "id": 100004,
+    "desc": "角色-1-章节4",
+    "role_id": 400000,
+    "number": 4,
+    "train_chapter_type": {
+      "chapter_type": 2,
+      "connect_id": 100001
+    },
+    "name": "DateChapterName_100004",
+    "unlock_condition": [
+      {
+        "condition_type": 1,
+        "condition_value": 20
+      },
+      {
+        "condition_type": 2,
+        "condition_value": 5
+      },
+      {
+        "condition_type": 3,
+        "condition_value": 100003
+      }
+    ],
+    "spend": 500,
+    "goal_condition": {
+      "condition_type": 5,
+      "condition_value": 1600
+    }
+  },
+  {
+    "id": 100101,
+    "desc": "角色-2-章节1",
+    "role_id": 400001,
+    "number": 1,
+    "train_chapter_type": {
+      "chapter_type": 1,
+      "connect_id": 0
+    },
+    "name": "DateChapterName_100101",
+    "unlock_condition": [
+      {
+        "condition_type": 1,
+        "condition_value": 6
+      }
+    ],
+    "spend": 100,
+    "goal_condition": {
+      "condition_type": 4,
+      "condition_value": 10010
+    }
+  },
+  {
+    "id": 100102,
+    "desc": "角色-2-章节2",
+    "role_id": 400001,
+    "number": 2,
+    "train_chapter_type": {
+      "chapter_type": 2,
+      "connect_id": 100001
+    },
+    "name": "DateChapterName_100102",
+    "unlock_condition": [
+      {
+        "condition_type": 1,
+        "condition_value": 10
+      },
+      {
+        "condition_type": 2,
+        "condition_value": 3
+      },
+      {
+        "condition_type": 3,
+        "condition_value": 100101
+      }
+    ],
+    "spend": 200,
+    "goal_condition": {
+      "condition_type": 5,
+      "condition_value": 400
+    }
+  },
+  {
+    "id": 100103,
+    "desc": "角色-2-章节3",
+    "role_id": 400001,
+    "number": 3,
+    "train_chapter_type": {
+      "chapter_type": 1,
+      "connect_id": 0
+    },
+    "name": "DateChapterName_100103",
+    "unlock_condition": [
+      {
+        "condition_type": 1,
+        "condition_value": 15
+      },
+      {
+        "condition_type": 3,
+        "condition_value": 100102
+      }
+    ],
+    "spend": 300,
+    "goal_condition": {
+      "condition_type": 4,
+      "condition_value": 10010
+    }
+  },
+  {
+    "id": 100104,
+    "desc": "角色-2-章节4",
+    "role_id": 400001,
+    "number": 4,
+    "train_chapter_type": {
+      "chapter_type": 2,
+      "connect_id": 100001
+    },
+    "name": "DateChapterName_100104",
+    "unlock_condition": [
+      {
+        "condition_type": 1,
+        "condition_value": 20
+      },
+      {
+        "condition_type": 2,
+        "condition_value": 5
+      },
+      {
+        "condition_type": 3,
+        "condition_value": 100103
+      }
+    ],
+    "spend": 500,
+    "goal_condition": {
+      "condition_type": 5,
+      "condition_value": 1000
+    }
+  },
+  {
+    "id": 100201,
+    "desc": "角色-3-章节1",
+    "role_id": 400002,
+    "number": 1,
+    "train_chapter_type": {
+      "chapter_type": 1,
+      "connect_id": 0
+    },
+    "name": "DateChapterName_100201",
+    "unlock_condition": [
+      {
+        "condition_type": 1,
+        "condition_value": 6
+      }
+    ],
+    "spend": 100,
+    "goal_condition": {
+      "condition_type": 4,
+      "condition_value": 10010
+    }
+  },
+  {
+    "id": 100202,
+    "desc": "角色-3-章节2",
+    "role_id": 400002,
+    "number": 2,
+    "train_chapter_type": {
+      "chapter_type": 2,
+      "connect_id": 100001
+    },
+    "name": "DateChapterName_100202",
+    "unlock_condition": [
+      {
+        "condition_type": 1,
+        "condition_value": 10
+      },
+      {
+        "condition_type": 2,
+        "condition_value": 3
+      },
+      {
+        "condition_type": 3,
+        "condition_value": 100201
+      }
+    ],
+    "spend": 200,
+    "goal_condition": {
+      "condition_type": 5,
+      "condition_value": 400
+    }
+  },
+  {
+    "id": 100203,
+    "desc": "角色-3-章节3",
+    "role_id": 400002,
+    "number": 3,
+    "train_chapter_type": {
+      "chapter_type": 1,
+      "connect_id": 0
+    },
+    "name": "DateChapterName_100203",
+    "unlock_condition": [
+      {
+        "condition_type": 1,
+        "condition_value": 15
+      },
+      {
+        "condition_type": 3,
+        "condition_value": 100202
+      }
+    ],
+    "spend": 300,
+    "goal_condition": {
+      "condition_type": 4,
+      "condition_value": 10010
+    }
+  },
+  {
+    "id": 100204,
+    "desc": "角色-3-章节4",
+    "role_id": 400002,
+    "number": 4,
+    "train_chapter_type": {
+      "chapter_type": 2,
+      "connect_id": 100001
+    },
+    "name": "DateChapterName_100204",
+    "unlock_condition": [
+      {
+        "condition_type": 1,
+        "condition_value": 20
+      },
+      {
+        "condition_type": 2,
+        "condition_value": 5
+      },
+      {
+        "condition_type": 3,
+        "condition_value": 100203
+      }
+    ],
+    "spend": 500,
+    "goal_condition": {
+      "condition_type": 5,
+      "condition_value": 1000
+    }
+  },
+  {
+    "id": 100301,
+    "desc": "角色-4-章节1",
+    "role_id": 400003,
+    "number": 1,
+    "train_chapter_type": {
+      "chapter_type": 1,
+      "connect_id": 0
+    },
+    "name": "DateChapterName_100301",
+    "unlock_condition": [
+      {
+        "condition_type": 1,
+        "condition_value": 6
+      }
+    ],
+    "spend": 100,
+    "goal_condition": {
+      "condition_type": 4,
+      "condition_value": 10010
+    }
+  },
+  {
+    "id": 100302,
+    "desc": "角色-4-章节2",
+    "role_id": 400003,
+    "number": 2,
+    "train_chapter_type": {
+      "chapter_type": 2,
+      "connect_id": 100001
+    },
+    "name": "DateChapterName_100302",
+    "unlock_condition": [
+      {
+        "condition_type": 1,
+        "condition_value": 10
+      },
+      {
+        "condition_type": 2,
+        "condition_value": 3
+      },
+      {
+        "condition_type": 3,
+        "condition_value": 100301
+      }
+    ],
+    "spend": 200,
+    "goal_condition": {
+      "condition_type": 5,
+      "condition_value": 400
+    }
+  },
+  {
+    "id": 100303,
+    "desc": "角色-4-章节3",
+    "role_id": 400003,
+    "number": 3,
+    "train_chapter_type": {
+      "chapter_type": 1,
+      "connect_id": 0
+    },
+    "name": "DateChapterName_100303",
+    "unlock_condition": [
+      {
+        "condition_type": 1,
+        "condition_value": 15
+      },
+      {
+        "condition_type": 3,
+        "condition_value": 100302
+      }
+    ],
+    "spend": 300,
+    "goal_condition": {
+      "condition_type": 4,
+      "condition_value": 10010
+    }
+  },
+  {
+    "id": 100304,
+    "desc": "角色-4-章节4",
+    "role_id": 400003,
+    "number": 4,
+    "train_chapter_type": {
+      "chapter_type": 2,
+      "connect_id": 100001
+    },
+    "name": "DateChapterName_100304",
+    "unlock_condition": [
+      {
+        "condition_type": 1,
+        "condition_value": 20
+      },
+      {
+        "condition_type": 2,
+        "condition_value": 5
+      },
+      {
+        "condition_type": 3,
+        "condition_value": 100303
+      }
+    ],
+    "spend": 500,
+    "goal_condition": {
+      "condition_type": 5,
+      "condition_value": 1000
+    }
+  },
+  {
+    "id": 100401,
+    "desc": "角色-5-章节1",
+    "role_id": 400004,
+    "number": 1,
+    "train_chapter_type": {
+      "chapter_type": 1,
+      "connect_id": 0
+    },
+    "name": "DateChapterName_100401",
+    "unlock_condition": [
+      {
+        "condition_type": 1,
+        "condition_value": 6
+      }
+    ],
+    "spend": 100,
+    "goal_condition": {
+      "condition_type": 4,
+      "condition_value": 10010
+    }
+  },
+  {
+    "id": 100402,
+    "desc": "角色-5-章节2",
+    "role_id": 400004,
+    "number": 2,
+    "train_chapter_type": {
+      "chapter_type": 2,
+      "connect_id": 100001
+    },
+    "name": "DateChapterName_100402",
+    "unlock_condition": [
+      {
+        "condition_type": 1,
+        "condition_value": 10
+      },
+      {
+        "condition_type": 2,
+        "condition_value": 3
+      },
+      {
+        "condition_type": 3,
+        "condition_value": 100401
+      }
+    ],
+    "spend": 200,
+    "goal_condition": {
+      "condition_type": 5,
+      "condition_value": 400
+    }
+  },
+  {
+    "id": 100403,
+    "desc": "角色-5-章节3",
+    "role_id": 400004,
+    "number": 3,
+    "train_chapter_type": {
+      "chapter_type": 1,
+      "connect_id": 0
+    },
+    "name": "DateChapterName_100403",
+    "unlock_condition": [
+      {
+        "condition_type": 1,
+        "condition_value": 15
+      },
+      {
+        "condition_type": 3,
+        "condition_value": 100402
+      }
+    ],
+    "spend": 300,
+    "goal_condition": {
+      "condition_type": 4,
+      "condition_value": 10010
+    }
+  },
+  {
+    "id": 100404,
+    "desc": "角色-5-章节4",
+    "role_id": 400004,
+    "number": 4,
+    "train_chapter_type": {
+      "chapter_type": 2,
+      "connect_id": 100001
+    },
+    "name": "DateChapterName_100404",
+    "unlock_condition": [
+      {
+        "condition_type": 1,
+        "condition_value": 20
+      },
+      {
+        "condition_type": 2,
+        "condition_value": 5
+      },
+      {
+        "condition_type": 3,
+        "condition_value": 100403
+      }
+    ],
+    "spend": 500,
+    "goal_condition": {
+      "condition_type": 5,
+      "condition_value": 1000
+    }
+  },
+  {
+    "id": 100501,
+    "desc": "角色-6-章节1",
+    "role_id": 400005,
+    "number": 1,
+    "train_chapter_type": {
+      "chapter_type": 1,
+      "connect_id": 0
+    },
+    "name": "DateChapterName_100501",
+    "unlock_condition": [
+      {
+        "condition_type": 1,
+        "condition_value": 6
+      }
+    ],
+    "spend": 100,
+    "goal_condition": {
+      "condition_type": 4,
+      "condition_value": 10010
+    }
+  },
+  {
+    "id": 100502,
+    "desc": "角色-6-章节2",
+    "role_id": 400005,
+    "number": 2,
+    "train_chapter_type": {
+      "chapter_type": 2,
+      "connect_id": 100001
+    },
+    "name": "DateChapterName_100502",
+    "unlock_condition": [
+      {
+        "condition_type": 1,
+        "condition_value": 10
+      },
+      {
+        "condition_type": 2,
+        "condition_value": 3
+      },
+      {
+        "condition_type": 3,
+        "condition_value": 100501
+      }
+    ],
+    "spend": 200,
+    "goal_condition": {
+      "condition_type": 5,
+      "condition_value": 400
+    }
+  },
+  {
+    "id": 100503,
+    "desc": "角色-6-章节3",
+    "role_id": 400005,
+    "number": 3,
+    "train_chapter_type": {
+      "chapter_type": 1,
+      "connect_id": 0
+    },
+    "name": "DateChapterName_100503",
+    "unlock_condition": [
+      {
+        "condition_type": 1,
+        "condition_value": 15
+      },
+      {
+        "condition_type": 3,
+        "condition_value": 100502
+      }
+    ],
+    "spend": 300,
+    "goal_condition": {
+      "condition_type": 4,
+      "condition_value": 10010
+    }
+  },
+  {
+    "id": 100504,
+    "desc": "角色-6-章节4",
+    "role_id": 400005,
+    "number": 4,
+    "train_chapter_type": {
+      "chapter_type": 2,
+      "connect_id": 100001
+    },
+    "name": "DateChapterName_100504",
+    "unlock_condition": [
+      {
+        "condition_type": 1,
+        "condition_value": 20
+      },
+      {
+        "condition_type": 2,
+        "condition_value": 5
+      },
+      {
+        "condition_type": 3,
+        "condition_value": 100503
+      }
+    ],
+    "spend": 500,
+    "goal_condition": {
+      "condition_type": 5,
+      "condition_value": 1000
+    }
+  },
+  {
+    "id": 100601,
+    "desc": "角色-7-章节1",
+    "role_id": 400006,
+    "number": 1,
+    "train_chapter_type": {
+      "chapter_type": 1,
+      "connect_id": 0
+    },
+    "name": "DateChapterName_100601",
+    "unlock_condition": [
+      {
+        "condition_type": 1,
+        "condition_value": 6
+      }
+    ],
+    "spend": 100,
+    "goal_condition": {
+      "condition_type": 4,
+      "condition_value": 10010
+    }
+  },
+  {
+    "id": 100602,
+    "desc": "角色-7-章节2",
+    "role_id": 400006,
+    "number": 2,
+    "train_chapter_type": {
+      "chapter_type": 2,
+      "connect_id": 100001
+    },
+    "name": "DateChapterName_100602",
+    "unlock_condition": [
+      {
+        "condition_type": 1,
+        "condition_value": 10
+      },
+      {
+        "condition_type": 2,
+        "condition_value": 3
+      },
+      {
+        "condition_type": 3,
+        "condition_value": 100601
+      }
+    ],
+    "spend": 200,
+    "goal_condition": {
+      "condition_type": 5,
+      "condition_value": 400
+    }
+  },
+  {
+    "id": 100603,
+    "desc": "角色-7-章节3",
+    "role_id": 400006,
+    "number": 3,
+    "train_chapter_type": {
+      "chapter_type": 1,
+      "connect_id": 0
+    },
+    "name": "DateChapterName_100603",
+    "unlock_condition": [
+      {
+        "condition_type": 1,
+        "condition_value": 15
+      },
+      {
+        "condition_type": 3,
+        "condition_value": 100602
+      }
+    ],
+    "spend": 300,
+    "goal_condition": {
+      "condition_type": 4,
+      "condition_value": 10010
+    }
+  },
+  {
+    "id": 100604,
+    "desc": "角色-7-章节4",
+    "role_id": 400006,
+    "number": 4,
+    "train_chapter_type": {
+      "chapter_type": 2,
+      "connect_id": 100001
+    },
+    "name": "DateChapterName_100604",
+    "unlock_condition": [
+      {
+        "condition_type": 1,
+        "condition_value": 20
+      },
+      {
+        "condition_type": 2,
+        "condition_value": 5
+      },
+      {
+        "condition_type": 3,
+        "condition_value": 100603
+      }
+    ],
+    "spend": 500,
+    "goal_condition": {
+      "condition_type": 5,
+      "condition_value": 1000
+    }
+  },
+  {
+    "id": 100701,
+    "desc": "角色-8-章节1",
+    "role_id": 400007,
+    "number": 1,
+    "train_chapter_type": {
+      "chapter_type": 1,
+      "connect_id": 0
+    },
+    "name": "DateChapterName_100701",
+    "unlock_condition": [
+      {
+        "condition_type": 1,
+        "condition_value": 6
+      }
+    ],
+    "spend": 100,
+    "goal_condition": {
+      "condition_type": 4,
+      "condition_value": 10010
+    }
+  },
+  {
+    "id": 100702,
+    "desc": "角色-8-章节2",
+    "role_id": 400007,
+    "number": 2,
+    "train_chapter_type": {
+      "chapter_type": 2,
+      "connect_id": 100001
+    },
+    "name": "DateChapterName_100702",
+    "unlock_condition": [
+      {
+        "condition_type": 1,
+        "condition_value": 10
+      },
+      {
+        "condition_type": 2,
+        "condition_value": 3
+      },
+      {
+        "condition_type": 3,
+        "condition_value": 100701
+      }
+    ],
+    "spend": 200,
+    "goal_condition": {
+      "condition_type": 5,
+      "condition_value": 400
+    }
+  },
+  {
+    "id": 100703,
+    "desc": "角色-8-章节3",
+    "role_id": 400007,
+    "number": 3,
+    "train_chapter_type": {
+      "chapter_type": 1,
+      "connect_id": 0
+    },
+    "name": "DateChapterName_100703",
+    "unlock_condition": [
+      {
+        "condition_type": 1,
+        "condition_value": 15
+      },
+      {
+        "condition_type": 3,
+        "condition_value": 100702
+      }
+    ],
+    "spend": 300,
+    "goal_condition": {
+      "condition_type": 4,
+      "condition_value": 10010
+    }
+  },
+  {
+    "id": 100704,
+    "desc": "角色-8-章节4",
+    "role_id": 400007,
+    "number": 4,
+    "train_chapter_type": {
+      "chapter_type": 2,
+      "connect_id": 100001
+    },
+    "name": "DateChapterName_100704",
+    "unlock_condition": [
+      {
+        "condition_type": 1,
+        "condition_value": 20
+      },
+      {
+        "condition_type": 2,
+        "condition_value": 5
+      },
+      {
+        "condition_type": 3,
+        "condition_value": 100703
+      }
+    ],
+    "spend": 500,
+    "goal_condition": {
+      "condition_type": 5,
+      "condition_value": 1000
+    }
+  },
+  {
+    "id": 100801,
+    "desc": "角色-9-章节1",
+    "role_id": 400008,
+    "number": 1,
+    "train_chapter_type": {
+      "chapter_type": 1,
+      "connect_id": 0
+    },
+    "name": "DateChapterName_100801",
+    "unlock_condition": [
+      {
+        "condition_type": 1,
+        "condition_value": 6
+      }
+    ],
+    "spend": 100,
+    "goal_condition": {
+      "condition_type": 4,
+      "condition_value": 10010
+    }
+  },
+  {
+    "id": 100802,
+    "desc": "角色-9-章节2",
+    "role_id": 400008,
+    "number": 2,
+    "train_chapter_type": {
+      "chapter_type": 2,
+      "connect_id": 100001
+    },
+    "name": "DateChapterName_100802",
+    "unlock_condition": [
+      {
+        "condition_type": 1,
+        "condition_value": 10
+      },
+      {
+        "condition_type": 2,
+        "condition_value": 3
+      },
+      {
+        "condition_type": 3,
+        "condition_value": 100801
+      }
+    ],
+    "spend": 200,
+    "goal_condition": {
+      "condition_type": 5,
+      "condition_value": 400
+    }
+  },
+  {
+    "id": 100803,
+    "desc": "角色-9-章节3",
+    "role_id": 400008,
+    "number": 3,
+    "train_chapter_type": {
+      "chapter_type": 1,
+      "connect_id": 0
+    },
+    "name": "DateChapterName_100803",
+    "unlock_condition": [
+      {
+        "condition_type": 1,
+        "condition_value": 15
+      },
+      {
+        "condition_type": 3,
+        "condition_value": 100802
+      }
+    ],
+    "spend": 300,
+    "goal_condition": {
+      "condition_type": 4,
+      "condition_value": 10010
+    }
+  },
+  {
+    "id": 100804,
+    "desc": "角色-9-章节4",
+    "role_id": 400008,
+    "number": 4,
+    "train_chapter_type": {
+      "chapter_type": 2,
+      "connect_id": 100001
+    },
+    "name": "DateChapterName_100804",
+    "unlock_condition": [
+      {
+        "condition_type": 1,
+        "condition_value": 20
+      },
+      {
+        "condition_type": 2,
+        "condition_value": 5
+      },
+      {
+        "condition_type": 3,
+        "condition_value": 100803
+      }
+    ],
+    "spend": 500,
+    "goal_condition": {
+      "condition_type": 5,
+      "condition_value": 1000
+    }
+  },
+  {
+    "id": 100901,
+    "desc": "角色-10-章节1",
+    "role_id": 400009,
+    "number": 1,
+    "train_chapter_type": {
+      "chapter_type": 1,
+      "connect_id": 0
+    },
+    "name": "DateChapterName_100901",
+    "unlock_condition": [
+      {
+        "condition_type": 1,
+        "condition_value": 6
+      }
+    ],
+    "spend": 100,
+    "goal_condition": {
+      "condition_type": 4,
+      "condition_value": 10010
+    }
+  },
+  {
+    "id": 100902,
+    "desc": "角色-10-章节2",
+    "role_id": 400009,
+    "number": 2,
+    "train_chapter_type": {
+      "chapter_type": 2,
+      "connect_id": 100001
+    },
+    "name": "DateChapterName_100902",
+    "unlock_condition": [
+      {
+        "condition_type": 1,
+        "condition_value": 10
+      },
+      {
+        "condition_type": 2,
+        "condition_value": 3
+      },
+      {
+        "condition_type": 3,
+        "condition_value": 100901
+      }
+    ],
+    "spend": 200,
+    "goal_condition": {
+      "condition_type": 5,
+      "condition_value": 400
+    }
+  },
+  {
+    "id": 100903,
+    "desc": "角色-10-章节3",
+    "role_id": 400009,
+    "number": 3,
+    "train_chapter_type": {
+      "chapter_type": 1,
+      "connect_id": 0
+    },
+    "name": "DateChapterName_100903",
+    "unlock_condition": [
+      {
+        "condition_type": 1,
+        "condition_value": 15
+      },
+      {
+        "condition_type": 3,
+        "condition_value": 100902
+      }
+    ],
+    "spend": 300,
+    "goal_condition": {
+      "condition_type": 4,
+      "condition_value": 10010
+    }
+  },
+  {
+    "id": 100904,
+    "desc": "角色-10-章节4",
+    "role_id": 400009,
+    "number": 4,
+    "train_chapter_type": {
+      "chapter_type": 2,
+      "connect_id": 100001
+    },
+    "name": "DateChapterName_100904",
+    "unlock_condition": [
+      {
+        "condition_type": 1,
+        "condition_value": 20
+      },
+      {
+        "condition_type": 2,
+        "condition_value": 5
+      },
+      {
+        "condition_type": 3,
+        "condition_value": 100903
+      }
+    ],
+    "spend": 500,
+    "goal_condition": {
+      "condition_type": 5,
+      "condition_value": 1000
+    }
+  },
+  {
+    "id": 101001,
+    "desc": "角色-11-章节1",
+    "role_id": 400010,
+    "number": 1,
+    "train_chapter_type": {
+      "chapter_type": 1,
+      "connect_id": 0
+    },
+    "name": "DateChapterName_101001",
+    "unlock_condition": [
+      {
+        "condition_type": 1,
+        "condition_value": 6
+      }
+    ],
+    "spend": 100,
+    "goal_condition": {
+      "condition_type": 4,
+      "condition_value": 10010
+    }
+  },
+  {
+    "id": 101002,
+    "desc": "角色-11-章节2",
+    "role_id": 400010,
+    "number": 2,
+    "train_chapter_type": {
+      "chapter_type": 2,
+      "connect_id": 100001
+    },
+    "name": "DateChapterName_101002",
+    "unlock_condition": [
+      {
+        "condition_type": 1,
+        "condition_value": 10
+      },
+      {
+        "condition_type": 2,
+        "condition_value": 3
+      },
+      {
+        "condition_type": 3,
+        "condition_value": 101001
+      }
+    ],
+    "spend": 200,
+    "goal_condition": {
+      "condition_type": 5,
+      "condition_value": 400
+    }
+  },
+  {
+    "id": 101003,
+    "desc": "角色-11-章节3",
+    "role_id": 400010,
+    "number": 3,
+    "train_chapter_type": {
+      "chapter_type": 1,
+      "connect_id": 0
+    },
+    "name": "DateChapterName_101003",
+    "unlock_condition": [
+      {
+        "condition_type": 1,
+        "condition_value": 15
+      },
+      {
+        "condition_type": 3,
+        "condition_value": 101002
+      }
+    ],
+    "spend": 300,
+    "goal_condition": {
+      "condition_type": 4,
+      "condition_value": 10010
+    }
+  },
+  {
+    "id": 101004,
+    "desc": "角色-11-章节4",
+    "role_id": 400010,
+    "number": 4,
+    "train_chapter_type": {
+      "chapter_type": 2,
+      "connect_id": 100001
+    },
+    "name": "DateChapterName_101004",
+    "unlock_condition": [
+      {
+        "condition_type": 1,
+        "condition_value": 20
+      },
+      {
+        "condition_type": 2,
+        "condition_value": 5
+      },
+      {
+        "condition_type": 3,
+        "condition_value": 101003
+      }
+    ],
+    "spend": 500,
+    "goal_condition": {
+      "condition_type": 5,
+      "condition_value": 1000
+    }
+  }
+]

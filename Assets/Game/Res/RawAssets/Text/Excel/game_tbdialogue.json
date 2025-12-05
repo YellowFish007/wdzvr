@@ -1,0 +1,38 @@
+[
+  {
+    "id": 700000,
+    "desc": "",
+    "dialogue_text": "Dialogue_Text_700000",
+    "next_id": 700001,
+    "role_name": "",
+    "role_res": "",
+    "sound": ""
+  },
+  {
+    "id": 700001,
+    "desc": "",
+    "dialogue_text": "Dialogue_Text_700001",
+    "next_id": 700002,
+    "role_name": "",
+    "role_res": "",
+    "sound": ""
+  },
+  {
+    "id": 700002,
+    "desc": "",
+    "dialogue_text": "Dialogue_Text_700002",
+    "next_id": 700003,
+    "role_name": "",
+    "role_res": "",
+    "sound": ""
+  },
+  {
+    "id": 700003,
+    "desc": "",
+    "dialogue_text": "Dialogue_Text_700003",
+    "next_id": 0,
+    "role_name": "",
+    "role_res": "",
+    "sound": ""
+  }
+]

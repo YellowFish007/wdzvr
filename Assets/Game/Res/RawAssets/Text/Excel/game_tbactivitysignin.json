@@ -1,0 +1,79 @@
+[
+  {
+    "id": 1000,
+    "desc": "七日签到-1组",
+    "group": 1,
+    "name_id": "Signin_Title_1000",
+    "order": 1,
+    "reward_data": {
+      "id": 100000,
+      "count": 1
+    }
+  },
+  {
+    "id": 1001,
+    "desc": "七日签到-2组",
+    "group": 1,
+    "name_id": "Signin_Title_1001",
+    "order": 2,
+    "reward_data": {
+      "id": 0,
+      "count": 200
+    }
+  },
+  {
+    "id": 1002,
+    "desc": "七日签到-3组",
+    "group": 1,
+    "name_id": "Signin_Title_1002",
+    "order": 3,
+    "reward_data": {
+      "id": 100000,
+      "count": 1
+    }
+  },
+  {
+    "id": 1003,
+    "desc": "七日签到-4组",
+    "group": 1,
+    "name_id": "Signin_Title_1003",
+    "order": 4,
+    "reward_data": {
+      "id": 0,
+      "count": 200
+    }
+  },
+  {
+    "id": 1004,
+    "desc": "七日签到-5组",
+    "group": 1,
+    "name_id": "Signin_Title_1004",
+    "order": 5,
+    "reward_data": {
+      "id": 100000,
+      "count": 1
+    }
+  },
+  {
+    "id": 1005,
+    "desc": "七日签到-6组",
+    "group": 1,
+    "name_id": "Signin_Title_1005",
+    "order": 6,
+    "reward_data": {
+      "id": 0,
+      "count": 200
+    }
+  },
+  {
+    "id": 1006,
+    "desc": "七日签到-7组",
+    "group": 1,
+    "name_id": "Signin_Title_1006",
+    "order": 7,
+    "reward_data": {
+      "id": 100000,
+      "count": 1
+    }
+  }
+]

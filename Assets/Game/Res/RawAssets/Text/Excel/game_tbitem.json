@@ -1,0 +1,408 @@
+[
+  {
+    "id": 200001,
+    "desc": "道具-玫瑰",
+    "name_id": "ItemName_200001",
+    "item_desc": "ItemDesc_200001",
+    "item_icon": "ItemIcon_200001",
+    "item_type": 6,
+    "item_quality": 1,
+    "stack_max": 99,
+    "effcet_data": {
+      "effect_type": 6,
+      "value": 100
+    }
+  },
+  {
+    "id": 200002,
+    "desc": "道具-口红",
+    "name_id": "ItemName_200002",
+    "item_desc": "ItemDesc_200002",
+    "item_icon": "ItemIcon_200002",
+    "item_type": 6,
+    "item_quality": 2,
+    "stack_max": 99,
+    "effcet_data": {
+      "effect_type": 6,
+      "value": 500
+    }
+  },
+  {
+    "id": 200003,
+    "desc": "道具-钻戒",
+    "name_id": "ItemName_200003",
+    "item_desc": "ItemDesc_200003",
+    "item_icon": "ItemIcon_200003",
+    "item_type": 6,
+    "item_quality": 3,
+    "stack_max": 99,
+    "effcet_data": {
+      "effect_type": 6,
+      "value": 1000
+    }
+  },
+  {
+    "id": 200004,
+    "desc": "道具-纲手（碎片）",
+    "name_id": "ItemName_200004",
+    "item_desc": "ItemDesc_200004",
+    "item_icon": "ItemIcon_200004",
+    "item_type": 8,
+    "item_quality": 3,
+    "stack_max": 99,
+    "effcet_data": {
+      "effect_type": 0,
+      "value": 0
+    }
+  },
+  {
+    "id": 200005,
+    "desc": "道具-项圈",
+    "name_id": "ItemName_200005",
+    "item_desc": "ItemDesc_200005",
+    "item_icon": "ItemIcon_200005",
+    "item_type": 7,
+    "item_quality": 1,
+    "stack_max": 99,
+    "effcet_data": {
+      "effect_type": 0,
+      "value": 0
+    }
+  },
+  {
+    "id": 200006,
+    "desc": "道具-项链",
+    "name_id": "ItemName_200006",
+    "item_desc": "ItemDesc_200006",
+    "item_icon": "ItemIcon_200006",
+    "item_type": 7,
+    "item_quality": 1,
+    "stack_max": 99,
+    "effcet_data": {
+      "effect_type": 0,
+      "value": 0
+    }
+  },
+  {
+    "id": 200007,
+    "desc": "道具-手表",
+    "name_id": "ItemName_200007",
+    "item_desc": "ItemDesc_200007",
+    "item_icon": "ItemIcon_200007",
+    "item_type": 7,
+    "item_quality": 1,
+    "stack_max": 99,
+    "effcet_data": {
+      "effect_type": 0,
+      "value": 0
+    }
+  },
+  {
+    "id": 200008,
+    "desc": "道具-巧克力",
+    "name_id": "ItemName_200008",
+    "item_desc": "ItemDesc_200008",
+    "item_icon": "ItemIcon_200008",
+    "item_type": 7,
+    "item_quality": 1,
+    "stack_max": 99,
+    "effcet_data": {
+      "effect_type": 0,
+      "value": 0
+    }
+  },
+  {
+    "id": 200009,
+    "desc": "道具-发饰",
+    "name_id": "ItemName_200009",
+    "item_desc": "ItemDesc_200009",
+    "item_icon": "ItemIcon_200009",
+    "item_type": 7,
+    "item_quality": 1,
+    "stack_max": 99,
+    "effcet_data": {
+      "effect_type": 0,
+      "value": 0
+    }
+  },
+  {
+    "id": 200010,
+    "desc": "道具-挎包",
+    "name_id": "ItemName_200010",
+    "item_desc": "ItemDesc_200010",
+    "item_icon": "ItemIcon_200010",
+    "item_type": 7,
+    "item_quality": 1,
+    "stack_max": 99,
+    "effcet_data": {
+      "effect_type": 0,
+      "value": 0
+    }
+  },
+  {
+    "id": 200011,
+    "desc": "角色2碎片",
+    "name_id": "ItemName_200011",
+    "item_desc": "ItemDesc_200011",
+    "item_icon": "ItemIcon_200011",
+    "item_type": 8,
+    "item_quality": 3,
+    "stack_max": 99,
+    "effcet_data": {
+      "effect_type": 0,
+      "value": 0
+    }
+  },
+  {
+    "id": 200012,
+    "desc": "角色3碎片",
+    "name_id": "ItemName_200012",
+    "item_desc": "ItemDesc_200012",
+    "item_icon": "ItemIcon_200012",
+    "item_type": 8,
+    "item_quality": 3,
+    "stack_max": 99,
+    "effcet_data": {
+      "effect_type": 0,
+      "value": 0
+    }
+  },
+  {
+    "id": 200013,
+    "desc": "角色4碎片",
+    "name_id": "ItemName_200013",
+    "item_desc": "ItemDesc_200013",
+    "item_icon": "ItemIcon_200013",
+    "item_type": 8,
+    "item_quality": 3,
+    "stack_max": 99,
+    "effcet_data": {
+      "effect_type": 0,
+      "value": 0
+    }
+  },
+  {
+    "id": 200014,
+    "desc": "角色5碎片",
+    "name_id": "ItemName_200014",
+    "item_desc": "ItemDesc_200014",
+    "item_icon": "ItemIcon_200014",
+    "item_type": 8,
+    "item_quality": 3,
+    "stack_max": 99,
+    "effcet_data": {
+      "effect_type": 0,
+      "value": 0
+    }
+  },
+  {
+    "id": 200015,
+    "desc": "角色6碎片",
+    "name_id": "ItemName_200015",
+    "item_desc": "ItemDesc_200015",
+    "item_icon": "ItemIcon_200015",
+    "item_type": 8,
+    "item_quality": 3,
+    "stack_max": 99,
+    "effcet_data": {
+      "effect_type": 0,
+      "value": 0
+    }
+  },
+  {
+    "id": 200016,
+    "desc": "角色7碎片",
+    "name_id": "ItemName_200016",
+    "item_desc": "ItemDesc_200016",
+    "item_icon": "ItemIcon_200016",
+    "item_type": 8,
+    "item_quality": 3,
+    "stack_max": 99,
+    "effcet_data": {
+      "effect_type": 0,
+      "value": 0
+    }
+  },
+  {
+    "id": 200017,
+    "desc": "角色8碎片",
+    "name_id": "ItemName_200017",
+    "item_desc": "ItemDesc_200017",
+    "item_icon": "ItemIcon_200017",
+    "item_type": 8,
+    "item_quality": 3,
+    "stack_max": 99,
+    "effcet_data": {
+      "effect_type": 0,
+      "value": 0
+    }
+  },
+  {
+    "id": 200018,
+    "desc": "角色9碎片",
+    "name_id": "ItemName_200018",
+    "item_desc": "ItemDesc_200018",
+    "item_icon": "ItemIcon_200018",
+    "item_type": 8,
+    "item_quality": 3,
+    "stack_max": 99,
+    "effcet_data": {
+      "effect_type": 0,
+      "value": 0
+    }
+  },
+  {
+    "id": 200019,
+    "desc": "角色10碎片",
+    "name_id": "ItemName_200019",
+    "item_desc": "ItemDesc_200019",
+    "item_icon": "ItemIcon_200019",
+    "item_type": 8,
+    "item_quality": 3,
+    "stack_max": 99,
+    "effcet_data": {
+      "effect_type": 0,
+      "value": 0
+    }
+  },
+  {
+    "id": 200020,
+    "desc": "角色11碎片",
+    "name_id": "ItemName_200020",
+    "item_desc": "ItemDesc_200020",
+    "item_icon": "ItemIcon_200020",
+    "item_type": 8,
+    "item_quality": 3,
+    "stack_max": 99,
+    "effcet_data": {
+      "effect_type": 0,
+      "value": 0
+    }
+  },
+  {
+    "id": 200021,
+    "desc": "棒棒糖",
+    "name_id": "ItemName_200021",
+    "item_desc": "ItemDesc_200021",
+    "item_icon": "ItemIcon_200021",
+    "item_type": 1,
+    "item_quality": 0,
+    "stack_max": 999,
+    "effcet_data": {
+      "effect_type": 3,
+      "value": 0
+    }
+  },
+  {
+    "id": 200022,
+    "desc": "炸弹",
+    "name_id": "ItemName_200022",
+    "item_desc": "ItemDesc_200022",
+    "item_icon": "ItemIcon_200022",
+    "item_type": 1,
+    "item_quality": 0,
+    "stack_max": 999,
+    "effcet_data": {
+      "effect_type": 1,
+      "value": 0
+    }
+  },
+  {
+    "id": 200023,
+    "desc": "交换道具",
+    "name_id": "ItemName_200023",
+    "item_desc": "ItemDesc_200023",
+    "item_icon": "ItemIcon_200023",
+    "item_type": 1,
+    "item_quality": 0,
+    "stack_max": 999,
+    "effcet_data": {
+      "effect_type": 2,
+      "value": 0
+    }
+  },
+  {
+    "id": 200024,
+    "desc": "巧克力球",
+    "name_id": "ItemName_200024",
+    "item_desc": "ItemDesc_200024",
+    "item_icon": "ItemIcon_200024",
+    "item_type": 1,
+    "item_quality": 0,
+    "stack_max": 999,
+    "effcet_data": {
+      "effect_type": 4,
+      "value": 0
+    }
+  },
+  {
+    "id": 200025,
+    "desc": "无限精力",
+    "name_id": "ItemName_200025",
+    "item_desc": "ItemDesc_200025",
+    "item_icon": "ItemIcon_200025",
+    "item_type": 9,
+    "item_quality": 0,
+    "stack_max": -1,
+    "effcet_data": {
+      "effect_type": 5,
+      "value": 1800
+    }
+  },
+  {
+    "id": 200026,
+    "desc": "金币",
+    "name_id": "ItemName_200026",
+    "item_desc": "ItemDesc_200026",
+    "item_icon": "ItemIcon_200026",
+    "item_type": 4,
+    "item_quality": 0,
+    "stack_max": -1,
+    "effcet_data": {
+      "effect_type": 0,
+      "value": 0
+    }
+  },
+  {
+    "id": 200027,
+    "desc": "调教币",
+    "name_id": "ItemName_200027",
+    "item_desc": "ItemDesc_200027",
+    "item_icon": "ItemIcon_200027",
+    "item_type": 5,
+    "item_quality": 0,
+    "stack_max": -1,
+    "effcet_data": {
+      "effect_type": 0,
+      "value": 0
+    }
+  },
+  {
+    "id": 200028,
+    "desc": "精力",
+    "name_id": "ItemName_200028",
+    "item_desc": "ItemDesc_200028",
+    "item_icon": "ItemIcon_200028",
+    "item_type": 9,
+    "item_quality": 0,
+    "stack_max": 0,
+    "effcet_data": {
+      "effect_type": 0,
+      "value": 0
+    }
+  },
+  {
+    "id": 200029,
+    "desc": "充值货币",
+    "name_id": "ItemName_200029",
+    "item_desc": "ItemDesc_200029",
+    "item_icon": "ItemIcon_200029",
+    "item_type": 10,
+    "item_quality": 0,
+    "stack_max": 0,
+    "effcet_data": {
+      "effect_type": 0,
+      "value": 0
+    }
+  }
+]

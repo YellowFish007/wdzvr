@@ -1,0 +1,359 @@
+[
+  {
+    "id": 100000,
+    "desc": "首充礼包",
+    "name_id": "Goods_Name_100000",
+    "goods_type": 1,
+    "buy_quantity_limit": 1,
+    "time_limit_type": 3,
+    "start_time": "",
+    "end_time": "",
+    "good_active_event": {
+      "game_event_type": 4,
+      "value": 1200
+    },
+    "drop_id": 0,
+    "goods_list": [
+      {
+        "id": 200026,
+        "count": 500,
+        "slot_type": 1
+      },
+      {
+        "id": 200025,
+        "count": 1,
+        "slot_type": 2
+      },
+      {
+        "id": 200021,
+        "count": 1,
+        "slot_type": 3
+      },
+      {
+        "id": 200023,
+        "count": 1,
+        "slot_type": 3
+      }
+    ],
+    "discount_show": 0.2,
+    "price_buy": {
+      "item_id": 200029,
+      "price": 6
+    }
+  },
+  {
+    "id": 100001,
+    "desc": "每日特惠",
+    "name_id": "Goods_Name_100001",
+    "goods_type": 2,
+    "buy_quantity_limit": 1,
+    "time_limit_type": 1,
+    "start_time": "",
+    "end_time": "",
+    "good_active_event": {
+      "game_event_type": 0,
+      "value": 0
+    },
+    "drop_id": 0,
+    "goods_list": [
+      {
+        "id": 200026,
+        "count": 500,
+        "slot_type": 1
+      },
+      {
+        "id": 200025,
+        "count": 1,
+        "slot_type": 2
+      },
+      {
+        "id": 200021,
+        "count": 1,
+        "slot_type": 3
+      },
+      {
+        "id": 200023,
+        "count": 1,
+        "slot_type": 3
+      }
+    ],
+    "discount_show": 0.1,
+    "price_buy": {
+      "item_id": 200029,
+      "price": 3
+    }
+  },
+  {
+    "id": 100002,
+    "desc": "常规道具礼包",
+    "name_id": "Goods_Name_100002",
+    "goods_type": 3,
+    "buy_quantity_limit": 0,
+    "time_limit_type": 0,
+    "start_time": "",
+    "end_time": "",
+    "good_active_event": {
+      "game_event_type": 0,
+      "value": 0
+    },
+    "drop_id": 0,
+    "goods_list": [
+      {
+        "id": 200026,
+        "count": 300,
+        "slot_type": 1
+      },
+      {
+        "id": 200025,
+        "count": 1,
+        "slot_type": 2
+      },
+      {
+        "id": 200021,
+        "count": 10,
+        "slot_type": 3
+      },
+      {
+        "id": 200022,
+        "count": 10,
+        "slot_type": 3
+      },
+      {
+        "id": 200023,
+        "count": 10,
+        "slot_type": 3
+      },
+      {
+        "id": 200024,
+        "count": 10,
+        "slot_type": 3
+      }
+    ],
+    "discount_show": 0.8,
+    "price_buy": {
+      "item_id": 200029,
+      "price": 480
+    }
+  },
+  {
+    "id": 100003,
+    "desc": "金币礼包",
+    "name_id": "Goods_Name_100003",
+    "goods_type": 4,
+    "buy_quantity_limit": 0,
+    "time_limit_type": 0,
+    "start_time": "",
+    "end_time": "",
+    "good_active_event": {
+      "game_event_type": 0,
+      "value": 0
+    },
+    "drop_id": 0,
+    "goods_list": [
+      {
+        "id": 200026,
+        "count": 1000,
+        "slot_type": 1
+      },
+      {
+        "id": 200026,
+        "count": 200,
+        "slot_type": 2
+      }
+    ],
+    "discount_show": 0,
+    "price_buy": {
+      "item_id": 200029,
+      "price": 6
+    }
+  },
+  {
+    "id": 100004,
+    "desc": "节日礼包",
+    "name_id": "Goods_Name_100004",
+    "goods_type": 5,
+    "buy_quantity_limit": 1,
+    "time_limit_type": 2,
+    "start_time": "2025/11/26 0:00:00",
+    "end_time": "2025/11/27 0:00:00",
+    "good_active_event": {
+      "game_event_type": 0,
+      "value": 0
+    },
+    "drop_id": 0,
+    "goods_list": [
+      {
+        "id": 200026,
+        "count": 300,
+        "slot_type": 1
+      },
+      {
+        "id": 200021,
+        "count": 2,
+        "slot_type": 3
+      },
+      {
+        "id": 200022,
+        "count": 2,
+        "slot_type": 3
+      },
+      {
+        "id": 200023,
+        "count": 2,
+        "slot_type": 3
+      },
+      {
+        "id": 200024,
+        "count": 2,
+        "slot_type": 3
+      }
+    ],
+    "discount_show": 0.5,
+    "price_buy": {
+      "item_id": 200029,
+      "price": 60
+    }
+  },
+  {
+    "id": 100005,
+    "desc": "调教测试礼包-送礼（正式版删除）",
+    "name_id": "Goods_Name_100005",
+    "goods_type": 3,
+    "buy_quantity_limit": 0,
+    "time_limit_type": 0,
+    "start_time": "",
+    "end_time": "",
+    "good_active_event": {
+      "game_event_type": 0,
+      "value": 0
+    },
+    "drop_id": 0,
+    "goods_list": [
+      {
+        "id": 200001,
+        "count": 100,
+        "slot_type": 3
+      },
+      {
+        "id": 200002,
+        "count": 100,
+        "slot_type": 3
+      },
+      {
+        "id": 200003,
+        "count": 100,
+        "slot_type": 3
+      },
+      {
+        "id": 200004,
+        "count": 100,
+        "slot_type": 3
+      }
+    ],
+    "discount_show": 0,
+    "price_buy": {
+      "item_id": 200029,
+      "price": 1
+    }
+  },
+  {
+    "id": 100006,
+    "desc": "调教测试礼包-突破（正式版删除）",
+    "name_id": "Goods_Name_100006",
+    "goods_type": 3,
+    "buy_quantity_limit": 0,
+    "time_limit_type": 0,
+    "start_time": "",
+    "end_time": "",
+    "good_active_event": {
+      "game_event_type": 0,
+      "value": 0
+    },
+    "drop_id": 0,
+    "goods_list": [
+      {
+        "id": 200005,
+        "count": 100,
+        "slot_type": 3
+      },
+      {
+        "id": 200006,
+        "count": 100,
+        "slot_type": 3
+      },
+      {
+        "id": 200007,
+        "count": 100,
+        "slot_type": 3
+      },
+      {
+        "id": 200008,
+        "count": 100,
+        "slot_type": 3
+      },
+      {
+        "id": 200009,
+        "count": 100,
+        "slot_type": 3
+      },
+      {
+        "id": 200010,
+        "count": 100,
+        "slot_type": 3
+      }
+    ],
+    "discount_show": 0,
+    "price_buy": {
+      "item_id": 200029,
+      "price": 1
+    }
+  },
+  {
+    "id": 100007,
+    "desc": "角色道具盲盒（1~5）",
+    "name_id": "Goods_Name_100007",
+    "goods_type": 6,
+    "buy_quantity_limit": 0,
+    "time_limit_type": 0,
+    "start_time": "",
+    "end_time": "",
+    "good_active_event": {
+      "game_event_type": 0,
+      "value": 0
+    },
+    "drop_id": 10023,
+    "goods_list": [],
+    "discount_show": 0,
+    "price_buy": {
+      "item_id": 200027,
+      "price": 300
+    }
+  },
+  {
+    "id": 100008,
+    "desc": "能量礼包（正式版删除）",
+    "name_id": "Goods_Name_100008",
+    "goods_type": 3,
+    "buy_quantity_limit": 0,
+    "time_limit_type": 0,
+    "start_time": "",
+    "end_time": "",
+    "good_active_event": {
+      "game_event_type": 0,
+      "value": 0
+    },
+    "drop_id": 0,
+    "goods_list": [
+      {
+        "id": 200028,
+        "count": 10,
+        "slot_type": 1
+      }
+    ],
+    "discount_show": 0,
+    "price_buy": {
+      "item_id": 200029,
+      "price": 100
+    }
+  }
+]

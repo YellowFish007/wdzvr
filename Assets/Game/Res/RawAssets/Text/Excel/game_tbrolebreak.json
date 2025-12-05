@@ -1,0 +1,1124 @@
+[
+  {
+    "id": 500001,
+    "desc": "角色-1-突破至1阶",
+    "role_id": 400000,
+    "break_order": 1,
+    "break_cost_list": [
+      {
+        "item_id": 200005,
+        "item_quantity": 10
+      },
+      {
+        "item_id": 200004,
+        "item_quantity": 5
+      }
+    ],
+    "break_level": 5
+  },
+  {
+    "id": 500002,
+    "desc": "角色-1-突破至2阶",
+    "role_id": 400000,
+    "break_order": 2,
+    "break_cost_list": [
+      {
+        "item_id": 200005,
+        "item_quantity": 20
+      },
+      {
+        "item_id": 200004,
+        "item_quantity": 10
+      }
+    ],
+    "break_level": 10
+  },
+  {
+    "id": 500003,
+    "desc": "角色-1-突破至3阶",
+    "role_id": 400000,
+    "break_order": 3,
+    "break_cost_list": [
+      {
+        "item_id": 200005,
+        "item_quantity": 30
+      },
+      {
+        "item_id": 200004,
+        "item_quantity": 15
+      }
+    ],
+    "break_level": 15
+  },
+  {
+    "id": 500004,
+    "desc": "角色-1-突破至4阶",
+    "role_id": 400000,
+    "break_order": 4,
+    "break_cost_list": [
+      {
+        "item_id": 200005,
+        "item_quantity": 40
+      },
+      {
+        "item_id": 200004,
+        "item_quantity": 20
+      }
+    ],
+    "break_level": 20
+  },
+  {
+    "id": 500005,
+    "desc": "角色-1-突破至5阶",
+    "role_id": 400000,
+    "break_order": 5,
+    "break_cost_list": [
+      {
+        "item_id": 200005,
+        "item_quantity": 50
+      },
+      {
+        "item_id": 200004,
+        "item_quantity": 25
+      }
+    ],
+    "break_level": 25
+  },
+  {
+    "id": 500006,
+    "desc": "角色-1-突破至6阶",
+    "role_id": 400000,
+    "break_order": 6,
+    "break_cost_list": [
+      {
+        "item_id": 200005,
+        "item_quantity": 60
+      },
+      {
+        "item_id": 200004,
+        "item_quantity": 30
+      }
+    ],
+    "break_level": 30
+  },
+  {
+    "id": 500101,
+    "desc": "角色-2-突破至1阶",
+    "role_id": 400001,
+    "break_order": 1,
+    "break_cost_list": [
+      {
+        "item_id": 200005,
+        "item_quantity": 10
+      },
+      {
+        "item_id": 200011,
+        "item_quantity": 5
+      }
+    ],
+    "break_level": 5
+  },
+  {
+    "id": 500102,
+    "desc": "角色-2-突破至2阶",
+    "role_id": 400001,
+    "break_order": 2,
+    "break_cost_list": [
+      {
+        "item_id": 200005,
+        "item_quantity": 20
+      },
+      {
+        "item_id": 200011,
+        "item_quantity": 10
+      }
+    ],
+    "break_level": 10
+  },
+  {
+    "id": 500103,
+    "desc": "角色-2-突破至3阶",
+    "role_id": 400001,
+    "break_order": 3,
+    "break_cost_list": [
+      {
+        "item_id": 200005,
+        "item_quantity": 30
+      },
+      {
+        "item_id": 200011,
+        "item_quantity": 15
+      }
+    ],
+    "break_level": 15
+  },
+  {
+    "id": 500104,
+    "desc": "角色-2-突破至4阶",
+    "role_id": 400001,
+    "break_order": 4,
+    "break_cost_list": [
+      {
+        "item_id": 200005,
+        "item_quantity": 40
+      },
+      {
+        "item_id": 200011,
+        "item_quantity": 20
+      }
+    ],
+    "break_level": 20
+  },
+  {
+    "id": 500105,
+    "desc": "角色-2-突破至5阶",
+    "role_id": 400001,
+    "break_order": 5,
+    "break_cost_list": [
+      {
+        "item_id": 200005,
+        "item_quantity": 50
+      },
+      {
+        "item_id": 200011,
+        "item_quantity": 25
+      }
+    ],
+    "break_level": 25
+  },
+  {
+    "id": 500106,
+    "desc": "角色-2-突破至6阶",
+    "role_id": 400001,
+    "break_order": 6,
+    "break_cost_list": [
+      {
+        "item_id": 200005,
+        "item_quantity": 60
+      },
+      {
+        "item_id": 200011,
+        "item_quantity": 30
+      }
+    ],
+    "break_level": 30
+  },
+  {
+    "id": 500107,
+    "desc": "",
+    "role_id": 400002,
+    "break_order": 1,
+    "break_cost_list": [
+      {
+        "item_id": 200005,
+        "item_quantity": 10
+      },
+      {
+        "item_id": 200012,
+        "item_quantity": 5
+      }
+    ],
+    "break_level": 5
+  },
+  {
+    "id": 500108,
+    "desc": "",
+    "role_id": 400002,
+    "break_order": 2,
+    "break_cost_list": [
+      {
+        "item_id": 200005,
+        "item_quantity": 20
+      },
+      {
+        "item_id": 200012,
+        "item_quantity": 10
+      }
+    ],
+    "break_level": 10
+  },
+  {
+    "id": 500109,
+    "desc": "",
+    "role_id": 400002,
+    "break_order": 3,
+    "break_cost_list": [
+      {
+        "item_id": 200005,
+        "item_quantity": 30
+      },
+      {
+        "item_id": 200012,
+        "item_quantity": 15
+      }
+    ],
+    "break_level": 15
+  },
+  {
+    "id": 500110,
+    "desc": "",
+    "role_id": 400002,
+    "break_order": 4,
+    "break_cost_list": [
+      {
+        "item_id": 200005,
+        "item_quantity": 40
+      },
+      {
+        "item_id": 200012,
+        "item_quantity": 20
+      }
+    ],
+    "break_level": 20
+  },
+  {
+    "id": 500111,
+    "desc": "",
+    "role_id": 400002,
+    "break_order": 5,
+    "break_cost_list": [
+      {
+        "item_id": 200005,
+        "item_quantity": 50
+      },
+      {
+        "item_id": 200012,
+        "item_quantity": 25
+      }
+    ],
+    "break_level": 25
+  },
+  {
+    "id": 500112,
+    "desc": "",
+    "role_id": 400002,
+    "break_order": 6,
+    "break_cost_list": [
+      {
+        "item_id": 200005,
+        "item_quantity": 60
+      },
+      {
+        "item_id": 200012,
+        "item_quantity": 30
+      }
+    ],
+    "break_level": 30
+  },
+  {
+    "id": 500113,
+    "desc": "",
+    "role_id": 400003,
+    "break_order": 1,
+    "break_cost_list": [
+      {
+        "item_id": 200005,
+        "item_quantity": 10
+      },
+      {
+        "item_id": 200013,
+        "item_quantity": 5
+      }
+    ],
+    "break_level": 5
+  },
+  {
+    "id": 500114,
+    "desc": "",
+    "role_id": 400003,
+    "break_order": 2,
+    "break_cost_list": [
+      {
+        "item_id": 200005,
+        "item_quantity": 20
+      },
+      {
+        "item_id": 200013,
+        "item_quantity": 10
+      }
+    ],
+    "break_level": 10
+  },
+  {
+    "id": 500115,
+    "desc": "",
+    "role_id": 400003,
+    "break_order": 3,
+    "break_cost_list": [
+      {
+        "item_id": 200005,
+        "item_quantity": 30
+      },
+      {
+        "item_id": 200013,
+        "item_quantity": 15
+      }
+    ],
+    "break_level": 15
+  },
+  {
+    "id": 500116,
+    "desc": "",
+    "role_id": 400003,
+    "break_order": 4,
+    "break_cost_list": [
+      {
+        "item_id": 200005,
+        "item_quantity": 40
+      },
+      {
+        "item_id": 200013,
+        "item_quantity": 20
+      }
+    ],
+    "break_level": 20
+  },
+  {
+    "id": 500117,
+    "desc": "",
+    "role_id": 400003,
+    "break_order": 5,
+    "break_cost_list": [
+      {
+        "item_id": 200005,
+        "item_quantity": 50
+      },
+      {
+        "item_id": 200013,
+        "item_quantity": 25
+      }
+    ],
+    "break_level": 25
+  },
+  {
+    "id": 500118,
+    "desc": "",
+    "role_id": 400003,
+    "break_order": 6,
+    "break_cost_list": [
+      {
+        "item_id": 200005,
+        "item_quantity": 60
+      },
+      {
+        "item_id": 200013,
+        "item_quantity": 30
+      }
+    ],
+    "break_level": 30
+  },
+  {
+    "id": 500119,
+    "desc": "",
+    "role_id": 400004,
+    "break_order": 1,
+    "break_cost_list": [
+      {
+        "item_id": 200005,
+        "item_quantity": 10
+      },
+      {
+        "item_id": 200014,
+        "item_quantity": 5
+      }
+    ],
+    "break_level": 5
+  },
+  {
+    "id": 500120,
+    "desc": "",
+    "role_id": 400004,
+    "break_order": 2,
+    "break_cost_list": [
+      {
+        "item_id": 200005,
+        "item_quantity": 20
+      },
+      {
+        "item_id": 200014,
+        "item_quantity": 10
+      }
+    ],
+    "break_level": 10
+  },
+  {
+    "id": 500121,
+    "desc": "",
+    "role_id": 400004,
+    "break_order": 3,
+    "break_cost_list": [
+      {
+        "item_id": 200005,
+        "item_quantity": 30
+      },
+      {
+        "item_id": 200014,
+        "item_quantity": 15
+      }
+    ],
+    "break_level": 15
+  },
+  {
+    "id": 500122,
+    "desc": "",
+    "role_id": 400004,
+    "break_order": 4,
+    "break_cost_list": [
+      {
+        "item_id": 200005,
+        "item_quantity": 40
+      },
+      {
+        "item_id": 200014,
+        "item_quantity": 20
+      }
+    ],
+    "break_level": 20
+  },
+  {
+    "id": 500123,
+    "desc": "",
+    "role_id": 400004,
+    "break_order": 5,
+    "break_cost_list": [
+      {
+        "item_id": 200005,
+        "item_quantity": 50
+      },
+      {
+        "item_id": 200014,
+        "item_quantity": 25
+      }
+    ],
+    "break_level": 25
+  },
+  {
+    "id": 500124,
+    "desc": "",
+    "role_id": 400004,
+    "break_order": 6,
+    "break_cost_list": [
+      {
+        "item_id": 200005,
+        "item_quantity": 60
+      },
+      {
+        "item_id": 200014,
+        "item_quantity": 30
+      }
+    ],
+    "break_level": 30
+  },
+  {
+    "id": 500125,
+    "desc": "",
+    "role_id": 400005,
+    "break_order": 1,
+    "break_cost_list": [
+      {
+        "item_id": 200005,
+        "item_quantity": 10
+      },
+      {
+        "item_id": 200015,
+        "item_quantity": 5
+      }
+    ],
+    "break_level": 5
+  },
+  {
+    "id": 500126,
+    "desc": "",
+    "role_id": 400005,
+    "break_order": 2,
+    "break_cost_list": [
+      {
+        "item_id": 200005,
+        "item_quantity": 20
+      },
+      {
+        "item_id": 200015,
+        "item_quantity": 10
+      }
+    ],
+    "break_level": 10
+  },
+  {
+    "id": 500127,
+    "desc": "",
+    "role_id": 400005,
+    "break_order": 3,
+    "break_cost_list": [
+      {
+        "item_id": 200005,
+        "item_quantity": 30
+      },
+      {
+        "item_id": 200015,
+        "item_quantity": 15
+      }
+    ],
+    "break_level": 15
+  },
+  {
+    "id": 500128,
+    "desc": "",
+    "role_id": 400005,
+    "break_order": 4,
+    "break_cost_list": [
+      {
+        "item_id": 200005,
+        "item_quantity": 40
+      },
+      {
+        "item_id": 200015,
+        "item_quantity": 20
+      }
+    ],
+    "break_level": 20
+  },
+  {
+    "id": 500129,
+    "desc": "",
+    "role_id": 400005,
+    "break_order": 5,
+    "break_cost_list": [
+      {
+        "item_id": 200005,
+        "item_quantity": 50
+      },
+      {
+        "item_id": 200015,
+        "item_quantity": 25
+      }
+    ],
+    "break_level": 25
+  },
+  {
+    "id": 500130,
+    "desc": "",
+    "role_id": 400005,
+    "break_order": 6,
+    "break_cost_list": [
+      {
+        "item_id": 200005,
+        "item_quantity": 60
+      },
+      {
+        "item_id": 200015,
+        "item_quantity": 30
+      }
+    ],
+    "break_level": 30
+  },
+  {
+    "id": 500131,
+    "desc": "",
+    "role_id": 400006,
+    "break_order": 1,
+    "break_cost_list": [
+      {
+        "item_id": 200005,
+        "item_quantity": 10
+      },
+      {
+        "item_id": 200016,
+        "item_quantity": 5
+      }
+    ],
+    "break_level": 5
+  },
+  {
+    "id": 500132,
+    "desc": "",
+    "role_id": 400006,
+    "break_order": 2,
+    "break_cost_list": [
+      {
+        "item_id": 200005,
+        "item_quantity": 20
+      },
+      {
+        "item_id": 200016,
+        "item_quantity": 10
+      }
+    ],
+    "break_level": 10
+  },
+  {
+    "id": 500133,
+    "desc": "",
+    "role_id": 400006,
+    "break_order": 3,
+    "break_cost_list": [
+      {
+        "item_id": 200005,
+        "item_quantity": 30
+      },
+      {
+        "item_id": 200016,
+        "item_quantity": 15
+      }
+    ],
+    "break_level": 15
+  },
+  {
+    "id": 500134,
+    "desc": "",
+    "role_id": 400006,
+    "break_order": 4,
+    "break_cost_list": [
+      {
+        "item_id": 200005,
+        "item_quantity": 40
+      },
+      {
+        "item_id": 200016,
+        "item_quantity": 20
+      }
+    ],
+    "break_level": 20
+  },
+  {
+    "id": 500135,
+    "desc": "",
+    "role_id": 400006,
+    "break_order": 5,
+    "break_cost_list": [
+      {
+        "item_id": 200005,
+        "item_quantity": 50
+      },
+      {
+        "item_id": 200016,
+        "item_quantity": 25
+      }
+    ],
+    "break_level": 25
+  },
+  {
+    "id": 500136,
+    "desc": "",
+    "role_id": 400006,
+    "break_order": 6,
+    "break_cost_list": [
+      {
+        "item_id": 200005,
+        "item_quantity": 60
+      },
+      {
+        "item_id": 200016,
+        "item_quantity": 30
+      }
+    ],
+    "break_level": 30
+  },
+  {
+    "id": 500137,
+    "desc": "",
+    "role_id": 400007,
+    "break_order": 1,
+    "break_cost_list": [
+      {
+        "item_id": 200005,
+        "item_quantity": 10
+      },
+      {
+        "item_id": 200017,
+        "item_quantity": 5
+      }
+    ],
+    "break_level": 5
+  },
+  {
+    "id": 500138,
+    "desc": "",
+    "role_id": 400007,
+    "break_order": 2,
+    "break_cost_list": [
+      {
+        "item_id": 200005,
+        "item_quantity": 20
+      },
+      {
+        "item_id": 200017,
+        "item_quantity": 10
+      }
+    ],
+    "break_level": 10
+  },
+  {
+    "id": 500139,
+    "desc": "",
+    "role_id": 400007,
+    "break_order": 3,
+    "break_cost_list": [
+      {
+        "item_id": 200005,
+        "item_quantity": 30
+      },
+      {
+        "item_id": 200017,
+        "item_quantity": 15
+      }
+    ],
+    "break_level": 15
+  },
+  {
+    "id": 500140,
+    "desc": "",
+    "role_id": 400007,
+    "break_order": 4,
+    "break_cost_list": [
+      {
+        "item_id": 200005,
+        "item_quantity": 40
+      },
+      {
+        "item_id": 200017,
+        "item_quantity": 20
+      }
+    ],
+    "break_level": 20
+  },
+  {
+    "id": 500141,
+    "desc": "",
+    "role_id": 400007,
+    "break_order": 5,
+    "break_cost_list": [
+      {
+        "item_id": 200005,
+        "item_quantity": 50
+      },
+      {
+        "item_id": 200017,
+        "item_quantity": 25
+      }
+    ],
+    "break_level": 25
+  },
+  {
+    "id": 500142,
+    "desc": "",
+    "role_id": 400007,
+    "break_order": 6,
+    "break_cost_list": [
+      {
+        "item_id": 200005,
+        "item_quantity": 60
+      },
+      {
+        "item_id": 200017,
+        "item_quantity": 30
+      }
+    ],
+    "break_level": 30
+  },
+  {
+    "id": 500143,
+    "desc": "",
+    "role_id": 400008,
+    "break_order": 1,
+    "break_cost_list": [
+      {
+        "item_id": 200005,
+        "item_quantity": 10
+      },
+      {
+        "item_id": 200018,
+        "item_quantity": 5
+      }
+    ],
+    "break_level": 5
+  },
+  {
+    "id": 500144,
+    "desc": "",
+    "role_id": 400008,
+    "break_order": 2,
+    "break_cost_list": [
+      {
+        "item_id": 200005,
+        "item_quantity": 20
+      },
+      {
+        "item_id": 200018,
+        "item_quantity": 10
+      }
+    ],
+    "break_level": 10
+  },
+  {
+    "id": 500145,
+    "desc": "",
+    "role_id": 400008,
+    "break_order": 3,
+    "break_cost_list": [
+      {
+        "item_id": 200005,
+        "item_quantity": 30
+      },
+      {
+        "item_id": 200018,
+        "item_quantity": 15
+      }
+    ],
+    "break_level": 15
+  },
+  {
+    "id": 500146,
+    "desc": "",
+    "role_id": 400008,
+    "break_order": 4,
+    "break_cost_list": [
+      {
+        "item_id": 200005,
+        "item_quantity": 40
+      },
+      {
+        "item_id": 200018,
+        "item_quantity": 20
+      }
+    ],
+    "break_level": 20
+  },
+  {
+    "id": 500147,
+    "desc": "",
+    "role_id": 400008,
+    "break_order": 5,
+    "break_cost_list": [
+      {
+        "item_id": 200005,
+        "item_quantity": 50
+      },
+      {
+        "item_id": 200018,
+        "item_quantity": 25
+      }
+    ],
+    "break_level": 25
+  },
+  {
+    "id": 500148,
+    "desc": "",
+    "role_id": 400008,
+    "break_order": 6,
+    "break_cost_list": [
+      {
+        "item_id": 200005,
+        "item_quantity": 60
+      },
+      {
+        "item_id": 200018,
+        "item_quantity": 30
+      }
+    ],
+    "break_level": 30
+  },
+  {
+    "id": 500149,
+    "desc": "",
+    "role_id": 400009,
+    "break_order": 1,
+    "break_cost_list": [
+      {
+        "item_id": 200005,
+        "item_quantity": 10
+      },
+      {
+        "item_id": 200019,
+        "item_quantity": 5
+      }
+    ],
+    "break_level": 5
+  },
+  {
+    "id": 500150,
+    "desc": "",
+    "role_id": 400009,
+    "break_order": 2,
+    "break_cost_list": [
+      {
+        "item_id": 200005,
+        "item_quantity": 20
+      },
+      {
+        "item_id": 200019,
+        "item_quantity": 10
+      }
+    ],
+    "break_level": 10
+  },
+  {
+    "id": 500151,
+    "desc": "",
+    "role_id": 400009,
+    "break_order": 3,
+    "break_cost_list": [
+      {
+        "item_id": 200005,
+        "item_quantity": 30
+      },
+      {
+        "item_id": 200019,
+        "item_quantity": 15
+      }
+    ],
+    "break_level": 15
+  },
+  {
+    "id": 500152,
+    "desc": "",
+    "role_id": 400009,
+    "break_order": 4,
+    "break_cost_list": [
+      {
+        "item_id": 200005,
+        "item_quantity": 40
+      },
+      {
+        "item_id": 200019,
+        "item_quantity": 20
+      }
+    ],
+    "break_level": 20
+  },
+  {
+    "id": 500153,
+    "desc": "",
+    "role_id": 400009,
+    "break_order": 5,
+    "break_cost_list": [
+      {
+        "item_id": 200005,
+        "item_quantity": 50
+      },
+      {
+        "item_id": 200019,
+        "item_quantity": 25
+      }
+    ],
+    "break_level": 25
+  },
+  {
+    "id": 500154,
+    "desc": "",
+    "role_id": 400009,
+    "break_order": 6,
+    "break_cost_list": [
+      {
+        "item_id": 200005,
+        "item_quantity": 60
+      },
+      {
+        "item_id": 200019,
+        "item_quantity": 30
+      }
+    ],
+    "break_level": 30
+  },
+  {
+    "id": 500155,
+    "desc": "",
+    "role_id": 400010,
+    "break_order": 1,
+    "break_cost_list": [
+      {
+        "item_id": 200005,
+        "item_quantity": 10
+      },
+      {
+        "item_id": 200020,
+        "item_quantity": 5
+      }
+    ],
+    "break_level": 5
+  },
+  {
+    "id": 500156,
+    "desc": "",
+    "role_id": 400010,
+    "break_order": 2,
+    "break_cost_list": [
+      {
+        "item_id": 200005,
+        "item_quantity": 20
+      },
+      {
+        "item_id": 200020,
+        "item_quantity": 10
+      }
+    ],
+    "break_level": 10
+  },
+  {
+    "id": 500157,
+    "desc": "",
+    "role_id": 400010,
+    "break_order": 3,
+    "break_cost_list": [
+      {
+        "item_id": 200005,
+        "item_quantity": 30
+      },
+      {
+        "item_id": 200020,
+        "item_quantity": 15
+      }
+    ],
+    "break_level": 15
+  },
+  {
+    "id": 500158,
+    "desc": "",
+    "role_id": 400010,
+    "break_order": 4,
+    "break_cost_list": [
+      {
+        "item_id": 200005,
+        "item_quantity": 40
+      },
+      {
+        "item_id": 200020,
+        "item_quantity": 20
+      }
+    ],
+    "break_level": 20
+  },
+  {
+    "id": 500159,
+    "desc": "",
+    "role_id": 400010,
+    "break_order": 5,
+    "break_cost_list": [
+      {
+        "item_id": 200005,
+        "item_quantity": 50
+      },
+      {
+        "item_id": 200020,
+        "item_quantity": 25
+      }
+    ],
+    "break_level": 25
+  },
+  {
+    "id": 500160,
+    "desc": "",
+    "role_id": 400010,
+    "break_order": 6,
+    "break_cost_list": [
+      {
+        "item_id": 200005,
+        "item_quantity": 60
+      },
+      {
+        "item_id": 200020,
+        "item_quantity": 30
+      }
+    ],
+    "break_level": 30
+  }
+]

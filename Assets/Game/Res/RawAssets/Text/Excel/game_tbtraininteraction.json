@@ -1,0 +1,35 @@
+[
+  {
+    "id": 400000,
+    "train_data": [
+      {
+        "desc": "纲手穿衣头部交互动画",
+        "res_spine": "click01",
+        "trigger_area": 1,
+        "trigger_status": 1,
+        "love_value": 100
+      },
+      {
+        "desc": "纲手穿衣胸部交互动画",
+        "res_spine": "click02",
+        "trigger_area": 3,
+        "trigger_status": 1,
+        "love_value": 0
+      },
+      {
+        "desc": "纲手穿衣腿部交互动画",
+        "res_spine": "click03",
+        "trigger_area": 5,
+        "trigger_status": 1,
+        "love_value": 0
+      },
+      {
+        "desc": "纲手裸体阴部交互动画",
+        "res_spine": "click04",
+        "trigger_area": 4,
+        "trigger_status": 1,
+        "love_value": 200
+      }
+    ]
+  }
+]

@@ -1,0 +1,230 @@
+[
+  {
+    "id": 10011,
+    "name": "共浴危机",
+    "desc": "时空裂隙导致木叶的女汤和男汤被强制合并了！水汽氤氲中，雏田、井野和樱的惊叫声此起彼伏。她们正试图用小小的毛巾遮挡自己，但显然...不够用。",
+    "role_id": 400000,
+    "chapter": 1,
+    "pos": [
+      289.13,
+      -671.14
+    ],
+    "drop_id": 10011,
+    "role_limit": "0",
+    "role_bonus": {
+      "role_id": 0,
+      "bonus_value": 0
+    },
+    "reward_gold": 5,
+    "reward_train": 1
+  },
+  {
+    "id": 10012,
+    "name": "失控电击",
+    "desc": "云隐村的萨姆伊被雷遁电流击中，全身麻痹。她的制服被烧焦撕裂，身体因电流而不自主地颤抖和抽搐，口中发出压抑的娇吟。",
+    "role_id": 400000,
+    "chapter": 1,
+    "pos": [
+      -134,
+      -267
+    ],
+    "drop_id": 10012,
+    "role_limit": "0",
+    "role_bonus": {
+      "role_id": 400000,
+      "bonus_value": 0.2
+    },
+    "reward_gold": 5,
+    "reward_train": 1
+  },
+  {
+    "id": 10013,
+    "name": "沉睡的体液",
+    "desc": "音忍村实验室里，香燐和小樱被困在同一个巨大的透明培养槽中，她们穿着薄薄的实验服，在粘稠的液体中漂浮、挤压着彼此。",
+    "role_id": 400000,
+    "chapter": 1,
+    "pos": [
+      102.105,
+      140.015
+    ],
+    "drop_id": 10013,
+    "role_limit": "0",
+    "role_bonus": {
+      "role_id": 0,
+      "bonus_value": 0
+    },
+    "reward_gold": 5,
+    "reward_train": 1
+  },
+  {
+    "id": 10014,
+    "name": "黏黏的蛞蝓",
+    "desc": "湿骨林的静音被蛞蝓的特殊黏液包裹。黏液是透明且粘稠的，像真空包装一样紧紧贴合着她的身体，突显出每一寸曲线。",
+    "role_id": 400000,
+    "chapter": 1,
+    "pos": [
+      -215.87,
+      371.14
+    ],
+    "drop_id": 10014,
+    "role_limit": "0",
+    "role_bonus": {
+      "role_id": 0,
+      "bonus_value": 0
+    },
+    "reward_gold": 5,
+    "reward_train": 1
+  },
+  {
+    "id": 10021,
+    "name": "水牢之爱",
+    "desc": "鬼灯城里的纲手被施以“水牢”之刑。她被固定在墙上，冰冷的水柱从她的头顶“精准”地浇灌在她的身上，她的衣物被水压紧紧贴合，无法动弹。",
+    "role_id": 400000,
+    "chapter": 2,
+    "pos": [
+      289.13,
+      -671.14
+    ],
+    "drop_id": 10021,
+    "role_limit": "0",
+    "role_bonus": {
+      "role_id": 0,
+      "bonus_value": 0
+    },
+    "reward_gold": 6,
+    "reward_train": 2
+  },
+  {
+    "id": 10022,
+    "name": "天照的皮鞭",
+    "desc": "幻术月读将井野困住，她被黑色的“天照”火焰捆绑在石柱上，火焰正如同皮鞭般“舔舐”着她裸露的肌肤。",
+    "role_id": 400000,
+    "chapter": 2,
+    "pos": [
+      -134,
+      -267
+    ],
+    "drop_id": 10022,
+    "role_limit": "0",
+    "role_bonus": {
+      "role_id": 0,
+      "bonus_value": 0
+    },
+    "reward_gold": 6,
+    "reward_train": 2
+  },
+  {
+    "id": 10023,
+    "name": "医疗病房",
+    "desc": "纲手施展百豪之术后因为查克拉耗尽而全身无力地躺在病床上，医用外袍敞开，露出汗湿的内衬和诱人的疲态。",
+    "role_id": 400000,
+    "chapter": 2,
+    "pos": [
+      211,
+      -250
+    ],
+    "drop_id": 10023,
+    "role_limit": "0",
+    "role_bonus": {
+      "role_id": 0,
+      "bonus_value": 0
+    },
+    "reward_gold": 6,
+    "reward_train": 2
+  },
+  {
+    "id": 10024,
+    "name": "水影的蒸汽浴",
+    "desc": "照美冥的“沸遁”失控，水影办公室瞬间被高温蒸汽填满。她的衣服因水汽变得半透明，汗水和蒸汽混合，令她娇喘连连。",
+    "role_id": 400000,
+    "chapter": 2,
+    "pos": [
+      -215.87,
+      371.14
+    ],
+    "drop_id": 10024,
+    "role_limit": "0",
+    "role_bonus": {
+      "role_id": 400000,
+      "bonus_value": 0.3
+    },
+    "reward_gold": 6,
+    "reward_train": 2
+  },
+  {
+    "id": 10031,
+    "name": "花藤的诱捕",
+    "desc": "井野的通灵术失控，她被巨大的花藤缠绕。藤蔓的束缚紧密而巧妙，凸显了她柔软的身体线条，她正在极力挣扎。",
+    "role_id": 400000,
+    "chapter": 3,
+    "pos": [
+      289.13,
+      -671.14
+    ],
+    "drop_id": 10031,
+    "role_limit": "0",
+    "role_bonus": {
+      "role_id": 0,
+      "bonus_value": 0
+    },
+    "reward_gold": 7,
+    "reward_train": 3
+  },
+  {
+    "id": 10032,
+    "name": "浸透的汗水",
+    "desc": "春野樱正在进行极限体力训练，她全身汗流浃背，运动内衣被汗水完全浸透，紧贴在胸口，每一次呼吸都清晰可见。",
+    "role_id": 400000,
+    "chapter": 3,
+    "pos": [
+      -134,
+      -267
+    ],
+    "drop_id": 10032,
+    "role_limit": "0",
+    "role_bonus": {
+      "role_id": 0,
+      "bonus_value": 0
+    },
+    "reward_gold": 7,
+    "reward_train": 3
+  },
+  {
+    "id": 10033,
+    "name": "纸分身的瑕疵",
+    "desc": "小南的一个纸分身因时空能量不足而变得不稳定，只用极少的纸片覆盖了身体的关键部位，像一个等待组装的人偶。",
+    "role_id": 400000,
+    "chapter": 3,
+    "pos": [
+      -223,
+      -937
+    ],
+    "drop_id": 10033,
+    "role_limit": "0",
+    "role_bonus": {
+      "role_id": 0,
+      "bonus_value": 0
+    },
+    "reward_gold": 7,
+    "reward_train": 3
+  },
+  {
+    "id": 10034,
+    "name": "异界赌场",
+    "desc": "纲手大人出现在这个只进不出的赌场。情报显示她又一次输光了，正准备把身上的“火影御神袍”当作最后的赌注。在她做出更出格的举动前，快去把她带回来！",
+    "role_id": 400000,
+    "chapter": 3,
+    "pos": [
+      -215.87,
+      371.14
+    ],
+    "drop_id": 10034,
+    "role_limit": "0",
+    "role_bonus": {
+      "role_id": 400000,
+      "bonus_value": 0.5
+    },
+    "reward_gold": 7,
+    "reward_train": 3
+  }
+]

@@ -1,0 +1,68 @@
+[
+  {
+    "id": 4000,
+    "desc": "角色1地图",
+    "name_id": "Map_Name_4000",
+    "map_prefab": "WorldMap4000"
+  },
+  {
+    "id": 4001,
+    "desc": "角色2地图",
+    "name_id": "Map_Name_4001",
+    "map_prefab": "WorldMap4000"
+  },
+  {
+    "id": 4002,
+    "desc": "角色3地图",
+    "name_id": "Map_Name_4002",
+    "map_prefab": "WorldMap4000"
+  },
+  {
+    "id": 4003,
+    "desc": "角色4地图",
+    "name_id": "Map_Name_4003",
+    "map_prefab": "WorldMap4000"
+  },
+  {
+    "id": 4004,
+    "desc": "角色5地图",
+    "name_id": "Map_Name_4004",
+    "map_prefab": "WorldMap4000"
+  },
+  {
+    "id": 4005,
+    "desc": "角色6地图",
+    "name_id": "Map_Name_4005",
+    "map_prefab": "WorldMap4000"
+  },
+  {
+    "id": 4006,
+    "desc": "角色7地图",
+    "name_id": "Map_Name_4006",
+    "map_prefab": "WorldMap4000"
+  },
+  {
+    "id": 4007,
+    "desc": "角色8地图",
+    "name_id": "Map_Name_4007",
+    "map_prefab": "WorldMap4000"
+  },
+  {
+    "id": 4008,
+    "desc": "角色9地图",
+    "name_id": "Map_Name_4008",
+    "map_prefab": "WorldMap4000"
+  },
+  {
+    "id": 4009,
+    "desc": "角色10地图",
+    "name_id": "Map_Name_4009",
+    "map_prefab": "WorldMap4000"
+  },
+  {
+    "id": 4010,
+    "desc": "角色11地图",
+    "name_id": "Map_Name_4010",
+    "map_prefab": "WorldMap4000"
+  }
+]
