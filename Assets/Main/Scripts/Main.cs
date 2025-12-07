@@ -6,14 +6,22 @@ using System;
 
 public class Main : MonoBehaviour
 {
+    public EPlayMode playMode = EPlayMode.EditorSimulateMode;
+
     void Start()
     {
-        YooAssetManager.Instance.Init(OnLoadRes);
+        GameEvent.AddEventListener(AssetConfig.EVENT_START_GAME, OnStartGame);
+
+        YooAssetManager.Instance.Init(playMode);
     }
 
-    private void OnLoadRes()
+    private void OnDestroy()
     {
-        GameManager.Instance.Init();
-        GameManager.Instance.LoadSceneAsync<Scene1001>();
+        GameEvent.RemoveEventListener(AssetConfig.EVENT_START_GAME, OnStartGame);
+    }
+
+    private void OnStartGame()
+    {
+        Procedure.Change<ProcedureStartGame>();
     }
 }
