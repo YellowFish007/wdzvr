@@ -73,28 +73,32 @@ namespace Engine
             rectTrans.localScale = Vector3.one;
         }
 
-        //添加Canvas
-        public void AddBaseCanvas()
-        {
-            //添加Canvas
-            gameObject.AddComponent<Canvas>();
-            //添加GraphicRaycaster
-            gameObject.AddComponent<GraphicRaycaster>();
+        ////添加Canvas
+        //public void AddBaseCanvas()
+        //{
+        //    //添加Canvas
+        //    Canvas canvas = gameObject.AddComponent<Canvas>();
+            
+        //    // VR环境需要World Space模式才能正确显示
+        //    canvas.renderMode = RenderMode.WorldSpace;
+            
+        //    //添加GraphicRaycaster
+        //    gameObject.AddComponent<GraphicRaycaster>();
 
-            Image image = gameObject.AddComponent<Image>();
-            //是否透传点击事件
-            image.raycastTarget = isRaycastTarget;
+        //    Image image = gameObject.AddComponent<Image>();
+        //    //是否透传点击事件
+        //    image.raycastTarget = isRaycastTarget;
 
-            //是否显示阴影
-            if (isShowBlackMask)
-            {
-                image.color = new Color(0, 0, 0, 204.0f / 255.0f);
-            }
-            else
-            {
-                image.color = new Color(0, 0, 0, 0);
-            }
-        }
+        //    //是否显示阴影
+        //    if (isShowBlackMask)
+        //    {
+        //        image.color = new Color(0, 0, 0, 204.0f / 255.0f);
+        //    }
+        //    else
+        //    {
+        //        image.color = new Color(0, 0, 0, 0);
+        //    }
+        //}
 
 
         /// <summary>

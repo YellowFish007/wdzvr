@@ -16,43 +16,38 @@ namespace Engine
         private Camera m_Camera;
 
         public bool IsInit = false;
-        public void Init()
-        {
-            LoadUIRoot();
-
-            m_UIList = new List<UIBase>();
-        }
         /// <summary>
         /// 获取UI节点
         /// </summary>
         /// <returns></returns>
-        private void LoadUIRoot()
+        public void InitUIRoot(GameObject root)
         {
-            GameObject prefab = Asset.LoadPrefabSync("UIRoot");
+            //GameObject prefab = Asset.LoadPrefabSync("UIRoot");
+            m_UIList = new List<UIBase>();
+            //GameObject uiRoot = GameObject.Instantiate(prefab);
+            //GameObject.DontDestroyOnLoad(uiRoot);
+            //uiRoot.name = "UIRoot";
+            ////设置父节点
+            //uiRoot.transform.SetParent(transform);
+            //Camera.main.gameObject.transform.GetChild(0).gameObject;
 
-            GameObject uiRoot = GameObject.Instantiate(prefab);
-            GameObject.DontDestroyOnLoad(uiRoot);
-            uiRoot.name = "UIRoot";
-            //设置父节点
-            uiRoot.transform.SetParent(transform);
-
-            m_UIRoot = uiRoot;
-
+            m_UIRoot = root;
+            
             IsInit = true;
         }
 
-        public void SetCamera(Camera camera)
-        {
-            m_Camera = Camera.main;
+        //public void SetCamera(Camera camera)
+        //{
+        //    m_Camera = Camera.main;
 
-            Canvas canvas = m_UIRoot.GetComponent<Canvas>();
-            canvas.worldCamera = m_Camera;
+        //    Canvas canvas = m_UIRoot.GetComponent<Canvas>();
+        //    canvas.worldCamera = m_Camera;
 
-            transform.SetParent(m_Camera.transform);
-            transform.localPosition = new Vector3(0, 0, 3);
-            transform.localRotation = Quaternion.identity;
-            transform.localScale = new Vector3(0.01f, 0.01f, 0.01f);
-        }
+        //    transform.SetParent(m_Camera.transform);
+        //    transform.localPosition = new Vector3(0, 0, 3);
+        //    transform.localRotation = Quaternion.identity;
+        //    transform.localScale = new Vector3(0.01f, 0.01f, 0.01f);
+        //}
 
         public Camera GetCamera()
         {
@@ -97,8 +92,8 @@ namespace Engine
                 //得到UIbase
                 uiBase = obj.GetComponent<UIBase>();
                 uiBase.id = uiPath;
-                //添加Canvas
-                uiBase.AddBaseCanvas();
+                ////添加Canvas
+                //uiBase.AddBaseCanvas();
 
                 //重置位置
                 uiBase.ResetTransform();
@@ -106,7 +101,7 @@ namespace Engine
                 m_UIList.Add(uiBase);
 
                 //设置层级
-                ResetCanvasDepth(uiBase);
+                //ResetCanvasDepth(uiBase);
 
 
             }
@@ -244,40 +239,40 @@ namespace Engine
             }
         }
 
-        /// <summary>
-        /// 设置层级
-        /// </summary>
-        private void ResetCanvasDepth(UIBase showUIBase)
-        {
-            //移除旧数据
-            int index = -1;
-            for (int i = 0; i < m_UIList.Count; i++)
-            {
-                if (showUIBase.id == m_UIList[i].id)
-                {
-                    index = i;
-                }
-            }
+        ///// <summary>
+        ///// 设置层级
+        ///// </summary>
+        //private void ResetCanvasDepth(UIBase showUIBase)
+        //{
+        //    //移除旧数据
+        //    int index = -1;
+        //    for (int i = 0; i < m_UIList.Count; i++)
+        //    {
+        //        if (showUIBase.id == m_UIList[i].id)
+        //        {
+        //            index = i;
+        //        }
+        //    }
 
-            if (index >= 0)
-            {
-                m_UIList.RemoveAt(index);
-            }
-            m_UIList.Add(showUIBase);
+        //    if (index >= 0)
+        //    {
+        //        m_UIList.RemoveAt(index);
+        //    }
+        //    m_UIList.Add(showUIBase);
 
-            //初始化层级
-            for (int i = 0; i < m_UIList.Count; i++)
-            {
-                UIBase uiBase = m_UIList[i];
-                Canvas canvas = uiBase.GetComponent<Canvas>();
-                canvas.overrideSorting = true;
-                int depth = (int)uiBase.uiType * 1000 + i * 10;
-                canvas.sortingOrder = depth;
+        //    //初始化层级
+        //    for (int i = 0; i < m_UIList.Count; i++)
+        //    {
+        //        UIBase uiBase = m_UIList[i];
+        //        Canvas canvas = uiBase.GetComponent<Canvas>();
+        //        canvas.overrideSorting = true;
+        //        int depth = (int)uiBase.uiType * 1000 + i * 10;
+        //        canvas.sortingOrder = depth;
 
-                ////重置粒子层级
-                //ResetParticleDepth(canvas, depth);
-            }
-        }
+        //        ////重置粒子层级
+        //        //ResetParticleDepth(canvas, depth);
+        //    }
+        //}
 
         private void ResetParticleDepth(Canvas canvas, int depth)
         {
@@ -306,16 +301,5 @@ namespace Engine
             return parts.Length > 0 ? parts[parts.Length - 1] : string.Empty;
         }
 
-        /// <summary>
-        /// 显示Reporter
-        /// </summary>
-        public void ShowReporter()
-        {
-            Asset.LoadPrefabAsync("UI/Base/Reporter", delegate (GameObject prefab)
-            {
-                GameObject reporter = Instantiate(prefab);
-                DontDestroyOnLoad(reporter);
-            });
-        }
     }
 }

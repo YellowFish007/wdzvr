@@ -21,7 +21,7 @@ public class GameManager : SingletonGameObject<GameManager>
 
         InitTables();
 
-        UIManager.Instance.Init();
+        //UIManager.Instance.Init();
 
         LoadSceneAsync<Scene1001>();
     }
