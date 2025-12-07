@@ -1,0 +1,19 @@
+﻿syntax = "proto3";
+
+message C0_HouShan
+{
+	bool isOpenDoor = 1;//是否开门
+	int32 lockNum = 2;//锁密码
+}
+message C0_DaTing
+{
+}
+
+message C0
+{
+	C0_HouShan houShan = 1;//后山数据
+	C0_DaTing daTing = 2;//大厅
+	repeated int32 laveAnswerList = 3;//剩余答案数组
+	repeated int32 lookedAnswerList = 4;//已经看过的答案数组
+
+}

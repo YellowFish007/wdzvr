@@ -1,0 +1,9 @@
+[
+  {
+    "id": 1001,
+    "desc": "场景1",
+    "name_id": "场景1",
+    "scene_res": "SceneMain",
+    "item_icon": "Icon_Scene_1001"
+  }
+]

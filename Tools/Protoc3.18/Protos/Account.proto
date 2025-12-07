@@ -1,0 +1,15 @@
+﻿syntax = "proto3";
+
+message PropItem
+{
+	int32 id = 1;//id
+	int32 num = 2;//数量
+	bool isWatch = 3;//是否观看
+}
+
+message Account
+{
+	int32 hp = 1;//hp数量
+	repeated PropItem propItemList = 2;//物品列表
+	int32 chapterId = 3;//当前章节id
+}
