@@ -22,6 +22,10 @@ namespace Engine
         {
             return LoadAssetSync<TextAsset>(path);
         }
+        public static GameObject LoadPrefabSync(string path)
+        {
+            return LoadAssetSync<GameObject>(path);
+        }
         public static Sprite LoadSpriteSync(string path)
         {
             return LoadAssetSync<Sprite>(path);

@@ -28,20 +28,30 @@ namespace Engine
         /// <returns></returns>
         private void LoadUIRoot()
         {
-            Asset.LoadPrefabAsync("UI/Base/UIRoot", delegate (GameObject prefab)
-            {
-                GameObject uiRoot = GameObject.Instantiate(prefab);
-                GameObject.DontDestroyOnLoad(uiRoot);
-                uiRoot.name = "UIRoot";
-                //设置父节点
-                uiRoot.transform.SetParent(transform);
+            GameObject prefab = Asset.LoadPrefabSync("UIRoot");
 
-                m_UIRoot = uiRoot;
+            GameObject uiRoot = GameObject.Instantiate(prefab);
+            GameObject.DontDestroyOnLoad(uiRoot);
+            uiRoot.name = "UIRoot";
+            //设置父节点
+            uiRoot.transform.SetParent(transform);
 
-                m_Camera = m_UIRoot.Find("Camera").GetComponent<Camera>();
+            m_UIRoot = uiRoot;
 
-                IsInit = true;
-            });
+            IsInit = true;
+        }
+
+        public void SetCamera(Camera camera)
+        {
+            m_Camera = Camera.main;
+
+            Canvas canvas = m_UIRoot.GetComponent<Canvas>();
+            canvas.worldCamera = m_Camera;
+
+            transform.SetParent(m_Camera.transform);
+            transform.localPosition = new Vector3(0, 0, 3);
+            transform.localRotation = Quaternion.identity;
+            transform.localScale = new Vector3(0.01f, 0.01f, 0.01f);
         }
 
         public Camera GetCamera()
@@ -67,7 +77,7 @@ namespace Engine
             return null;
         }
 
-        private void LoadUIBase(string uiPath, Action<UIBase> callBack)
+        private UIBase LoadUIBase(string uiPath)
         {
             UIBase uiBase = GetUI(uiPath);
 
@@ -75,37 +85,32 @@ namespace Engine
             {
                 //实例化一个预制
 
-                Asset.LoadPrefabAsync(uiPath, delegate (GameObject prefab)
-                {
+                GameObject prefab = Asset.LoadPrefabSync(uiPath);
 
-                    GameObject obj = Instantiate(prefab);
-                    obj.name = GetLastNameFromPath(uiPath);
 
-                    //设置父节点
-                    obj.transform.SetParent(m_UIRoot.transform);
+                GameObject obj = Instantiate(prefab);
+                obj.name = GetLastNameFromPath(uiPath);
 
-                    //得到UIbase
-                    uiBase = obj.GetComponent<UIBase>();
-                    uiBase.id = uiPath;
-                    //添加Canvas
-                    uiBase.AddBaseCanvas();
+                //设置父节点
+                obj.SetParent(m_UIRoot);
 
-                    //重置位置
-                    uiBase.ResetTransform();
-                    //添加一个UI
-                    m_UIList.Add(uiBase);
+                //得到UIbase
+                uiBase = obj.GetComponent<UIBase>();
+                uiBase.id = uiPath;
+                //添加Canvas
+                uiBase.AddBaseCanvas();
 
-                    //设置层级
-                    ResetCanvasDepth(uiBase);
+                //重置位置
+                uiBase.ResetTransform();
+                //添加一个UI
+                m_UIList.Add(uiBase);
 
-                    callBack(uiBase);
+                //设置层级
+                ResetCanvasDepth(uiBase);
 
-                });
+
             }
-            else
-            {
-                callBack(uiBase);
-            }
+            return uiBase;
         }
 
         /// <summary>
@@ -116,26 +121,21 @@ namespace Engine
         public void OpenUI(string uiPath, params object[] args)
         {
             //得到UIbase
-            LoadUIBase(uiPath, delegate (UIBase uiBase)
-            {
-                //已经存在则直接打开
-                if (uiBase.IsInit)
-                {
-                    uiBase.OnEnter(args);
-                    uiBase.OnFreshLanguage();
-                }
-                else
-                {
-                    uiBase.IsInit = true;
+            UIBase uiBase = LoadUIBase(uiPath);
 
-                    uiBase.OnPreload(delegate ()
-                    {
-                        uiBase.OnCreate(args);
-                        uiBase.OnEnter(args);
-                        uiBase.OnFreshLanguage();
-                    });
-                }
-            });
+            //已经存在则直接打开
+            if (uiBase.IsInit)
+            {
+                uiBase.OnEnter(args);
+                uiBase.OnFreshLanguage();
+            }
+            else
+            {
+                uiBase.IsInit = true;
+
+                uiBase.OnCreate(args);
+                uiBase.OnEnter(args);
+            }
         }
 
         /// <summary>
@@ -274,8 +274,8 @@ namespace Engine
                 int depth = (int)uiBase.uiType * 1000 + i * 10;
                 canvas.sortingOrder = depth;
 
-                //重置粒子层级
-                ResetParticleDepth(canvas, depth);
+                ////重置粒子层级
+                //ResetParticleDepth(canvas, depth);
             }
         }
 

@@ -65,8 +65,8 @@ namespace Engine
         public void ResetTransform()
         {
             RectTransform rectTrans = gameObject.GetComponent<RectTransform>();
-            rectTrans.anchorMin = new Vector2(0.0f, 0.0f);
-            rectTrans.anchorMax = new Vector2(1.0f, 1.0f);
+            rectTrans.anchorMin = new Vector2(0.5f, 0.5f);
+            rectTrans.anchorMax = new Vector2(0.5f, 0.5f);
             rectTrans.anchoredPosition3D = new Vector3(0.5f, 0.5f, 0);
             rectTrans.sizeDelta = Vector2.zero;
             rectTrans.anchoredPosition = Vector2.zero;

@@ -39,6 +39,7 @@ namespace Engine
             obj.transform.SetParent(obj2.transform);
             obj.transform.localScale = Vector3.one;
             obj.transform.localPosition = Vector3.zero;
+            obj.transform.localRotation = Quaternion.Euler(Vector3.zero);
         }
 
         public static void SetLocalPos(this GameObject obj, float x, float y)
