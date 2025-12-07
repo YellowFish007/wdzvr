@@ -1,0 +1,1128 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f0b0c553be8edd4682e9180fdd13e37, type: 3}
+  m_Name: I2Languages
+  m_EditorClassIdentifier: 
+  mSource:
+    UserAgreesToHaveItOnTheScene: 0
+    UserAgreesToHaveItInsideThePluginsFolder: 0
+    GoogleLiveSyncIsUptoDate: 1
+    mTerms:
+    - Term: Chapter_Name_300000
+      TermType: 0
+      Description: 
+      Languages:
+      - "\u7B2C1\u7AE0: \u96FE\u68EE\u5951\u7EA6"
+      - "\u7B2C1\u7AE0: \u96FE\u68EE\u5951\u7EA6"
+      - "\u7B2C1\u7AE0: \u96FE\u68EE\u5951\u7EA6"
+      Flags: 000000
+      Languages_Touch: []
+    - Term: Chapter_Name_300001
+      TermType: 0
+      Description: 
+      Languages:
+      - "\u7B2C2\u7AE0: \u661F\u5D16\u9884\u8A00"
+      - "\u7B2C2\u7AE0: \u661F\u5D16\u9884\u8A00"
+      - "\u7B2C2\u7AE0: \u661F\u5D16\u9884\u8A00"
+      Flags: 000000
+      Languages_Touch: []
+    - Term: Chapter_Name_300002
+      TermType: 0
+      Description: 
+      Languages:
+      - "\u7B2C3\u7AE0: \u6708\u5F71\u5BC6\u94A5"
+      - "\u7B2C3\u7AE0: \u6708\u5F71\u5BC6\u94A5"
+      - "\u7B2C3\u7AE0: \u6708\u5F71\u5BC6\u94A5"
+      Flags: 000000
+      Languages_Touch: []
+    - Term: Chapter_Name_300003
+      TermType: 0
+      Description: 
+      Languages:
+      - "\u7B2C1\u7AE0: \u96FE\u68EE\u5951\u7EA6"
+      - "\u7B2C1\u7AE0: \u96FE\u68EE\u5951\u7EA6"
+      - "\u7B2C1\u7AE0: \u96FE\u68EE\u5951\u7EA6"
+      Flags: 000000
+      Languages_Touch: []
+    - Term: Chapter_Name_300004
+      TermType: 0
+      Description: 
+      Languages:
+      - "\u7B2C2\u7AE0: \u661F\u5D16\u9884\u8A00"
+      - "\u7B2C2\u7AE0: \u661F\u5D16\u9884\u8A00"
+      - "\u7B2C2\u7AE0: \u661F\u5D16\u9884\u8A00"
+      Flags: 000000
+      Languages_Touch: []
+    - Term: Chapter_Name_300005
+      TermType: 0
+      Description: 
+      Languages:
+      - "\u7B2C3\u7AE0: \u6708\u5F71\u5BC6\u94A5"
+      - "\u7B2C3\u7AE0: \u6708\u5F71\u5BC6\u94A5"
+      - "\u7B2C3\u7AE0: \u6708\u5F71\u5BC6\u94A5"
+      Flags: 000000
+      Languages_Touch: []
+    - Term: Chapter_Name_300006
+      TermType: 0
+      Description: 
+      Languages:
+      - "\u7B2C1\u7AE0: \u96FE\u68EE\u5951\u7EA6"
+      - "\u7B2C1\u7AE0: \u96FE\u68EE\u5951\u7EA6"
+      - "\u7B2C1\u7AE0: \u96FE\u68EE\u5951\u7EA6"
+      Flags: 000000
+      Languages_Touch: []
+    - Term: Chapter_Name_300007
+      TermType: 0
+      Description: 
+      Languages:
+      - "\u7B2C2\u7AE0: \u661F\u5D16\u9884\u8A00"
+      - "\u7B2C2\u7AE0: \u661F\u5D16\u9884\u8A00"
+      - "\u7B2C2\u7AE0: \u661F\u5D16\u9884\u8A00"
+      Flags: 000000
+      Languages_Touch: []
+    - Term: Chapter_Name_300008
+      TermType: 0
+      Description: 
+      Languages:
+      - "\u7B2C3\u7AE0: \u6708\u5F71\u5BC6\u94A5"
+      - "\u7B2C3\u7AE0: \u6708\u5F71\u5BC6\u94A5"
+      - "\u7B2C3\u7AE0: \u6708\u5F71\u5BC6\u94A5"
+      Flags: 000000
+      Languages_Touch: []
+    - Term: Chapter_Name_300009
+      TermType: 0
+      Description: 
+      Languages:
+      - "\u7B2C1\u7AE0: \u96FE\u68EE\u5951\u7EA6"
+      - "\u7B2C1\u7AE0: \u96FE\u68EE\u5951\u7EA6"
+      - "\u7B2C1\u7AE0: \u96FE\u68EE\u5951\u7EA6"
+      Flags: 000000
+      Languages_Touch: []
+    - Term: Chapter_Name_300010
+      TermType: 0
+      Description: 
+      Languages:
+      - "\u7B2C2\u7AE0: \u661F\u5D16\u9884\u8A00"
+      - "\u7B2C2\u7AE0: \u661F\u5D16\u9884\u8A00"
+      - "\u7B2C2\u7AE0: \u661F\u5D16\u9884\u8A00"
+      Flags: 000000
+      Languages_Touch: []
+    - Term: Chapter_Name_300011
+      TermType: 0
+      Description: 
+      Languages:
+      - "\u7B2C3\u7AE0: \u6708\u5F71\u5BC6\u94A5"
+      - "\u7B2C3\u7AE0: \u6708\u5F71\u5BC6\u94A5"
+      - "\u7B2C3\u7AE0: \u6708\u5F71\u5BC6\u94A5"
+      Flags: 000000
+      Languages_Touch: []
+    - Term: Chapter_Name_300012
+      TermType: 0
+      Description: 
+      Languages:
+      - "\u7B2C1\u7AE0: \u96FE\u68EE\u5951\u7EA6"
+      - "\u7B2C1\u7AE0: \u96FE\u68EE\u5951\u7EA6"
+      - "\u7B2C1\u7AE0: \u96FE\u68EE\u5951\u7EA6"
+      Flags: 000000
+      Languages_Touch: []
+    - Term: Chapter_Name_300013
+      TermType: 0
+      Description: 
+      Languages:
+      - "\u7B2C2\u7AE0: \u661F\u5D16\u9884\u8A00"
+      - "\u7B2C2\u7AE0: \u661F\u5D16\u9884\u8A00"
+      - "\u7B2C2\u7AE0: \u661F\u5D16\u9884\u8A00"
+      Flags: 000000
+      Languages_Touch: []
+    - Term: Chapter_Name_300014
+      TermType: 0
+      Description: 
+      Languages:
+      - "\u7B2C3\u7AE0: \u6708\u5F71\u5BC6\u94A5"
+      - "\u7B2C3\u7AE0: \u6708\u5F71\u5BC6\u94A5"
+      - "\u7B2C3\u7AE0: \u6708\u5F71\u5BC6\u94A5"
+      Flags: 000000
+      Languages_Touch: []
+    - Term: Chapter_Name_300015
+      TermType: 0
+      Description: 
+      Languages:
+      - "\u7B2C1\u7AE0: \u96FE\u68EE\u5951\u7EA6"
+      - "\u7B2C1\u7AE0: \u96FE\u68EE\u5951\u7EA6"
+      - "\u7B2C1\u7AE0: \u96FE\u68EE\u5951\u7EA6"
+      Flags: 000000
+      Languages_Touch: []
+    - Term: Chapter_Name_300016
+      TermType: 0
+      Description: 
+      Languages:
+      - "\u7B2C2\u7AE0: \u661F\u5D16\u9884\u8A00"
+      - "\u7B2C2\u7AE0: \u661F\u5D16\u9884\u8A00"
+      - "\u7B2C2\u7AE0: \u661F\u5D16\u9884\u8A00"
+      Flags: 000000
+      Languages_Touch: []
+    - Term: Chapter_Name_300017
+      TermType: 0
+      Description: 
+      Languages:
+      - "\u7B2C3\u7AE0: \u6708\u5F71\u5BC6\u94A5"
+      - "\u7B2C3\u7AE0: \u6708\u5F71\u5BC6\u94A5"
+      - "\u7B2C3\u7AE0: \u6708\u5F71\u5BC6\u94A5"
+      Flags: 000000
+      Languages_Touch: []
+    - Term: Chapter_Name_300018
+      TermType: 0
+      Description: 
+      Languages:
+      - "\u7B2C1\u7AE0: \u96FE\u68EE\u5951\u7EA6"
+      - "\u7B2C1\u7AE0: \u96FE\u68EE\u5951\u7EA6"
+      - "\u7B2C1\u7AE0: \u96FE\u68EE\u5951\u7EA6"
+      Flags: 000000
+      Languages_Touch: []
+    - Term: Chapter_Name_300019
+      TermType: 0
+      Description: 
+      Languages:
+      - "\u7B2C2\u7AE0: \u661F\u5D16\u9884\u8A00"
+      - "\u7B2C2\u7AE0: \u661F\u5D16\u9884\u8A00"
+      - "\u7B2C2\u7AE0: \u661F\u5D16\u9884\u8A00"
+      Flags: 000000
+      Languages_Touch: []
+    - Term: Chapter_Name_300020
+      TermType: 0
+      Description: 
+      Languages:
+      - "\u7B2C3\u7AE0: \u6708\u5F71\u5BC6\u94A5"
+      - "\u7B2C3\u7AE0: \u6708\u5F71\u5BC6\u94A5"
+      - "\u7B2C3\u7AE0: \u6708\u5F71\u5BC6\u94A5"
+      Flags: 000000
+      Languages_Touch: []
+    - Term: Chapter_Name_300021
+      TermType: 0
+      Description: 
+      Languages:
+      - "\u7B2C1\u7AE0: \u96FE\u68EE\u5951\u7EA6"
+      - "\u7B2C1\u7AE0: \u96FE\u68EE\u5951\u7EA6"
+      - "\u7B2C1\u7AE0: \u96FE\u68EE\u5951\u7EA6"
+      Flags: 000000
+      Languages_Touch: []
+    - Term: Chapter_Name_300022
+      TermType: 0
+      Description: 
+      Languages:
+      - "\u7B2C2\u7AE0: \u661F\u5D16\u9884\u8A00"
+      - "\u7B2C2\u7AE0: \u661F\u5D16\u9884\u8A00"
+      - "\u7B2C2\u7AE0: \u661F\u5D16\u9884\u8A00"
+      Flags: 000000
+      Languages_Touch: []
+    - Term: Chapter_Name_300023
+      TermType: 0
+      Description: 
+      Languages:
+      - "\u7B2C3\u7AE0: \u6708\u5F71\u5BC6\u94A5"
+      - "\u7B2C3\u7AE0: \u6708\u5F71\u5BC6\u94A5"
+      - "\u7B2C3\u7AE0: \u6708\u5F71\u5BC6\u94A5"
+      Flags: 000000
+      Languages_Touch: []
+    - Term: Chapter_Name_300024
+      TermType: 0
+      Description: 
+      Languages:
+      - "\u7B2C1\u7AE0: \u96FE\u68EE\u5951\u7EA6"
+      - "\u7B2C1\u7AE0: \u96FE\u68EE\u5951\u7EA6"
+      - "\u7B2C1\u7AE0: \u96FE\u68EE\u5951\u7EA6"
+      Flags: 000000
+      Languages_Touch: []
+    - Term: Chapter_Name_300025
+      TermType: 0
+      Description: 
+      Languages:
+      - "\u7B2C2\u7AE0: \u661F\u5D16\u9884\u8A00"
+      - "\u7B2C2\u7AE0: \u661F\u5D16\u9884\u8A00"
+      - "\u7B2C2\u7AE0: \u661F\u5D16\u9884\u8A00"
+      Flags: 000000
+      Languages_Touch: []
+    - Term: Chapter_Name_300026
+      TermType: 0
+      Description: 
+      Languages:
+      - "\u7B2C3\u7AE0: \u6708\u5F71\u5BC6\u94A5"
+      - "\u7B2C3\u7AE0: \u6708\u5F71\u5BC6\u94A5"
+      - "\u7B2C3\u7AE0: \u6708\u5F71\u5BC6\u94A5"
+      Flags: 000000
+      Languages_Touch: []
+    - Term: Chapter_Name_300027
+      TermType: 0
+      Description: 
+      Languages:
+      - "\u7B2C1\u7AE0: \u96FE\u68EE\u5951\u7EA6"
+      - "\u7B2C1\u7AE0: \u96FE\u68EE\u5951\u7EA6"
+      - "\u7B2C1\u7AE0: \u96FE\u68EE\u5951\u7EA6"
+      Flags: 000000
+      Languages_Touch: []
+    - Term: Chapter_Name_300028
+      TermType: 0
+      Description: 
+      Languages:
+      - "\u7B2C2\u7AE0: \u661F\u5D16\u9884\u8A00"
+      - "\u7B2C2\u7AE0: \u661F\u5D16\u9884\u8A00"
+      - "\u7B2C2\u7AE0: \u661F\u5D16\u9884\u8A00"
+      Flags: 000000
+      Languages_Touch: []
+    - Term: Chapter_Name_300029
+      TermType: 0
+      Description: 
+      Languages:
+      - "\u7B2C3\u7AE0: \u6708\u5F71\u5BC6\u94A5"
+      - "\u7B2C3\u7AE0: \u6708\u5F71\u5BC6\u94A5"
+      - "\u7B2C3\u7AE0: \u6708\u5F71\u5BC6\u94A5"
+      Flags: 000000
+      Languages_Touch: []
+    - Term: Chapter_Name_300030
+      TermType: 0
+      Description: 
+      Languages:
+      - "\u7B2C1\u7AE0: \u96FE\u68EE\u5951\u7EA6"
+      - "\u7B2C1\u7AE0: \u96FE\u68EE\u5951\u7EA6"
+      - "\u7B2C1\u7AE0: \u96FE\u68EE\u5951\u7EA6"
+      Flags: 000000
+      Languages_Touch: []
+    - Term: Chapter_Name_300031
+      TermType: 0
+      Description: 
+      Languages:
+      - "\u7B2C2\u7AE0: \u661F\u5D16\u9884\u8A00"
+      - "\u7B2C2\u7AE0: \u661F\u5D16\u9884\u8A00"
+      - "\u7B2C2\u7AE0: \u661F\u5D16\u9884\u8A00"
+      Flags: 000000
+      Languages_Touch: []
+    - Term: Chapter_Name_300032
+      TermType: 0
+      Description: 
+      Languages:
+      - "\u7B2C3\u7AE0: \u6708\u5F71\u5BC6\u94A5"
+      - "\u7B2C3\u7AE0: \u6708\u5F71\u5BC6\u94A5"
+      - "\u7B2C3\u7AE0: \u6708\u5F71\u5BC6\u94A5"
+      Flags: 000000
+      Languages_Touch: []
+    - Term: ConditionType_ChapterComplete
+      TermType: 0
+      Description: 
+      Languages:
+      - "\u5B8C\u6210\u7AE0\u8282{0}"
+      - "\u5B8C\u6210\u7AE0\u8282{0}"
+      - "\u5B8C\u6210\u7AE0\u8282{0}"
+      Flags: 000000
+      Languages_Touch: []
+    - Term: ConditionType_RalationLevel
+      TermType: 0
+      Description: 
+      Languages:
+      - "\u5173\u7CFB\u7A81\u7834\u81F3\u201C{0}\u201D"
+      - "\u5173\u7CFB\u7A81\u7834\u81F3\u201C{0}\u201D"
+      - "\u5173\u7CFB\u7A81\u7834\u81F3\u201C{0}\u201D"
+      Flags: 000000
+      Languages_Touch: []
+    - Term: ConditionType_RoleLevel
+      TermType: 0
+      Description: 
+      Languages:
+      - "\u89D2\u8272\u7B49\u7EA7\u8FBE\u5230{0}\u7EA7"
+      - "\u89D2\u8272\u7B49\u7EA7\u8FBE\u5230{0}\u7EA7"
+      - "\u89D2\u8272\u7B49\u7EA7\u8FBE\u5230{0}\u7EA7"
+      Flags: 000000
+      Languages_Touch: []
+    - Term: DateChapterName_100001
+      TermType: 0
+      Description: 
+      Languages:
+      - "\u521D\u89C1"
+      - "\u521D\u89C1"
+      - "\u521D\u89C1"
+      Flags: 000000
+      Languages_Touch: []
+    - Term: DateChapterName_100002
+      TermType: 0
+      Description: 
+      Languages:
+      - "\u60B8\u52A8"
+      - "\u60B8\u52A8"
+      - "\u60B8\u52A8"
+      Flags: 000000
+      Languages_Touch: []
+    - Term: DateChapterName_100003
+      TermType: 0
+      Description: 
+      Languages:
+      - "\u96BE\u8A00\u4E4B\u9690"
+      - "\u96BE\u8A00\u4E4B\u9690"
+      - "\u96BE\u8A00\u4E4B\u9690"
+      Flags: 000000
+      Languages_Touch: []
+    - Term: DateChapterName_100004
+      TermType: 0
+      Description: 
+      Languages:
+      - "\u7EFD\u653E"
+      - "\u7EFD\u653E"
+      - "\u7EFD\u653E"
+      Flags: 000000
+      Languages_Touch: []
+    - Term: DateChapterName_100101
+      TermType: 0
+      Description: 
+      Languages:
+      - "\u5C0F\u5FC3\u601D"
+      - "\u5C0F\u5FC3\u601D"
+      - "\u5C0F\u5FC3\u601D"
+      Flags: 000000
+      Languages_Touch: []
+    - Term: DateChapterName_100102
+      TermType: 0
+      Description: 
+      Languages:
+      - "\u5C0F\u5FC3\u601D"
+      - "\u5C0F\u5FC3\u601D"
+      - "\u5C0F\u5FC3\u601D"
+      Flags: 000000
+      Languages_Touch: []
+    - Term: DateChapterName_100103
+      TermType: 0
+      Description: 
+      Languages:
+      - "\u5C0F\u5FC3\u601D"
+      - "\u5C0F\u5FC3\u601D"
+      - "\u5C0F\u5FC3\u601D"
+      Flags: 000000
+      Languages_Touch: []
+    - Term: DateChapterName_100104
+      TermType: 0
+      Description: 
+      Languages:
+      - "\u5C0F\u5FC3\u601D"
+      - "\u5C0F\u5FC3\u601D"
+      - "\u5C0F\u5FC3\u601D"
+      Flags: 000000
+      Languages_Touch: []
+    - Term: DateChapterName_100201
+      TermType: 0
+      Description: 
+      Languages:
+      - "\u5C0F\u5FC3\u601D"
+      - "\u5C0F\u5FC3\u601D"
+      - "\u5C0F\u5FC3\u601D"
+      Flags: 000000
+      Languages_Touch: []
+    - Term: DateChapterName_100202
+      TermType: 0
+      Description: 
+      Languages:
+      - "\u5C0F\u5FC3\u601D"
+      - "\u5C0F\u5FC3\u601D"
+      - "\u5C0F\u5FC3\u601D"
+      Flags: 000000
+      Languages_Touch: []
+    - Term: DateChapterName_100203
+      TermType: 0
+      Description: 
+      Languages:
+      - "\u5C0F\u5FC3\u601D"
+      - "\u5C0F\u5FC3\u601D"
+      - "\u5C0F\u5FC3\u601D"
+      Flags: 000000
+      Languages_Touch: []
+    - Term: DateChapterName_100204
+      TermType: 0
+      Description: 
+      Languages:
+      - "\u5C0F\u5FC3\u601D"
+      - "\u5C0F\u5FC3\u601D"
+      - "\u5C0F\u5FC3\u601D"
+      Flags: 000000
+      Languages_Touch: []
+    - Term: DateChapterName_100301
+      TermType: 0
+      Description: 
+      Languages:
+      - "\u5C0F\u5FC3\u601D"
+      - "\u5C0F\u5FC3\u601D"
+      - "\u5C0F\u5FC3\u601D"
+      Flags: 000000
+      Languages_Touch: []
+    - Term: DateChapterName_100302
+      TermType: 0
+      Description: 
+      Languages:
+      - "\u5C0F\u5FC3\u601D"
+      - "\u5C0F\u5FC3\u601D"
+      - "\u5C0F\u5FC3\u601D"
+      Flags: 000000
+      Languages_Touch: []
+    - Term: DateChapterName_100303
+      TermType: 0
+      Description: 
+      Languages:
+      - "\u5C0F\u5FC3\u601D"
+      - "\u5C0F\u5FC3\u601D"
+      - "\u5C0F\u5FC3\u601D"
+      Flags: 000000
+      Languages_Touch: []
+    - Term: DateChapterName_100304
+      TermType: 0
+      Description: 
+      Languages:
+      - "\u5C0F\u5FC3\u601D"
+      - "\u5C0F\u5FC3\u601D"
+      - "\u5C0F\u5FC3\u601D"
+      Flags: 000000
+      Languages_Touch: []
+    - Term: DateChapterName_100401
+      TermType: 0
+      Description: 
+      Languages:
+      - "\u5C0F\u5FC3\u601D"
+      - "\u5C0F\u5FC3\u601D"
+      - "\u5C0F\u5FC3\u601D"
+      Flags: 000000
+      Languages_Touch: []
+    - Term: DateChapterName_100402
+      TermType: 0
+      Description: 
+      Languages:
+      - "\u5C0F\u5FC3\u601D"
+      - "\u5C0F\u5FC3\u601D"
+      - "\u5C0F\u5FC3\u601D"
+      Flags: 000000
+      Languages_Touch: []
+    - Term: DateChapterName_100403
+      TermType: 0
+      Description: 
+      Languages:
+      - "\u5C0F\u5FC3\u601D"
+      - "\u5C0F\u5FC3\u601D"
+      - "\u5C0F\u5FC3\u601D"
+      Flags: 000000
+      Languages_Touch: []
+    - Term: DateChapterName_100404
+      TermType: 0
+      Description: 
+      Languages:
+      - "\u5C0F\u5FC3\u601D"
+      - "\u5C0F\u5FC3\u601D"
+      - "\u5C0F\u5FC3\u601D"
+      Flags: 000000
+      Languages_Touch: []
+    - Term: DateChapterName_100501
+      TermType: 0
+      Description: 
+      Languages:
+      - "\u5C0F\u5FC3\u601D"
+      - "\u5C0F\u5FC3\u601D"
+      - "\u5C0F\u5FC3\u601D"
+      Flags: 000000
+      Languages_Touch: []
+    - Term: DateChapterName_100502
+      TermType: 0
+      Description: 
+      Languages:
+      - "\u5C0F\u5FC3\u601D"
+      - "\u5C0F\u5FC3\u601D"
+      - "\u5C0F\u5FC3\u601D"
+      Flags: 000000
+      Languages_Touch: []
+    - Term: DateChapterName_100503
+      TermType: 0
+      Description: 
+      Languages:
+      - "\u5C0F\u5FC3\u601D"
+      - "\u5C0F\u5FC3\u601D"
+      - "\u5C0F\u5FC3\u601D"
+      Flags: 000000
+      Languages_Touch: []
+    - Term: DateChapterName_100504
+      TermType: 0
+      Description: 
+      Languages:
+      - "\u5C0F\u5FC3\u601D"
+      - "\u5C0F\u5FC3\u601D"
+      - "\u5C0F\u5FC3\u601D"
+      Flags: 000000
+      Languages_Touch: []
+    - Term: DateChapterName_100601
+      TermType: 0
+      Description: 
+      Languages:
+      - "\u5C0F\u5FC3\u601D"
+      - "\u5C0F\u5FC3\u601D"
+      - "\u5C0F\u5FC3\u601D"
+      Flags: 000000
+      Languages_Touch: []
+    - Term: DateChapterName_100602
+      TermType: 0
+      Description: 
+      Languages:
+      - "\u5C0F\u5FC3\u601D"
+      - "\u5C0F\u5FC3\u601D"
+      - "\u5C0F\u5FC3\u601D"
+      Flags: 000000
+      Languages_Touch: []
+    - Term: DateChapterName_100603
+      TermType: 0
+      Description: 
+      Languages:
+      - "\u5C0F\u5FC3\u601D"
+      - "\u5C0F\u5FC3\u601D"
+      - "\u5C0F\u5FC3\u601D"
+      Flags: 000000
+      Languages_Touch: []
+    - Term: DateChapterName_100604
+      TermType: 0
+      Description: 
+      Languages:
+      - "\u5C0F\u5FC3\u601D"
+      - "\u5C0F\u5FC3\u601D"
+      - "\u5C0F\u5FC3\u601D"
+      Flags: 000000
+      Languages_Touch: []
+    - Term: DateChapterName_100701
+      TermType: 0
+      Description: 
+      Languages:
+      - "\u5C0F\u5FC3\u601D"
+      - "\u5C0F\u5FC3\u601D"
+      - "\u5C0F\u5FC3\u601D"
+      Flags: 000000
+      Languages_Touch: []
+    - Term: DateChapterName_100702
+      TermType: 0
+      Description: 
+      Languages:
+      - "\u5C0F\u5FC3\u601D"
+      - "\u5C0F\u5FC3\u601D"
+      - "\u5C0F\u5FC3\u601D"
+      Flags: 000000
+      Languages_Touch: []
+    - Term: DateChapterName_100703
+      TermType: 0
+      Description: 
+      Languages:
+      - "\u5C0F\u5FC3\u601D"
+      - "\u5C0F\u5FC3\u601D"
+      - "\u5C0F\u5FC3\u601D"
+      Flags: 000000
+      Languages_Touch: []
+    - Term: DateChapterName_100704
+      TermType: 0
+      Description: 
+      Languages:
+      - "\u5C0F\u5FC3\u601D"
+      - "\u5C0F\u5FC3\u601D"
+      - "\u5C0F\u5FC3\u601D"
+      Flags: 000000
+      Languages_Touch: []
+    - Term: DateChapterName_100801
+      TermType: 0
+      Description: 
+      Languages:
+      - "\u5C0F\u5FC3\u601D"
+      - "\u5C0F\u5FC3\u601D"
+      - "\u5C0F\u5FC3\u601D"
+      Flags: 000000
+      Languages_Touch: []
+    - Term: DateChapterName_100802
+      TermType: 0
+      Description: 
+      Languages:
+      - "\u5C0F\u5FC3\u601D"
+      - "\u5C0F\u5FC3\u601D"
+      - "\u5C0F\u5FC3\u601D"
+      Flags: 000000
+      Languages_Touch: []
+    - Term: DateChapterName_100803
+      TermType: 0
+      Description: 
+      Languages:
+      - "\u5C0F\u5FC3\u601D"
+      - "\u5C0F\u5FC3\u601D"
+      - "\u5C0F\u5FC3\u601D"
+      Flags: 000000
+      Languages_Touch: []
+    - Term: DateChapterName_100804
+      TermType: 0
+      Description: 
+      Languages:
+      - "\u5C0F\u5FC3\u601D"
+      - "\u5C0F\u5FC3\u601D"
+      - "\u5C0F\u5FC3\u601D"
+      Flags: 000000
+      Languages_Touch: []
+    - Term: DateChapterName_100901
+      TermType: 0
+      Description: 
+      Languages:
+      - "\u5C0F\u5FC3\u601D"
+      - "\u5C0F\u5FC3\u601D"
+      - "\u5C0F\u5FC3\u601D"
+      Flags: 000000
+      Languages_Touch: []
+    - Term: DateChapterName_100902
+      TermType: 0
+      Description: 
+      Languages:
+      - "\u5C0F\u5FC3\u601D"
+      - "\u5C0F\u5FC3\u601D"
+      - "\u5C0F\u5FC3\u601D"
+      Flags: 000000
+      Languages_Touch: []
+    - Term: DateChapterName_100903
+      TermType: 0
+      Description: 
+      Languages:
+      - "\u5C0F\u5FC3\u601D"
+      - "\u5C0F\u5FC3\u601D"
+      - "\u5C0F\u5FC3\u601D"
+      Flags: 000000
+      Languages_Touch: []
+    - Term: DateChapterName_100904
+      TermType: 0
+      Description: 
+      Languages:
+      - "\u5C0F\u5FC3\u601D"
+      - "\u5C0F\u5FC3\u601D"
+      - "\u5C0F\u5FC3\u601D"
+      Flags: 000000
+      Languages_Touch: []
+    - Term: DateChapterName_101001
+      TermType: 0
+      Description: 
+      Languages:
+      - "\u5C0F\u5FC3\u601D"
+      - "\u5C0F\u5FC3\u601D"
+      - "\u5C0F\u5FC3\u601D"
+      Flags: 000000
+      Languages_Touch: []
+    - Term: DateChapterName_101002
+      TermType: 0
+      Description: 
+      Languages:
+      - "\u5C0F\u5FC3\u601D"
+      - "\u5C0F\u5FC3\u601D"
+      - "\u5C0F\u5FC3\u601D"
+      Flags: 000000
+      Languages_Touch: []
+    - Term: DateChapterName_101003
+      TermType: 0
+      Description: 
+      Languages:
+      - "\u5C0F\u5FC3\u601D"
+      - "\u5C0F\u5FC3\u601D"
+      - "\u5C0F\u5FC3\u601D"
+      Flags: 000000
+      Languages_Touch: []
+    - Term: DateChapterName_101004
+      TermType: 0
+      Description: 
+      Languages:
+      - "\u5C0F\u5FC3\u601D"
+      - "\u5C0F\u5FC3\u601D"
+      - "\u5C0F\u5FC3\u601D"
+      Flags: 000000
+      Languages_Touch: []
+    - Term: ItemName_200001
+      TermType: 0
+      Description: 
+      Languages:
+      - "\u73AB\u7470"
+      - "\u73AB\u7470"
+      - "\u73AB\u7470"
+      Flags: 000000
+      Languages_Touch: []
+    - Term: ItemName_200002
+      TermType: 0
+      Description: 
+      Languages:
+      - "\u53E3\u7EA2"
+      - "\u53E3\u7EA2"
+      - "\u53E3\u7EA2"
+      Flags: 000000
+      Languages_Touch: []
+    - Term: ItemName_200003
+      TermType: 0
+      Description: 
+      Languages:
+      - "\u94BB\u6212"
+      - "\u94BB\u6212"
+      - "\u94BB\u6212"
+      Flags: 000000
+      Languages_Touch: []
+    - Term: ItemName_200004
+      TermType: 0
+      Description: 
+      Languages:
+      - "\u7EB2\u624B(\u788E\u7247)"
+      - "\u7EB2\u624B(\u788E\u7247)"
+      - "\u7EB2\u624B(\u788E\u7247)"
+      Flags: 000000
+      Languages_Touch: []
+    - Term: ItemName_200005
+      TermType: 0
+      Description: 
+      Languages:
+      - "\u9879\u5708"
+      - "\u9879\u5708"
+      - "\u9879\u5708"
+      Flags: 000000
+      Languages_Touch: []
+    - Term: ItemName_200006
+      TermType: 0
+      Description: 
+      Languages:
+      - "\u9879\u94FE"
+      - "\u9879\u94FE"
+      - "\u9879\u94FE"
+      Flags: 000000
+      Languages_Touch: []
+    - Term: ItemName_200007
+      TermType: 0
+      Description: 
+      Languages:
+      - "\u624B\u8868"
+      - "\u624B\u8868"
+      - "\u624B\u8868"
+      Flags: 000000
+      Languages_Touch: []
+    - Term: ItemName_200008
+      TermType: 0
+      Description: 
+      Languages:
+      - "\u5DE7\u514B\u529B"
+      - "\u5DE7\u514B\u529B"
+      - "\u5DE7\u514B\u529B"
+      Flags: 000000
+      Languages_Touch: []
+    - Term: ItemName_200009
+      TermType: 0
+      Description: 
+      Languages:
+      - "\u53D1\u9970"
+      - "\u53D1\u9970"
+      - "\u53D1\u9970"
+      Flags: 000000
+      Languages_Touch: []
+    - Term: ItemName_200010
+      TermType: 0
+      Description: 
+      Languages:
+      - "\u630E\u5305"
+      - "\u630E\u5305"
+      - "\u630E\u5305"
+      Flags: 000000
+      Languages_Touch: []
+    - Term: ItemName_200011
+      TermType: 0
+      Description: 
+      Languages:
+      - "\u89D2\u82722\u788E\u7247"
+      - "\u89D2\u82722\u788E\u7247"
+      - "\u89D2\u82722\u788E\u7247"
+      Flags: 000000
+      Languages_Touch: []
+    - Term: ItemName_200012
+      TermType: 0
+      Description: 
+      Languages:
+      - "\u89D2\u82723\u788E\u7247"
+      - "\u89D2\u82723\u788E\u7247"
+      - "\u89D2\u82723\u788E\u7247"
+      Flags: 000000
+      Languages_Touch: []
+    - Term: ItemName_200013
+      TermType: 0
+      Description: 
+      Languages:
+      - "\u89D2\u82724\u788E\u7247"
+      - "\u89D2\u82724\u788E\u7247"
+      - "\u89D2\u82724\u788E\u7247"
+      Flags: 000000
+      Languages_Touch: []
+    - Term: ItemName_200014
+      TermType: 0
+      Description: 
+      Languages:
+      - "\u89D2\u82725\u788E\u7247"
+      - "\u89D2\u82725\u788E\u7247"
+      - "\u89D2\u82725\u788E\u7247"
+      Flags: 000000
+      Languages_Touch: []
+    - Term: ItemName_200015
+      TermType: 0
+      Description: 
+      Languages:
+      - "\u89D2\u82726\u788E\u7247"
+      - "\u89D2\u82726\u788E\u7247"
+      - "\u89D2\u82726\u788E\u7247"
+      Flags: 000000
+      Languages_Touch: []
+    - Term: ItemName_200016
+      TermType: 0
+      Description: 
+      Languages:
+      - "\u89D2\u82727\u788E\u7247"
+      - "\u89D2\u82727\u788E\u7247"
+      - "\u89D2\u82727\u788E\u7247"
+      Flags: 000000
+      Languages_Touch: []
+    - Term: ItemName_200017
+      TermType: 0
+      Description: 
+      Languages:
+      - "\u89D2\u82728\u788E\u7247"
+      - "\u89D2\u82728\u788E\u7247"
+      - "\u89D2\u82728\u788E\u7247"
+      Flags: 000000
+      Languages_Touch: []
+    - Term: ItemName_200018
+      TermType: 0
+      Description: 
+      Languages:
+      - "\u89D2\u82729\u788E\u7247"
+      - "\u89D2\u82729\u788E\u7247"
+      - "\u89D2\u82729\u788E\u7247"
+      Flags: 000000
+      Languages_Touch: []
+    - Term: ItemName_200019
+      TermType: 0
+      Description: 
+      Languages:
+      - "\u89D2\u827210\u788E\u7247"
+      - "\u89D2\u827210\u788E\u7247"
+      - "\u89D2\u827210\u788E\u7247"
+      Flags: 000000
+      Languages_Touch: []
+    - Term: ItemName_200020
+      TermType: 0
+      Description: 
+      Languages:
+      - "\u89D2\u827211\u788E\u7247"
+      - "\u89D2\u827211\u788E\u7247"
+      - "\u89D2\u827211\u788E\u7247"
+      Flags: 000000
+      Languages_Touch: []
+    - Term: RalationLevelType_1
+      TermType: 0
+      Description: 
+      Languages:
+      - "\u666E\u901A"
+      - "\u666E\u901A"
+      - "\u666E\u901A"
+      Flags: 000000
+      Languages_Touch: []
+    - Term: RalationLevelType_2
+      TermType: 0
+      Description: 
+      Languages:
+      - "\u4EB2\u8FD1"
+      - "\u4EB2\u8FD1"
+      - "\u4EB2\u8FD1"
+      Flags: 000000
+      Languages_Touch: []
+    - Term: RalationLevelType_3
+      TermType: 0
+      Description: 
+      Languages:
+      - "\u597D\u611F"
+      - "\u597D\u611F"
+      - "\u597D\u611F"
+      Flags: 000000
+      Languages_Touch: []
+    - Term: RalationLevelType_4
+      TermType: 0
+      Description: 
+      Languages:
+      - "\u66A7\u6627"
+      - "\u66A7\u6627"
+      - "\u66A7\u6627"
+      Flags: 000000
+      Languages_Touch: []
+    - Term: RalationLevelType_5
+      TermType: 0
+      Description: 
+      Languages:
+      - "\u7231\u6155"
+      - "\u7231\u6155"
+      - "\u7231\u6155"
+      Flags: 000000
+      Languages_Touch: []
+    - Term: RalationLevelType_6
+      TermType: 0
+      Description: 
+      Languages:
+      - "\u544A\u767D"
+      - "\u544A\u767D"
+      - "\u544A\u767D"
+      Flags: 000000
+      Languages_Touch: []
+    - Term: Role_Name_400000
+      TermType: 0
+      Description: 
+      Languages:
+      - "<size=170>\u5343</size>\u624B\u7EB2\u624B"
+      - "<size=170>\u5343</size>\u624B\u7EB2\u624B"
+      - "<size=170>\u5343</size>\u624B\u7EB2\u624B"
+      Flags: 000000
+      Languages_Touch: []
+    - Term: Role_Name_400001
+      TermType: 0
+      Description: 
+      Languages:
+      - "<size=170>\u65E5</size>\u5411\u96CF\u7530"
+      - "<size=170>\u65E5</size>\u5411\u96CF\u7530"
+      - "<size=170>\u65E5</size>\u5411\u96CF\u7530"
+      Flags: 000000
+      Languages_Touch: []
+    - Term: Role_Name_400002
+      TermType: 0
+      Description: 
+      Languages:
+      - "<size=170>\u6625</size>\u91CE\u6A31"
+      - "<size=170>\u6625</size>\u91CE\u6A31"
+      - "<size=170>\u6625</size>\u91CE\u6A31"
+      Flags: 000000
+      Languages_Touch: []
+    - Term: Role_Name_400003
+      TermType: 0
+      Description: 
+      Languages:
+      - "<size=170>\u5C71</size>\u4E2D\u4E95\u91CE"
+      - "<size=170>\u5C71</size>\u4E2D\u4E95\u91CE"
+      - "<size=170>\u5C71</size>\u4E2D\u4E95\u91CE"
+      Flags: 000000
+      Languages_Touch: []
+    - Term: Role_Name_400004
+      TermType: 0
+      Description: 
+      Languages:
+      - "<size=170>\u7076</size>\u95E8\u5F25\u8C46\u5B50"
+      - "<size=170>\u7076</size>\u95E8\u5F25\u8C46\u5B50"
+      - "<size=170>\u7076</size>\u95E8\u5F25\u8C46\u5B50"
+      Flags: 000000
+      Languages_Touch: []
+    - Term: Role_Name_400005
+      TermType: 0
+      Description: 
+      Languages:
+      - "<size=170>\u7518</size>\u9732\u5BFA\u871C\u7483"
+      - "<size=170>\u7518</size>\u9732\u5BFA\u871C\u7483"
+      - "<size=170>\u7518</size>\u9732\u5BFA\u871C\u7483"
+      Flags: 000000
+      Languages_Touch: []
+    - Term: Role_Name_400006
+      TermType: 0
+      Description: 
+      Languages:
+      - "<size=170>\u5815</size>\u59EC"
+      - "<size=170>\u5815</size>\u59EC"
+      - "<size=170>\u5815</size>\u59EC"
+      Flags: 000000
+      Languages_Touch: []
+    - Term: Role_Name_400007
+      TermType: 0
+      Description: 
+      Languages:
+      - "<size=170>\u8774</size>\u8776\u5FCD"
+      - "<size=170>\u8774</size>\u8776\u5FCD"
+      - "<size=170>\u8774</size>\u8776\u5FCD"
+      Flags: 000000
+      Languages_Touch: []
+    - Term: Role_Name_400008
+      TermType: 0
+      Description: 
+      Languages:
+      - "<size=170>\u8BFA</size>\u8587"
+      - "<size=170>\u8BFA</size>\u8587"
+      - "<size=170>\u8BFA</size>\u8587"
+      Flags: 000000
+      Languages_Touch: []
+    - Term: Role_Name_400009
+      TermType: 0
+      Description: 
+      Languages:
+      - "<size=170>\u827E</size>\u7433"
+      - "<size=170>\u827E</size>\u7433"
+      - "<size=170>\u827E</size>\u7433"
+      Flags: 000000
+      Languages_Touch: []
+    - Term: Role_Name_400010
+      TermType: 0
+      Description: 
+      Languages:
+      - "<size=170>\u5343</size>\u7FBD"
+      - "<size=170>\u5343</size>\u7FBD"
+      - "<size=170>\u5343</size>\u7FBD"
+      Flags: 000000
+      Languages_Touch: []
+    - Term: Tips_NotEnoughItems
+      TermType: 0
+      Description: 
+      Languages:
+      - "\u9053\u5177\u6570\u91CF\u4E0D\u8DB3"
+      - "\u9053\u5177\u6570\u91CF\u4E0D\u8DB3"
+      - "\u9053\u5177\u6570\u91CF\u4E0D\u8DB3"
+      Flags: 000000
+      Languages_Touch: []
+    - Term: UnlockTitle_Text
+      TermType: 0
+      Description: 
+      Languages:
+      - "\u89E3\u9501\u6761\u4EF6{0}\uFF1A"
+      - "\u89E3\u9501\u6761\u4EF6{0}\uFF1A"
+      - "\u89E3\u9501\u6761\u4EF6{0}\uFF1A"
+      Flags: 000000
+      Languages_Touch: []
+    - Term: login
+      TermType: 0
+      Description: 
+      Languages:
+      - "\u767B\u9646"
+      - login
+      - "\u30ED\u30B0\u30A4\u30F3"
+      Flags: 000000
+      Languages_Touch: []
+    CaseInsensitiveTerms: 0
+    OnMissingTranslation: 1
+    mTerm_AppName: 
+    mLanguages:
+    - Name: Chinese
+      Code: zh
+      Flags: 0
+    - Name: English
+      Code: en
+      Flags: 0
+    - Name: Japanese
+      Code: ja
+      Flags: 0
+    IgnoreDeviceLanguage: 0
+    _AllowUnloadingLanguages: 0
+    Google_WebServiceURL: 
+    Google_SpreadsheetKey: 
+    Google_SpreadsheetName: 
+    Google_LastUpdatedVersion: 
+    Google_Password: change_this
+    GoogleUpdateFrequency: 3
+    GoogleInEditorCheckFrequency: 2
+    GoogleUpdateSynchronization: 1
+    GoogleUpdateDelay: 0
+    Assets: []
+    Spreadsheet_LocalFileName: 
+    Spreadsheet_LocalCSVSeparator: ','
+    Spreadsheet_LocalCSVEncoding: utf-8
+    Spreadsheet_SpecializationAsRows: 1
