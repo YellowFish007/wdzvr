@@ -20,10 +20,9 @@ public class GameManager : SingletonGameObject<GameManager>
         Debug.Log("InitGame: InitTables...");
 
         InitTables();
-
-        //UIManager.Instance.Init();
-
-        LoadSceneAsync<Scene1001>();
+        
+        //LoadSceneAsync<Scene1001>();
+        UnityEngine.SceneManagement.SceneManager.LoadScene("SceneTest");
     }
 
     /// <summary>

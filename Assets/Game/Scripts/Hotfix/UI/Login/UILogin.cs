@@ -5,8 +5,5 @@ using UnityEngine;
 
 public class UILogin : UIBase
 {
-    public override void OnCreate(params object[] args)
-    {
-        base.OnCreate(args);
-    }
+    public override string Name => "UILogin";
 }

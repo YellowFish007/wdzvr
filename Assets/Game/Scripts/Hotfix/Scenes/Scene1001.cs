@@ -10,6 +10,5 @@ public class Scene1001 : SceneBase
     public override void OnCreate(params object[] args)
     {        
         //UIManager.Instance.InitUIRoot(uiRoot);
-        UIManager.Instance.OpenUI(UIConfig.Login);
     }
 }
