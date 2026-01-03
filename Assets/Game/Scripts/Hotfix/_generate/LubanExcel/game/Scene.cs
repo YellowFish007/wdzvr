@@ -21,7 +21,8 @@ public sealed partial class Scene : Luban.BeanBase
         { if(!_buf["desc"].IsString) { throw new SerializationException(); }  Desc = _buf["desc"]; }
         { if(!_buf["name_id"].IsString) { throw new SerializationException(); }  NameId = _buf["name_id"]; }
         { if(!_buf["scene_res"].IsString) { throw new SerializationException(); }  SceneRes = _buf["scene_res"]; }
-        { if(!_buf["item_icon"].IsString) { throw new SerializationException(); }  ItemIcon = _buf["item_icon"]; }
+        { if(!_buf["icon"].IsString) { throw new SerializationException(); }  Icon = _buf["icon"]; }
+        { if(!_buf["video"].IsString) { throw new SerializationException(); }  Video = _buf["video"]; }
     }
 
     public static Scene DeserializeScene(JSONNode _buf)
@@ -42,13 +43,17 @@ public sealed partial class Scene : Luban.BeanBase
     /// </summary>
     public readonly string NameId;
     /// <summary>
-    /// 物品描述
+    /// 场景名字
     /// </summary>
     public readonly string SceneRes;
     /// <summary>
-    /// 物品图标
+    /// 场景图标
     /// </summary>
-    public readonly string ItemIcon;
+    public readonly string Icon;
+    /// <summary>
+    /// 场景图标
+    /// </summary>
+    public readonly string Video;
    
     public const int __ID__ = -462478480;
     public override int GetTypeId() => __ID__;
@@ -64,7 +69,8 @@ public sealed partial class Scene : Luban.BeanBase
         + "desc:" + Desc + ","
         + "nameId:" + NameId + ","
         + "sceneRes:" + SceneRes + ","
-        + "itemIcon:" + ItemIcon + ","
+        + "icon:" + Icon + ","
+        + "video:" + Video + ","
         + "}";
     }
 }
