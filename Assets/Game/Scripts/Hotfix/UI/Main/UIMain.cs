@@ -28,19 +28,19 @@ public class UIMain : UIBase
 
     private void Awake()
     {
-        userInfoBtn.AddOnPointerSoundClick(OnBtnClick);
-        friendBtn.AddOnPointerSoundClick(OnBtnClick);
-        shopBtn.AddOnPointerSoundClick(OnBtnClick);
-        sceneSettingBtn.AddOnPointerSoundClick(OnBtnClick);
-        bagBtn.AddOnPointerSoundClick(OnBtnClick);
-        skillBtn.AddOnPointerSoundClick(OnBtnClick);
-        joinRoomBtn.AddOnPointerSoundClick(OnBtnClick);
-        createSceneBtn.AddOnPointerSoundClick(OnBtnClick);
-        joinSceneBtn.AddOnPointerSoundClick(OnBtnClick);
-        hallSceneBtn.AddOnPointerSoundClick(OnBtnClick);
-        backMainSceneBtn.AddOnPointerSoundClick(OnBtnClick);
+        userInfoBtn.AddOnPointerClick(OnBtnClick);
+        friendBtn.AddOnPointerClick(OnBtnClick);
+        shopBtn.AddOnPointerClick(OnBtnClick);
+        sceneSettingBtn.AddOnPointerClick(OnBtnClick);
+        bagBtn.AddOnPointerClick(OnBtnClick);
+        skillBtn.AddOnPointerClick(OnBtnClick);
+        joinRoomBtn.AddOnPointerClick(OnBtnClick);
+        createSceneBtn.AddOnPointerClick(OnBtnClick);
+        joinSceneBtn.AddOnPointerClick(OnBtnClick);
+        hallSceneBtn.AddOnPointerClick(OnBtnClick);
+        backMainSceneBtn.AddOnPointerClick(OnBtnClick);
 
-        settingBtn.AddOnPointerSoundClick(OnBtnClick);
+        settingBtn.AddOnPointerClick(OnBtnClick);
     }
 
     private void OnBtnClick(Button btn)

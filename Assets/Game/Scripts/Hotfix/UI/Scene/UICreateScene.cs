@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Engine;
 using SuperScrollView;
+using TMPro;
 using UnityEngine;
 using UnityTimer;
 
@@ -11,13 +12,19 @@ public class UICreateScene : UIBase
 
     public LoopListView2 sceneListView;
 
+    public TMP_Text debugText;
+
     public override void OnOpen()
     {
-        this.AttachTimer(1.0f, delegate () {
+        this.AttachTimer(1.0f, delegate ()
+        {
+
+            debugText.text = Excel.GetSceneDataList().Count + "";
 
             sceneListView.InitListView(0, OnGetItemByIndex);
             sceneListView.SetListItemCount(Excel.GetSceneDataList().Count);
             sceneListView.RefreshAllShownItem();
+
         });
     }
 

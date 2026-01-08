@@ -40,7 +40,7 @@ namespace RbEngine
             return AddEventEntry(btn, EventTriggerType.PointerClick, callFunc);
         }
 
-        public static EventTrigger.Entry AddOnPointerSoundClick(this Button btn, Action<Button> callFunc,string audioName = "Common/sound_com_click")
+        public static EventTrigger.Entry AddOnPointerSoundClick(this Button btn, Action<Button> callFunc,string audioName = "sound_click")
         {
             return AddEventEntry(btn, EventTriggerType.PointerClick, delegate (Button btn)
             {

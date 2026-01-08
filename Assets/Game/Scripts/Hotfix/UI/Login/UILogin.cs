@@ -14,7 +14,7 @@ public class UILogin : UIBase
 
     private void Awake()
     {
-        loginBtn.AddOnPointerSoundClick(OnBtnClick);
+        loginBtn.AddOnPointerClick(OnBtnClick);
     }
 
     private void OnBtnClick(Button btn)
@@ -27,7 +27,8 @@ public class UILogin : UIBase
 
     public override void OnOpen()
     {
-
+        string icon = Excel.GetSceneIcon(1001);
+        Debug.Log("UILogin icon : " + icon);
     }
 
 }
