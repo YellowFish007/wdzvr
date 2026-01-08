@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7917826373954006472}
   - component: {fileID: 2771226269661191105}
   m_Layer: 5
-  m_Name: Button
+  m_Name: userInfoBtn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -404,7 +404,7 @@ GameObject:
   - component: {fileID: 6833245543976997077}
   - component: {fileID: 6735226397981920049}
   m_Layer: 5
-  m_Name: passRoom (1)
+  m_Name: roomPassInput
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -818,7 +818,7 @@ GameObject:
   - component: {fileID: 6075704763666411583}
   - component: {fileID: 8218300765150400303}
   m_Layer: 5
-  m_Name: Button (5)
+  m_Name: skillBtn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -939,7 +939,7 @@ GameObject:
   - component: {fileID: 2144907178465917614}
   - component: {fileID: 6203662462869099313}
   m_Layer: 5
-  m_Name: Button (4)
+  m_Name: backMainSceneBtn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2407,7 +2407,7 @@ GameObject:
   - component: {fileID: 8331306580955322086}
   - component: {fileID: 3484230719322366519}
   m_Layer: 5
-  m_Name: Image
+  m_Name: wifiCloseImg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2483,7 +2483,7 @@ GameObject:
   - component: {fileID: 3404873364688169493}
   - component: {fileID: 2504823487871897301}
   m_Layer: 5
-  m_Name: Button (4)
+  m_Name: bagBtn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2814,7 +2814,7 @@ GameObject:
   - component: {fileID: 5123331488789075267}
   - component: {fileID: 6651167070575231433}
   m_Layer: 5
-  m_Name: Button (3)
+  m_Name: sceneSettingBtn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3145,7 +3145,7 @@ GameObject:
   - component: {fileID: 6047736817566743446}
   - component: {fileID: 6047736817566743430}
   m_Layer: 5
-  m_Name: createScene
+  m_Name: createSceneBtn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3413,7 +3413,7 @@ GameObject:
   - component: {fileID: 7048733135142981010}
   - component: {fileID: 2237328764523538398}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: friendBtn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3534,7 +3534,7 @@ GameObject:
   - component: {fileID: 6369049841279911396}
   - component: {fileID: 6369049841279911399}
   m_Layer: 5
-  m_Name: Button (2)
+  m_Name: wifi
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4058,7 +4058,7 @@ GameObject:
   - component: {fileID: 6369049841754088480}
   - component: {fileID: 6369049841754088483}
   m_Layer: 5
-  m_Name: SureRoom
+  m_Name: joinRoomBtn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4239,6 +4239,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6369049841882846885}
+  - component: {fileID: 4221209837733968091}
   m_Layer: 5
   m_Name: UIMain
   m_TagString: Untagged
@@ -4266,6 +4267,29 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 2400, y: 1800}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &4221209837733968091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6369049841882846884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a0d7de034f58e64486268b357a52550, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  userInfoBtn: {fileID: 2771226269661191105}
+  friendBtn: {fileID: 2237328764523538398}
+  shopBtn: {fileID: 1573881004093866593}
+  sceneSettingBtn: {fileID: 6651167070575231433}
+  bagBtn: {fileID: 2504823487871897301}
+  skillBtn: {fileID: 8218300765150400303}
+  joinRoomBtn: {fileID: 6369049841754088483}
+  createSceneBtn: {fileID: 6047736817566743430}
+  joinSceneBtn: {fileID: 7992227607650937626}
+  hallSceneBtn: {fileID: 3488660248428751764}
+  backMainSceneBtn: {fileID: 6203662462869099313}
 --- !u!1 &6369049842434620246
 GameObject:
   m_ObjectHideFlags: 0
@@ -4570,7 +4594,7 @@ GameObject:
   - component: {fileID: 6369049842817396447}
   - component: {fileID: 6369049842817396446}
   m_Layer: 5
-  m_Name: InputRoom
+  m_Name: roomIdInput
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4880,7 +4904,7 @@ GameObject:
   - component: {fileID: 2397634024936486719}
   - component: {fileID: 3488660248428751764}
   m_Layer: 5
-  m_Name: joinScene (1)
+  m_Name: hallSceneBtn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5134,7 +5158,7 @@ GameObject:
   - component: {fileID: 914072634995250285}
   - component: {fileID: 1573881004093866593}
   m_Layer: 5
-  m_Name: Button (2)
+  m_Name: shopBtn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5255,7 +5279,7 @@ GameObject:
   - component: {fileID: 6398238160122926414}
   - component: {fileID: 7992227607650937626}
   m_Layer: 5
-  m_Name: joinScene
+  m_Name: joinSceneBtn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

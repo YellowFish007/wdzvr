@@ -21,8 +21,8 @@ public class GameManager : SingletonGameObject<GameManager>
 
         InitTables();
         
-        //LoadSceneAsync<Scene1001>();
-        UnityEngine.SceneManagement.SceneManager.LoadScene("SceneTest");
+        LoadSceneAsync<Scene1001>();
+        //UnityEngine.SceneManagement.SceneManager.LoadScene("SceneTest");
     }
 
     /// <summary>

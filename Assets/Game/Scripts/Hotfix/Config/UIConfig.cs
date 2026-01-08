@@ -2,5 +2,12 @@ public static class UIConfig
 {
     public static string Login = "UILogin";
     public static string CreateScene = "UICreateScene";
+    public static string Main = "UIMain";
+    public static string Friend = "UIFriend";
+    public static string Bag = "UIBag";
 
+    public static string Confirm = "UIConfirm";
+    public static string Setting = "UISetting";
+    public static string Skill = "UISkill";
+    public static string UserInfo = "UIUserInfo";
 }

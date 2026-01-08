@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Engine;
@@ -5,16 +6,24 @@ using UnityEngine;
 
 public class UIRoot : MonoBehaviour
 {
-    public UIBase [] uiBases;
+    public UIBase[] uiBases;
 
     private void Awake()
     {
+
+        GameEvent.AddEventListener<string>("UIRoot", OnShowUI);
+
         foreach (var uiBase in uiBases)
         {
             uiBase.gameObject.SetActive(false);
         }
     }
-    
+
+    private void OnShowUI(string name)
+    {
+        OpenUI(name);
+    }
+
     public void OpenUI(string name)
     {
         foreach (var uiBase in uiBases)
@@ -24,7 +33,7 @@ public class UIRoot : MonoBehaviour
                 uiBase.SetActive(true);
                 uiBase.OnOpen();
             }
-            else    
+            else
             {
                 uiBase.SetActive(false);
             }

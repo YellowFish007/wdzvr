@@ -88,5 +88,10 @@ namespace Engine
                 m_CurrentScene.OnTouchUp();
             }
         }
+
+        public void OpenUI(string name)
+        {
+            m_CurrentScene.GetUIRoot().OpenUI(name);
+        }
     }
 }
