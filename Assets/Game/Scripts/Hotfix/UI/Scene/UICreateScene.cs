@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Engine;
 using SuperScrollView;
 using UnityEngine;
+using UnityTimer;
 
 public class UICreateScene : UIBase
 {
@@ -12,9 +13,12 @@ public class UICreateScene : UIBase
 
     public override void OnOpen()
     {
-        sceneListView.InitListView(0, OnGetItemByIndex);
-        sceneListView.SetListItemCount(Excel.GetSceneDataList().Count);
-        sceneListView.RefreshAllShownItem();
+        this.AttachTimer(1.0f, delegate () {
+
+            sceneListView.InitListView(0, OnGetItemByIndex);
+            sceneListView.SetListItemCount(Excel.GetSceneDataList().Count);
+            sceneListView.RefreshAllShownItem();
+        });
     }
 
     LoopListViewItem2 OnGetItemByIndex(LoopListView2 listView, int index)

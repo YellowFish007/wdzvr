@@ -22,11 +22,25 @@ public class UIMain : UIBase
     public Button hallSceneBtn;
     public Button backMainSceneBtn;
 
+    public Button settingBtn;
 
+    
 
     private void Awake()
     {
         userInfoBtn.AddOnPointerSoundClick(OnBtnClick);
+        friendBtn.AddOnPointerSoundClick(OnBtnClick);
+        shopBtn.AddOnPointerSoundClick(OnBtnClick);
+        sceneSettingBtn.AddOnPointerSoundClick(OnBtnClick);
+        bagBtn.AddOnPointerSoundClick(OnBtnClick);
+        skillBtn.AddOnPointerSoundClick(OnBtnClick);
+        joinRoomBtn.AddOnPointerSoundClick(OnBtnClick);
+        createSceneBtn.AddOnPointerSoundClick(OnBtnClick);
+        joinSceneBtn.AddOnPointerSoundClick(OnBtnClick);
+        hallSceneBtn.AddOnPointerSoundClick(OnBtnClick);
+        backMainSceneBtn.AddOnPointerSoundClick(OnBtnClick);
+
+        settingBtn.AddOnPointerSoundClick(OnBtnClick);
     }
 
     private void OnBtnClick(Button btn)
@@ -43,6 +57,18 @@ public class UIMain : UIBase
         {
             GameEvent.Send("UIRoot", UIConfig.Bag);
         }
+        else if (skillBtn == btn)
+        {
+            GameEvent.Send("UIRoot", UIConfig.Skill);
+        }
+        else if (settingBtn == btn)
+        {
+            GameEvent.Send("UIRoot", UIConfig.Setting);
+        }
+        else if (createSceneBtn == btn)
+        {
+            GameEvent.Send("UIRoot", UIConfig.CreateScene);
+        }        
     }
 
     public override void OnOpen()

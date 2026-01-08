@@ -4290,6 +4290,7 @@ MonoBehaviour:
   joinSceneBtn: {fileID: 7992227607650937626}
   hallSceneBtn: {fileID: 3488660248428751764}
   backMainSceneBtn: {fileID: 6203662462869099313}
+  settingBtn: {fileID: 6369049841494632717}
 --- !u!1 &6369049842434620246
 GameObject:
   m_ObjectHideFlags: 0
