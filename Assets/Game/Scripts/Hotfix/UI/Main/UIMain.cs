@@ -16,6 +16,8 @@ public class UIMain : UIBase
     public Button sceneSettingBtn;
     public Button bagBtn;
     public Button skillBtn;
+    public Button chatBtn;
+
     public Button joinRoomBtn;
     public Button createSceneBtn;
     public Button joinSceneBtn;
@@ -34,6 +36,8 @@ public class UIMain : UIBase
         sceneSettingBtn.AddOnPointerClick(OnBtnClick);
         bagBtn.AddOnPointerClick(OnBtnClick);
         skillBtn.AddOnPointerClick(OnBtnClick);
+        chatBtn.AddOnPointerClick(OnBtnClick);
+
         joinRoomBtn.AddOnPointerClick(OnBtnClick);
         createSceneBtn.AddOnPointerClick(OnBtnClick);
         joinSceneBtn.AddOnPointerClick(OnBtnClick);
@@ -65,6 +69,10 @@ public class UIMain : UIBase
         {
             GameEvent.Send("UIRoot", UIConfig.Setting);
         }
+        else if (chatBtn == btn)
+        {
+            GameEvent.Send("UIRoot", UIConfig.Chat);
+        }        
         else if (createSceneBtn == btn)
         {
             GameEvent.Send("UIRoot", UIConfig.CreateScene);

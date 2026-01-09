@@ -5,6 +5,7 @@ public static class UIConfig
     public static string Main = "UIMain";
     public static string Friend = "UIFriend";
     public static string Bag = "UIBag";
+    public static string Chat = "UIChat";
 
     public static string Confirm = "UIConfirm";
     public static string Setting = "UISetting";
