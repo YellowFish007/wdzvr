@@ -26,8 +26,6 @@ public class UIMain : UIBase
 
     public Button settingBtn;
 
-    
-
     private void Awake()
     {
         userInfoBtn.AddOnPointerClick(OnBtnClick);
@@ -81,7 +79,6 @@ public class UIMain : UIBase
 
     public override void OnOpen()
     {
-
     }
 
 }
