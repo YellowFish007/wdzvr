@@ -4,7 +4,18 @@ using System.Collections.Generic;
 using System.Linq;
 public static partial class Excel
 {
-    public static Tables Tables { get { return GameManager.Instance.GetTables(); } }
+    public static Tables Tables 
+    { 
+        get 
+        { 
+            var tables = GameManager.Instance.GetTables();
+            if (tables == null)
+            {
+                UnityEngine.Debug.LogError("Excel.Tables is null! Make sure GameManager.Init() has been called and Tables are initialized.");
+            }
+            return tables; 
+        } 
+    }
 
     #region TbScene 场景表
     public static cfg.game.Scene GetScene(int id)

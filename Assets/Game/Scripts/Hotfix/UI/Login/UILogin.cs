@@ -27,8 +27,8 @@ public class UILogin : UIBase
 
     public override void OnOpen()
     {
-        string icon = Excel.GetSceneIcon(1001);
-        Debug.Log("UILogin icon : " + icon);
+        // string icon = Excel.GetSceneIcon(1001);
+        // Debug.Log("UILogin icon : " + icon);
     }
 
 }

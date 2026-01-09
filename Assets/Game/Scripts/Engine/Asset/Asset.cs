@@ -6,152 +6,104 @@ using UnityEngine;
 namespace Engine
 {
     /// <summary>
-    /// 资源访问静态类，提供简化的资源访问API
+    /// 资源访问静态类，提供简化的资源访问API (类似于 Resources 类)
     /// </summary>
     public static class Asset
     {
-        //public static readonly string PrefabPath = "Assets/Game/Res/Prefabs/";
-        //public static readonly string TextPath = "Assets/Game/Res/RawAssets/Text/";
-        //public static readonly string AudioPath = "Assets/Game/Res/RawAssets/Audio/";
-        //public static readonly string TexturePath = "Assets/Game/Res/RawAssets/Texture/";
-        //public static readonly string ScenePath = "Assets/Game/Res/Scenes/";
-
-
-        //------------------------------------------同步简化------------------------------------------
-        public static TextAsset LoadTextAssetSync(string path)
-        {
-            return LoadAssetSync<TextAsset>(path);
-        }
-        public static GameObject LoadPrefabSync(string path)
-        {
-            return LoadAssetSync<GameObject>(path);
-        }
-        public static Sprite LoadSpriteSync(string path)
-        {
-            return LoadAssetSync<Sprite>(path);
-        }
-        //------------------------------------------异步简化------------------------------------------
-        public static void LoadPrefabAsync(string path, Action<GameObject> callBack)
-        {
-            LoadAssetAsync<GameObject>(path, callBack);
-        }
-
-        public static void LoadTextAssetAsync(string path, Action<TextAsset> callBack)
-        {
-            LoadAssetAsync<TextAsset>(path, callBack);
-        }
-
-        public static void LoadAudioClipAsync(string path, Action<AudioClip> callBack)
-        {
-            LoadAssetAsync<AudioClip>(path, callBack);
-        }
-
-        public static void LoadSpriteAsync(string path, Action<Sprite> callBack)
-        {
-            LoadAssetAsync<Texture2D>(path, delegate (Texture2D texture)
-            {
-                Sprite sp = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), new Vector2(0.5f, 0.5f));
-                callBack(sp);
-            });
-        }
-
-        //------------------------------------------同步方法------------------------------------------
-
-        public static T LoadAssetSync<T>(string path) where T : UnityEngine.Object
-        {
-            if (YooAssetManager.Instance == null)
-            {
-                Debug.LogError($"Asset.LoadAssetSync: YooAssetManager.Instance is null! Cannot load {path}");
-                return null;
-            }
-            return YooAssetManager.Instance.LoadAssetSync<T>(path);
-        }
-
-        //------------------------------------------异步方法------------------------------------------
+        //------------------------------------------同步加载 (Load)------------------------------------------
 
         /// <summary>
-        /// 异步获取资源
+        /// 加载资源 (泛型)
         /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <param name="path"></param>
-        /// <param name="callBack"></param>
-        public static void LoadAssetAsync<T>(string path, Action<T> callBack) where T : UnityEngine.Object
+        public static T Load<T>(string path) where T : UnityEngine.Object
         {
-            YooAssetManager.Instance.LoadAssetAsync<T>(path, callBack);
+            return AssetManager.Instance.LoadAsset<T>(path);
         }
 
         /// <summary>
-        /// 异步获取通用资源
+        /// 加载资源 (非泛型)
         /// </summary>
-        /// <param name="path"></param>
-        /// <param name="callBack"></param>
-        public static void LoadAssetAsync(string path, Action<UnityEngine.Object> callBack)
+        public static UnityEngine.Object Load(string path, Type type)
         {
-            YooAssetManager.Instance.LoadAssetAsync(path, callBack);
+            return AssetManager.Instance.LoadAsset(path, type);
         }
 
         /// <summary>
-        /// 异步获取多个资源
+        /// 加载资源 (非泛型，仅路径)
         /// </summary>
-        /// <param name="paths"></param>
-        /// <param name="callBack"></param>
-        public static async void LoadMultipleAssetsAsync(List<string> paths, Action<List<UnityEngine.Object>> callBack)
+        public static UnityEngine.Object Load(string path)
         {
-            var tasks = new List<Task<UnityEngine.Object>>();
-            foreach (var path in paths)
-            {
-                var tcs = new TaskCompletionSource<UnityEngine.Object>();
-                LoadAssetAsync(path, (asset) => tcs.SetResult(asset));
-                tasks.Add(tcs.Task);
-            }
+            return Load(path, typeof(UnityEngine.Object));
+        }
 
-            var results = await Task.WhenAll(tasks);
-            callBack?.Invoke(new List<UnityEngine.Object>(results));
+        //------------------------------------------异步加载 (LoadAsync)------------------------------------------
+
+        /// <summary>
+        /// 异步加载资源
+        /// </summary>
+        public static void LoadAsync<T>(string path, Action<T> callback) where T : UnityEngine.Object
+        {
+            AssetManager.Instance.LoadAssetAsync<T>(path, callback);
         }
 
         /// <summary>
-        /// 异步获取多个资源
+        /// 异步加载资源 (通用)
         /// </summary>
-        /// <param name="paths"></param>
-        /// <param name="callBack"></param>
-        public static async void LoadMultipleAssetsAsync(
-            List<(string path, Action<UnityEngine.Object> callback)> callbacks,
-            Action allCompleted = null)
+        public static void LoadAsync(string path, Type type, Action<UnityEngine.Object> callback)
         {
-            var tasks = new List<Task>();
-
-            foreach (var (path, callback) in callbacks)
-            {
-                var tcs = new TaskCompletionSource<bool>();
-                LoadAssetAsync(path, (asset) =>
-                {
-                    callback?.Invoke(asset);
-                    tcs.SetResult(true);
-                });
-                tasks.Add(tcs.Task);
-            }
-
-            await Task.WhenAll(tasks);
-            allCompleted?.Invoke();
+            AssetManager.Instance.LoadAssetAsync(path, type, callback);
         }
+
+        /// <summary>
+        /// 异步加载资源 (通用，仅路径)
+        /// </summary>
+        public static void LoadAsync(string path, Action<UnityEngine.Object> callback)
+        {
+            LoadAsync(path, typeof(UnityEngine.Object), callback);
+        }
+
+        //------------------------------------------特定类型同步加载------------------------------------------
+
+        public static TextAsset LoadTextAsset(string path)
+        {
+            return Load<TextAsset>(path);
+        }
+
+        public static GameObject LoadPrefab(string path)
+        {
+            return Load<GameObject>(path);
+        }
+
+        public static Sprite LoadSprite(string path)
+        {
+            return Load<Sprite>(path);
+        }
+
+        public static void LoadSpriteAsync(string path, Action<Sprite> callback)
+        {
+            LoadAsync<Sprite>(path, callback);
+        }
+
+        public static void LoadAudioClipAsync(string path, Action<AudioClip> callback)
+        {
+            LoadAsync<AudioClip>(path, callback);
+        }
+        
+        //------------------------------------------兼容旧接口 (Optional)------------------------------------------
+        // 为了兼容之前的代码，保留了 LoadAssetSync 和 LoadAssetAsync 的命名别名
+        
+        public static T LoadAssetSync<T>(string path) where T : UnityEngine.Object => Load<T>(path);
+        public static void LoadAssetAsync<T>(string path, Action<T> callback) where T : UnityEngine.Object => LoadAsync<T>(path, callback);
+
+        //------------------------------------------场景加载------------------------------------------
 
         /// <summary>
         /// 异步加载场景
         /// </summary>
-        /// <param name="scenePath"></param>
-        /// <param name="progressCallback"></param>
-        /// <param name="completedCallback"></param>
         public static void LoadSceneAsync(string scenePath, Action<float> progressCallback = null, Action completedCallback = null)
         {
-            YooAssetManager.Instance.LoadSceneAsync(scenePath, progressCallback, completedCallback);
+            AssetManager.Instance.LoadSceneAsync(scenePath, progressCallback, completedCallback);
         }
-
-
-        public static Sprite ConvertTextureToSprite(Texture2D texture)
-        {
-            Sprite sp = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), new Vector2(0.5f, 0.5f));
-            return sp;
-        }
-
+        
     }
 }

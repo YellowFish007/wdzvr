@@ -4,6 +4,7 @@ using cfg;
 using SimpleJSON;
 using System;
 using System.Threading.Tasks;
+using UnityTimer;
 
 public class GameManager : SingletonGameObject<GameManager>
 {
@@ -19,21 +20,27 @@ public class GameManager : SingletonGameObject<GameManager>
         //初始化Excel
         Debug.Log("InitGame: InitTables...");
 
-        InitTables();
-        
-        LoadSceneAsync<Scene1001>();
+        //InitTables();
+
+        this.AttachTimer(1.0f, delegate ()
+        {
+
+            LoadSceneAsync<Scene1001>();
+
+        });
+
         //UnityEngine.SceneManagement.SceneManager.LoadScene("SceneTest");
     }
 
     /// <summary>
     /// 初始化表
     /// </summary>
-    private void InitTables()
+    public void InitTables()
     {
         JSONNode LoadJsonFile(string file)
         {
             Debug.Log($"InitTables: Loading file {file}");
-            var asset = Asset.LoadAssetSync<TextAsset>(file);
+            var asset = Asset.LoadAssetSync<TextAsset>("RawAssets/Text/Excel/" + file);
             if (asset == null)
             {
                 Debug.LogError($"InitTables: Failed to load asset {file}, returned null!");
