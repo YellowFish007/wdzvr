@@ -19,8 +19,7 @@ public class UICreateScene : UIBase
         this.AttachTimer(1.0f, delegate ()
         {
             sceneListView.InitListView(0, OnGetItemByIndex);
-            //sceneListView.SetListItemCount(Excel.GetSceneDataList().Count);
-            sceneListView.SetListItemCount(4);
+            sceneListView.SetListItemCount(Excel.GetSceneDataList().Count);
             sceneListView.RefreshAllShownItem();
 
         });
@@ -37,7 +36,7 @@ public class UICreateScene : UIBase
         }
         itemScript.SetIndex(index);
 
-        //itemScript.FreshItem(Excel.GetSceneDataList()[index].Id);
+        itemScript.FreshItem(Excel.GetSceneDataList()[index].Id);
 
         return item;
     }

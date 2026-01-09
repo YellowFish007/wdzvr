@@ -15,10 +15,10 @@ public class UICreateSceneItem : UIScollItem
 
     public void FreshItem(int id)
     {
-        //headImg.SetSprite("RawAssets/Texture/Icon/Scene/" + Excel.GetSceneIcon(id), false);
+        headImg.SetSprite("RawAssets/Texture/Icon/Scene/" + Excel.GetSceneIcon(id), false);
 
-        //desText.text = Excel.GetSceneDesc(id);
+        desText.text = Excel.GetSceneDesc(id);
 
-        //nameText.text = Excel.GetSceneName(id);
+        nameText.text = Excel.GetSceneName(id);
     }
 }

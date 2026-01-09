@@ -13,6 +13,12 @@ public class Scene1001 : SceneBase
         this.AttachTimer(1.0f, delegate ()
         {
             uiRoot.OpenUI(UIConfig.Login);
+
+            GameManager.Instance.InitTables();
+
+            string icon = Excel.GetSceneIcon(1001);
+            Debug.Log("UILogin icon : " + icon);
+
         });
     }
     public override void OnCreate(params object[] args)
