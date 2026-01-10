@@ -9,8 +9,8 @@ using System;
 public class UIChatMsgItem : MonoBehaviour
 {
     [Header("Components")]
-    public Image bgImg;
-    public TMP_Text contentText;
+    public Image msgImg;
+    public TMP_Text msgText;
 
     [Header("Settings")]
     public float maxWidth = 600f; // 最大宽度限制
@@ -21,37 +21,37 @@ public class UIChatMsgItem : MonoBehaviour
     /// <param name="content"></param>
     public void SetContent(string content)
     {
-        if (contentText == null) return;
+        if (msgText == null) return;
 
-        contentText.text = content;
+        msgText.text = content;
 
         // 1. 先重置状态，允许不换行来计算理想宽度
-        contentText.enableWordWrapping = false;
+        msgText.enableWordWrapping = false;
 
         // 强制更新网格以获取最新的 preferredWidth
-        contentText.ForceMeshUpdate();
+        msgText.ForceMeshUpdate();
 
-        float preferredWidth = contentText.preferredWidth;
+        float preferredWidth = msgText.preferredWidth;
 
         // 2. 判断是否超过最大宽度
         if (preferredWidth > maxWidth)
         {
             // 超过最大宽度，启用换行，并限制布局元素的宽度
-            contentText.enableWordWrapping = true;
+            msgText.enableWordWrapping = true;
 
-            var layoutElement = contentText.GetComponent<LayoutElement>();
+            var layoutElement = msgText.GetComponent<LayoutElement>();
             if (layoutElement == null)
             {
-                layoutElement = contentText.gameObject.AddComponent<LayoutElement>();
+                layoutElement = msgText.gameObject.AddComponent<LayoutElement>();
             }
             layoutElement.preferredWidth = maxWidth;
         }
         else
         {
             // 未超过最大宽度，直接使用内容宽度（或者禁用LayoutElement的限制让ContentSizeFitter处理）
-            contentText.enableWordWrapping = false; // 或者保持true但宽度不够自然不会换行
+            msgText.enableWordWrapping = false; // 或者保持true但宽度不够自然不会换行
 
-            var layoutElement = contentText.GetComponent<LayoutElement>();
+            var layoutElement = msgText.GetComponent<LayoutElement>();
             if (layoutElement != null)
             {
                 layoutElement.preferredWidth = -1; // -1 表示不使用 preferredWidth 覆盖
@@ -63,7 +63,7 @@ public class UIChatMsgItem : MonoBehaviour
         // 有时候需要刷新两次或者刷新整个LayoutGroup
         LayoutRebuilder.ForceRebuildLayoutImmediate(transform as RectTransform);
 
-        // 4. 在下一帧同步 bgImg 的宽高，等待 Layout 系统计算完成
+        // 4. 在下一帧同步 msgImg 的宽高，等待 Layout 系统计算完成
         StartCoroutine(SyncSizeNextFrame());
     }
 
@@ -72,10 +72,10 @@ public class UIChatMsgItem : MonoBehaviour
         // 等待一帧，让LayoutGroup和ContentSizeFitter完成计算
         yield return null;
 
-        if (bgImg != null && contentText != null)
+        if (msgImg != null && msgText != null)
         {
-            var width = contentText.rectTransform.rect.width;
-            var height = contentText.rectTransform.rect.height;
+            var width = msgText.rectTransform.rect.width;
+            var height = msgText.rectTransform.rect.height;
 
             // 如果宽或高为0，可能还在计算，等待直到有尺寸（最多等待0.5秒）
             float timer = 0f;
@@ -83,19 +83,19 @@ public class UIChatMsgItem : MonoBehaviour
             {
                 yield return null;
                 timer += Time.deltaTime;
-                width = contentText.rectTransform.rect.width;
-                height = contentText.rectTransform.rect.height;
+                width = msgText.rectTransform.rect.width;
+                height = msgText.rectTransform.rect.height;
             }
 
-            bgImg.rectTransform.sizeDelta = new Vector2(width + 50, height + 20);
+            msgImg.rectTransform.sizeDelta = new Vector2(width + 50, height + 20);
 
-            // 修改本身游戏物体的高度，使其能包住 bgImg
+            // 修改本身游戏物体的高度，使其能包住 msgImg
             var rootRect = transform as RectTransform;
             if (rootRect != null)
             {
                 // 高度 = bgImg的高度 + bgImg的Y坐标绝对值 (处理顶部偏移)
-                float bgHeight = bgImg.rectTransform.sizeDelta.y;
-                float yOffset = Mathf.Abs(bgImg.rectTransform.anchoredPosition.y);
+                float bgHeight = msgImg.rectTransform.sizeDelta.y;
+                float yOffset = Mathf.Abs(msgImg.rectTransform.anchoredPosition.y);
                 rootRect.sizeDelta = new Vector2(rootRect.sizeDelta.x, bgHeight + yOffset);
             }
         }
