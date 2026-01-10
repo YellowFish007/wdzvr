@@ -18,6 +18,7 @@ public class UICreateScene : UIBase
     {
         this.AttachTimer(1.0f, delegate ()
         {
+
             sceneListView.InitListView(0, OnGetItemByIndex);
             sceneListView.SetListItemCount(Excel.GetSceneDataList().Count);
             sceneListView.RefreshAllShownItem();

@@ -88,6 +88,16 @@ public class UIChatBoxItem : MonoBehaviour
             }
 
             bgImg.rectTransform.sizeDelta = new Vector2(width + 50, height + 20);
+
+            // 修改本身游戏物体的高度，使其能包住 bgImg
+            var rootRect = transform as RectTransform;
+            if (rootRect != null)
+            {
+                // 高度 = bgImg的高度 + bgImg的Y坐标绝对值 (处理顶部偏移)
+                float bgHeight = bgImg.rectTransform.sizeDelta.y;
+                float yOffset = Mathf.Abs(bgImg.rectTransform.anchoredPosition.y);
+                rootRect.sizeDelta = new Vector2(rootRect.sizeDelta.x, bgHeight + yOffset);
+            }
         }
     }
 

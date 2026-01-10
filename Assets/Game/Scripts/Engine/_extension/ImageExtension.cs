@@ -12,16 +12,24 @@ namespace Engine
         /// </summary>
         /// <param name="img">图片组件</param>
         /// <param name="iconName">图标名称</param>
-        public static void SetSprite(this Image img, string iconName,bool setNative = true)
+        public static void SetSprite(this Image img, string iconName, bool setNative = true)
         {
-            Asset.LoadSpriteAsync(iconName, delegate (Sprite sp)
+            Sprite sp = Asset.LoadSprite(iconName);
+
+            img.sprite = sp;
+
+            if (setNative)
             {
-                img.sprite = sp;
-                if (setNative)
-                {
-                    img.SetNativeSize();
-                }
-            });
+                img.SetNativeSize();
+            }
+
+            //Asset.LoadSpriteAsync(iconName, delegate (Sprite sp)
+            //{
+            //    if (setNative)
+            //    {
+            //        img.SetNativeSize();
+            //    }
+            //});
         }
     }
 }

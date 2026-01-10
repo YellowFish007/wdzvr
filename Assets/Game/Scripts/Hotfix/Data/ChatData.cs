@@ -1,0 +1,83 @@
+using System.Collections;
+using System.Collections.Generic;
+using Engine;
+using UnityEngine;
+
+public class ChatData : Singleton<ChatData>
+{
+    public enum ChatType
+    {
+        Text = 0,   // 字符串数据
+        Voice = 1,  // 语音数据
+        Emoji = 2   // 表情
+    }
+
+    [System.Serializable]
+    public class ChatMsg 
+    {
+        public ChatType type;
+        
+        // 字符串内容 (文本消息) 或 表情ID/名称 (表情消息)
+        public string content;
+        
+        // 语音数据 (如果是语音类型)
+        public byte[] voiceData;
+        
+        // 语音时长 (秒)
+        public float voiceDuration;
+
+        // 发送者ID (可选)
+        public int senderId;
+        
+        // 构造函数
+        public ChatMsg() { }
+        
+        public static ChatMsg CreateText(string text)
+        {
+            return new ChatMsg { type = ChatType.Text, content = text };
+        }
+        
+        public static ChatMsg CreateEmoji(string emojiId)
+        {
+            return new ChatMsg { type = ChatType.Emoji, content = emojiId };
+        }
+        
+        public static ChatMsg CreateVoice(byte[] data, float duration)
+        {
+            return new ChatMsg { type = ChatType.Voice, voiceData = data, voiceDuration = duration };
+        }
+    }
+
+    // 存储好友ID对应的聊天记录
+    // Key: 好友ID, Value: 该好友的聊天消息列表
+    private Dictionary<int, List<ChatMsg>> friendChats = new Dictionary<int, List<ChatMsg>>();
+
+    /// <summary>
+    /// 获取所有聊天记录字典
+    /// </summary>
+    public Dictionary<int, List<ChatMsg>> GetAllChats()
+    {
+        return friendChats;
+    }
+
+    /// <summary>
+    /// 获取指定好友的聊天记录
+    /// </summary>
+    public List<ChatMsg> GetFriendMessages(int friendId)
+    {
+        if (!friendChats.ContainsKey(friendId))
+        {
+            friendChats[friendId] = new List<ChatMsg>();
+        }
+        return friendChats[friendId];
+    }
+
+    /// <summary>
+    /// 添加一条消息到指定好友的聊天记录中
+    /// </summary>
+    public void AddMessage(int friendId, ChatMsg msg)
+    {
+        var list = GetFriendMessages(friendId);
+        list.Add(msg);
+    }
+}
