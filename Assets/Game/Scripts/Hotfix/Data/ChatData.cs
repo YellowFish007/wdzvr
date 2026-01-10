@@ -15,36 +15,41 @@ public class ChatData : Singleton<ChatData>
     [System.Serializable]
     public class ChatMsg 
     {
-        public ChatType type;
+        public ChatType Type;
         
         // 字符串内容 (文本消息) 或 表情ID/名称 (表情消息)
-        public string content;
+        public string Content;
         
         // 语音数据 (如果是语音类型)
-        public byte[] voiceData;
+        public byte[] VoiceData;
         
         // 语音时长 (秒)
-        public float voiceDuration;
+        public float VoiceDuration;
 
         // 发送者ID (可选)
-        public int senderId;
+        public int SenderId;
+
+        // 辅助属性
+        public bool IsEmoji => Type == ChatType.Emoji;
+        public bool IsVoice => Type == ChatType.Voice;
+        public bool IsText => Type == ChatType.Text;
         
         // 构造函数
         public ChatMsg() { }
         
         public static ChatMsg CreateText(string text)
         {
-            return new ChatMsg { type = ChatType.Text, content = text };
+            return new ChatMsg { Type = ChatType.Text, Content = text };
         }
         
         public static ChatMsg CreateEmoji(string emojiId)
         {
-            return new ChatMsg { type = ChatType.Emoji, content = emojiId };
+            return new ChatMsg { Type = ChatType.Emoji, Content = emojiId };
         }
         
         public static ChatMsg CreateVoice(byte[] data, float duration)
         {
-            return new ChatMsg { type = ChatType.Voice, voiceData = data, voiceDuration = duration };
+            return new ChatMsg { Type = ChatType.Voice, VoiceData = data, VoiceDuration = duration };
         }
     }
 

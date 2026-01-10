@@ -8,18 +8,67 @@ using System;
 
 public class UIChatMsgItem : MonoBehaviour
 {
-    [Header("Components")]
+    //消息
     public Image msgImg;
     public TMP_Text msgText;
+    //表情
+    public Image emojiImg;
+    //声音
+    public GameObject chatVoiceNode;
 
-    [Header("Settings")]
     public float maxWidth = 600f; // 最大宽度限制
+
+    public void FreshItem(ChatData.ChatMsg chatMsg)
+    {
+        if (chatMsg == null) return;
+
+        // 2. 根据消息类型设置显示
+        if (chatMsg.IsEmoji)
+        {
+            // 显示表情
+            emojiImg.gameObject.SetActive(true);
+            msgImg.gameObject.SetActive(false);
+            msgText.gameObject.SetActive(false);
+            chatVoiceNode.SetActive(false);
+
+            string iconPath = GetEmojjSpritePath(int.Parse(chatMsg.Content));
+            emojiImg.SetSprite(iconPath, false);
+
+            // 如果是表情，当前节点高度要改成+60
+            var rootRect = transform as RectTransform;
+            if (rootRect != null)
+            {
+                float height = emojiImg.rectTransform.sizeDelta.y;
+                rootRect.sizeDelta = new Vector2(rootRect.sizeDelta.x, height + 60);
+            }
+
+        }
+        else if (chatMsg.IsVoice)
+        {
+            // 显示语音
+            emojiImg.gameObject.SetActive(false);
+            msgImg.gameObject.SetActive(false);
+            msgText.gameObject.SetActive(false);
+            chatVoiceNode.SetActive(true);
+        }
+        else
+        {
+            // 1. 设置消息内容
+            SetContent(chatMsg.Content);
+
+            // 显示文本消息
+            emojiImg.gameObject.SetActive(false);
+            msgImg.gameObject.SetActive(true);
+            msgText.gameObject.SetActive(true);
+            chatVoiceNode.SetActive(false);
+        }
+    }
 
     /// <summary>
     /// 设置内容并动态适配
     /// </summary>
     /// <param name="content"></param>
-    public void SetContent(string content)
+    private void SetContent(string content)
     {
         if (msgText == null) return;
 
@@ -102,5 +151,9 @@ public class UIChatMsgItem : MonoBehaviour
     }
 
 
+    private string GetEmojjSpritePath(int index)
+    {
+        return "RawAssets/Texture/Icon/Emoji/emoji_" + (index + 1).ToString("00");
+    }
 
 }

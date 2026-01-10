@@ -506,8 +506,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a86c0115e361a64e813e1c905667e26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bgImg: {fileID: 3134731703769074772}
-  contentText: {fileID: 6948315948479282581}
+  msgImg: {fileID: 3134731703769074772}
+  msgText: {fileID: 6948315948479282581}
+  emojiImg: {fileID: 4734895380935381502}
+  chatVoiceNode: {fileID: 3614018573992497731}
   maxWidth: 600
 --- !u!1 &5961516283330086307
 GameObject:
