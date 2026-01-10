@@ -6,7 +6,7 @@ using TMPro;
 using Engine;
 using System;
 
-public class UIChatBoxItem : MonoBehaviour
+public class UIChatMsgItem : MonoBehaviour
 {
     [Header("Components")]
     public Image bgImg;
