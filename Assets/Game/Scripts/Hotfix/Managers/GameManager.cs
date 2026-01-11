@@ -19,7 +19,7 @@ public class GameManager : SingletonGameObject<GameManager>
 
         //初始化Excel
         Debug.Log("InitGame: InitTables...");
-        
+
         // 添加聊天测试数据
         InitChatTestData();
 
@@ -63,7 +63,7 @@ public class GameManager : SingletonGameObject<GameManager>
         ChatData.Instance.AddMessage(friendId, ChatData.ChatMsg.CreateText("我正在测试聊天功能。"));
         ChatData.Instance.AddMessage(friendId, ChatData.ChatMsg.CreateText("这是一个非常长的文本消息，用来测试聊天气泡的自动换行和高度适配功能是否正常工作。如果一切正常，背景图应该会随着文字内容自动拉伸。"));
         ChatData.Instance.AddMessage(friendId, ChatData.ChatMsg.CreateEmoji("1"));
-        
+
         Debug.Log("Chat test data initialized.");
     }
 
@@ -74,7 +74,7 @@ public class GameManager : SingletonGameObject<GameManager>
         FriendData.Instance.AddFriend(new FriendData.FriendInfo(1002, "Bob", "icon_avatar_02", 5, false, "Busy..."));
         FriendData.Instance.AddFriend(new FriendData.FriendInfo(1003, "Charlie", "icon_avatar_03", 20, true, "Gaming time"));
         FriendData.Instance.AddFriend(new FriendData.FriendInfo(1004, "David", "icon_avatar_04", 1, false, "Newbie"));
-        
+
         Debug.Log("Friend test data initialized.");
     }
 

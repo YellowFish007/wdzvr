@@ -11,80 +11,117 @@ public class UIChat : UIBase
 {
     public override string Name => "UIChat";
 
-    //角色列表
+    // Constants
+    private const float MSG_SPACING = 20f;
+    private const float MSG_PADDING_BOTTOM = 50f;
+    private const int CURRENT_USER_ID = 1001;
+
+    // UI Components
     public LoopListView2 chatRoleListView;
-
-    //表情列表
     public LoopGridView chatEmojiGridView;
-
-    private int mChatRoleIndex = 0;
-
-    //聊天记录
     public ScrollRect chatMsgScrollRect;
     public GameObject chatMsgContent;
-
-
     public Button emojiBtn;
     public Button sendBtn;
-
     public InputField msgInputField;
+
+    public Button cancelVoiceBtn;
+    public Button voiceBtn;
+
+    private int mChatRoleIndex = 0;
 
     private void Awake()
     {
         emojiBtn.AddOnPointerClick(OnBtnClick);
         sendBtn.AddOnPointerClick(OnBtnClick);
+        cancelVoiceBtn.AddOnPointerClick(OnBtnClick);
+        voiceBtn.AddOnPointerClick(OnBtnClick);
     }
 
     private void OnBtnClick(Button btn)
     {
         if (btn == emojiBtn)
         {
-            Debug.Log("emojiBtn");
-
-            chatEmojiGridView.gameObject.SetActive(!chatEmojiGridView.gameObject.activeSelf);
+            ToggleEmojiPanel();
         }
         else if (btn == sendBtn)
         {
-            ChatData.Instance.AddMessage(1001, ChatData.ChatMsg.CreateText(msgInputField.text));
-            msgInputField.text = "";
+            SendTextMessage();
+        }
+        else if (btn == cancelVoiceBtn)
+        {
+            byte[] bt = VoiceManager.Instance.StopRecord();
+            ChatData.Instance.AddMessage(1001, ChatData.ChatMsg.CreateVoice(bt, 5));
 
             FreshChatMsg(1001);
+
+            cancelVoiceBtn.SetActive(false);
+            voiceBtn.SetActive(true);
+
         }
+        else if (btn == voiceBtn)
+        {
+            VoiceManager.Instance.StartRecord();
+
+            cancelVoiceBtn.SetActive(true);
+            voiceBtn.SetActive(false);
+        }
+
+
+    }
+
+    private void ToggleEmojiPanel()
+    {
+        bool isActive = !chatEmojiGridView.gameObject.activeSelf;
+        chatEmojiGridView.gameObject.SetActive(isActive);
+    }
+
+    private void SendTextMessage()
+    {
+        if (string.IsNullOrEmpty(msgInputField.text)) return;
+
+        ChatData.Instance.AddMessage(CURRENT_USER_ID, ChatData.ChatMsg.CreateText(msgInputField.text));
+        msgInputField.text = "";
+        FreshChatMsg(CURRENT_USER_ID);
     }
 
     public override void OnOpen()
     {
+        InitRoleListView();
+        InitEmojiGridView();
+        FreshChatMsg(CURRENT_USER_ID);
+    }
+
+    private void InitRoleListView()
+    {
         chatRoleListView.InitListView(0, OnGetItemByIndex);
         chatRoleListView.SetListItemCount(FriendData.Instance.GetFriendCount());
         chatRoleListView.RefreshAllShownItem();
+    }
 
+    private void InitEmojiGridView()
+    {
         chatEmojiGridView.InitGridView(0, OnGetEmojjItemByRowColumn);
         chatEmojiGridView.SetListItemCount(160);
         chatEmojiGridView.RefreshAllShownItem();
-
-        FreshChatMsg(1001);
     }
 
     private LoopGridViewItem OnGetEmojjItemByRowColumn(LoopGridView gridView, int itemIndex, int row, int column)
     {
         LoopGridViewItem item = gridView.NewListViewItem("UIChatEmojiItem");
-
         UIChatEmojiItem itemScript = item.GetComponent<UIChatEmojiItem>();
         if (!itemScript.isInit)
         {
             itemScript.Init(chatEmojiGridView.gameObject, OnTouchEmojiItem);
         }
         itemScript.SetIndex(itemIndex);
-
         itemScript.FreshItem(itemIndex);
-
         return item;
     }
 
-    LoopListViewItem2 OnGetItemByIndex(LoopListView2 listView, int index)
+    private LoopListViewItem2 OnGetItemByIndex(LoopListView2 listView, int index)
     {
         LoopListViewItem2 item = listView.NewListViewItem("UIChatRoleItem");
-
         UIChatRoleItem itemScript = item.GetComponent<UIChatRoleItem>();
         if (!itemScript.isInit)
         {
@@ -93,63 +130,57 @@ public class UIChat : UIBase
         itemScript.SetIndex(index);
 
         List<FriendData.FriendInfo> friends = FriendData.Instance.GetAllFriends();
-
         itemScript.FreshItem(friends[index].Name, friends[index].Avatar, index == mChatRoleIndex);
-
         return item;
     }
 
     private void OnTouchRoleItem(int index)
     {
-        Debug.Log(" OnTouchRoleItem " + index);
         mChatRoleIndex = index;
         chatRoleListView.RefreshAllShownItem();
     }
 
     private void OnTouchEmojiItem(int index)
     {
-        Debug.Log(" OnTouchEmojiItem " + index);
-
-        ChatData.Instance.AddMessage(1001, ChatData.ChatMsg.CreateEmoji(index + ""));
-        FreshChatMsg(1001);
-
+        ChatData.Instance.AddMessage(CURRENT_USER_ID, ChatData.ChatMsg.CreateEmoji(index.ToString()));
+        FreshChatMsg(CURRENT_USER_ID);
         chatEmojiGridView.gameObject.SetActive(false);
     }
 
     private void FreshChatMsg(int friendId)
     {
-        // 1. 清理现有消息
-        for (int i = chatMsgContent.transform.childCount - 1; i >= 0; i--)
-        {
-            GameObject.Destroy(chatMsgContent.transform.GetChild(i).gameObject);
-        }
+        ClearChatMessages();
 
         List<ChatData.ChatMsg> friendMsgList = ChatData.Instance.GetFriendMessages(friendId);
         List<UIChatMsgItem> createdItems = new List<UIChatMsgItem>();
 
-        for (int i = 0; i < friendMsgList.Count; i++)
+        foreach (var msg in friendMsgList)
         {
             GameObject obj = chatMsgContent.AddPrefab("Prefabs/UI/Chat/UIChatMsgRItem");
-
             UIChatMsgItem chatMsgItem = obj.GetComponent<UIChatMsgItem>();
-
-            chatMsgItem.FreshItem(friendMsgList[i]);
+            chatMsgItem.FreshItem(msg);
             createdItems.Add(chatMsgItem);
         }
 
-        // 2. 启动排版协程
         StartCoroutine(LayoutChatItems(createdItems));
+    }
+
+    private void ClearChatMessages()
+    {
+        for (int i = chatMsgContent.transform.childCount - 1; i >= 0; i--)
+        {
+            Destroy(chatMsgContent.transform.GetChild(i).gameObject);
+        }
     }
 
     private IEnumerator LayoutChatItems(List<UIChatMsgItem> items)
     {
-        // 等待几帧，确保Item内部的尺寸计算完成
-        yield return null;
-        yield return null;
+        // Wait for items to initialize their sizes
+        // UIChatMsgItem uses coroutines to size text, so we need to wait a bit
+        yield return new WaitForEndOfFrame();
+        yield return new WaitForEndOfFrame();
 
-        float startY = 0;
-        float spacing = 20; // 间距
-        float paddingBottom = 50;
+        float currentY = 0;
 
         foreach (var item in items)
         {
@@ -157,30 +188,27 @@ public class UIChat : UIBase
 
             RectTransform itemRect = item.transform as RectTransform;
 
-            // 强制更新Item布局以防万一
+            // Ensure we have the latest size if possible, though UIChatMsgItem handles its own size
             // LayoutRebuilder.ForceRebuildLayoutImmediate(itemRect);
 
             float height = itemRect.sizeDelta.y;
-
-            // 计算Y坐标 (假设锚点在顶部，向下延伸)
-            // 如果Pivot是(0.5, 0.5)，Y应该是 -startY - height/2
-            // 这里我们动态调整Pivot或者根据Pivot计算
-
             float pivotOffset = height * (1 - itemRect.pivot.y);
-            float yPos = -startY - pivotOffset;
+            float yPos = -currentY - pivotOffset;
 
             itemRect.anchoredPosition = new Vector2(0, yPos);
-
-            startY += height + spacing;
+            currentY += height + MSG_SPACING;
         }
 
-        // 更新Content高度
-        RectTransform contentRect = chatMsgContent.transform as RectTransform;
-        contentRect.sizeDelta = new Vector2(contentRect.sizeDelta.x, startY + paddingBottom);
+        UpdateContentHeight(currentY);
 
-        // 滚动到底部
+        // Scroll to bottom after layout update
         yield return null;
         chatMsgScrollRect.verticalNormalizedPosition = 0;
     }
-}
 
+    private void UpdateContentHeight(float height)
+    {
+        RectTransform contentRect = chatMsgContent.transform as RectTransform;
+        contentRect.sizeDelta = new Vector2(contentRect.sizeDelta.x, height + MSG_PADDING_BOTTOM);
+    }
+}
