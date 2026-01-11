@@ -14,6 +14,8 @@ public class GameManager : SingletonGameObject<GameManager>
     public void Init()
     {
         Application.targetFrameRate = 60;
+        
+        SoundManager.Instance.Init();
 
         Debug.Log("InitGame Start");
 
@@ -33,6 +35,7 @@ public class GameManager : SingletonGameObject<GameManager>
 
         });
 
+        
         //UnityEngine.SceneManagement.SceneManager.LoadScene("SceneTest");
     }
 

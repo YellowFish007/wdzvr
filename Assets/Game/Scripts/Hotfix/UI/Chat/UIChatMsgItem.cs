@@ -14,6 +14,7 @@ public class UIChatMsgItem : MonoBehaviour
     public TMP_Text msgText;
     public Image emojiImg;
     public Button chatVoiceBtn;
+    public TMP_Text voiceText;
 
     // Configuration
     public float maxWidth = 600f; // Max text width
@@ -65,7 +66,7 @@ public class UIChatMsgItem : MonoBehaviour
     private void ShowEmoji(ChatData.ChatMsg chatMsg)
     {
         emojiImg.gameObject.SetActive(true);
-        
+
         int index = 0;
         int.TryParse(chatMsg.Content, out index); // Safer parsing
         string iconPath = GetEmojjSpritePath(index);
@@ -87,14 +88,16 @@ public class UIChatMsgItem : MonoBehaviour
     private void ShowVoice(ChatData.ChatMsg chatMsg)
     {
         chatVoiceBtn.SetActive(true);
-        // Voice layout handling if needed
+        float duration = VoiceManager.Instance.GetAudioDuration(chatMsg.VoiceData);
+
+        voiceText.text = Math.Ceiling(duration) + "\"";
     }
 
     private void ShowText(ChatData.ChatMsg chatMsg)
     {
         msgImg.gameObject.SetActive(true);
         msgText.gameObject.SetActive(true);
-        
+
         SetTextContent(chatMsg.Content);
     }
 
@@ -103,16 +106,16 @@ public class UIChatMsgItem : MonoBehaviour
         if (msgText == null) return;
 
         msgText.text = content;
-        
+
         // Reset wrapping to calculate preferred width
         msgText.enableWordWrapping = false;
         msgText.ForceMeshUpdate();
 
         float preferredWidth = msgText.preferredWidth;
-        
+
         // Handle LayoutElement based on width
         var layoutElement = GetOrAddComponent<LayoutElement>(msgText.gameObject);
-        
+
         if (preferredWidth > maxWidth)
         {
             msgText.enableWordWrapping = true;

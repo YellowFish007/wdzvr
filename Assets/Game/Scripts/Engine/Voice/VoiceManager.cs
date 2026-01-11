@@ -40,6 +40,28 @@ namespace Engine
                     // 获取实际录制的音频数据
                     float[] samples = new float[position * recordedClip.channels];
                     recordedClip.GetData(samples, 0);
+
+                    // 1. 声音太小，需要做归一化(Normalize)处理
+                    // 找到最大音量值
+                    float max = 0;
+                    for (int i = 0; i < samples.Length; i++)
+                    {
+                        if (Mathf.Abs(samples[i]) > max)
+                        {
+                            max = Mathf.Abs(samples[i]);
+                        }
+                    }
+                    // 放大声音
+                    if (max > 0.001f)
+                    {
+                        float factor = 1.0f / max;
+                        // 限制最大放大倍数，避免背景噪音过大
+                        factor = Mathf.Min(factor, 5f); 
+                        for (int i = 0; i < samples.Length; i++)
+                        {
+                            samples[i] *= factor;
+                        }
+                    }
                     
                     // 转换为 byte[]
                     return AudioClipToBytes(samples);
@@ -70,6 +92,22 @@ namespace Engine
             {
                 Debug.LogWarning("没有录音数据可播放");
             }
+        }
+
+        /// <summary>
+        /// 获取音频数据的时长（秒）
+        /// </summary>
+        /// <param name="data">音频数据 (PCM 16-bit)</param>
+        /// <returns>时长（秒）</returns>
+        public float GetAudioDuration(byte[] data)
+        {
+            if (data == null || data.Length == 0)
+                return 0f;
+
+            // 16-bit PCM = 2 bytes per sample
+            int sampleCount = data.Length / 2;
+            // 假设单声道
+            return (float)sampleCount / frequency;
         }
 
         // --- Helper Methods ---

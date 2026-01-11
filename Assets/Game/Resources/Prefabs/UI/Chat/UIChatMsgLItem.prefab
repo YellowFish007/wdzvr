@@ -555,6 +555,7 @@ MonoBehaviour:
   msgText: {fileID: 6948315948479282581}
   emojiImg: {fileID: 4734895380935381502}
   chatVoiceBtn: {fileID: 7592823731452984348}
+  voiceText: {fileID: 5530284760715277572}
   maxWidth: 600
 --- !u!1 &5961516283330086307
 GameObject:

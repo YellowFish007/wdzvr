@@ -20,6 +20,12 @@ namespace Engine
         private const string KEY_SHOT_VOLUME = "KEY_SHOT_VOLUME";
 
         AudioListener m_AudioListener;
+
+        public void Init() 
+        {
+        
+        }
+
         private void Awake()
         {
             if (!PlayerPrefs.HasKey(KEY_SOUND))

@@ -50,8 +50,10 @@ public class UIChat : UIBase
         }
         else if (btn == cancelVoiceBtn)
         {
-            byte[] bt = VoiceManager.Instance.StopRecord();
-            ChatData.Instance.AddMessage(1001, ChatData.ChatMsg.CreateVoice(bt, 5));
+            byte[] voivceBt = VoiceManager.Instance.StopRecord();
+            ChatData.Instance.AddMessage(1001, ChatData.ChatMsg.CreateVoice(voivceBt, 5));
+
+            Debug.Log("voivceBt : " + voivceBt.Length);
 
             FreshChatMsg(1001);
 
