@@ -13,7 +13,5 @@ namespace Engine
         public virtual void OnTouchDown() { }
         public virtual void OnTouchUp() { }
 
-        public virtual UIRoot GetUIRoot() { return null; }
-
     }
 }

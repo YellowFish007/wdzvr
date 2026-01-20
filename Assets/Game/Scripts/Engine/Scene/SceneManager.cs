@@ -88,9 +88,5 @@ namespace Engine
             }
         }
 
-        public void OpenUI(string name)
-        {
-            m_CurrentScene.GetUIRoot().OpenUI(name);
-        }
     }
 }

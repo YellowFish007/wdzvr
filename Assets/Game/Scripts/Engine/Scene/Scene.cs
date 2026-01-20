@@ -16,10 +16,5 @@ namespace Engine
         {
             return SceneManager.Instance.GetScene<T>();
         }
-
-        public static void OpenUI(string name)
-        {
-            SceneManager.Instance.OpenUI(name);
-        }
     }
 }

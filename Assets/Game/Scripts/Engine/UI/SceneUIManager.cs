@@ -6,6 +6,7 @@ using Engine;
 public class SceneUIManager : SingletonGameObject<SceneUIManager>
 {
     public Transform Root { get; private set; }
+    private Canvas _rootCanvas;
 
     private Stack<UIBase> _uiStack = new Stack<UIBase>();
 
@@ -24,6 +25,7 @@ public class SceneUIManager : SingletonGameObject<SceneUIManager>
         }
         Root = rootGo.transform;
         Root.SetParent(transform, false);
+        _rootCanvas = rootGo.GetComponent<Canvas>();
     }
 
     public void OpenUI(string name)
@@ -93,8 +95,16 @@ public class SceneUIManager : SingletonGameObject<SceneUIManager>
         if (Camera.main != null && Root != null)
         {
             Transform camTrans = Camera.main.transform;
-            Root.position = camTrans.position + camTrans.forward * 2.0f;
-            Root.rotation = camTrans.rotation;
+            Vector3 eulerAngles = camTrans.rotation.eulerAngles;
+            Quaternion lookRot = Quaternion.Euler(0, eulerAngles.y, 0);
+            
+            Root.position = camTrans.position + (lookRot * Vector3.forward) * 2.0f;
+            Root.rotation = lookRot;
+
+            if (_rootCanvas != null)
+            {
+                _rootCanvas.worldCamera = Camera.main;
+            }
         }
     }
 }
