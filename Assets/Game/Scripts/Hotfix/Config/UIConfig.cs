@@ -1,7 +1,7 @@
 public static class UIConfig
 {
     public static string Login = "Prefabs/UI/Login/UILogin";
-    public static string CreateScene = "Prefabs/UI/Scene/UICreateScene";
+    public static string CreateScene = "Prefabs/UI/Scene/Create/UICreateScene";
     public static string Main = "Prefabs/UI/Main/UIMain";
     public static string Friend = "Prefabs/UI/Friend/UIFriend";
     public static string Bag = "Prefabs/UI/Bag/UIBag";

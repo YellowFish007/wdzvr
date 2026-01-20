@@ -20,7 +20,6 @@ public class UILogin : UIBase
     {
         if (loginBtn == btn)
         {
-            //GameEvent.Send("UIRoot", UIConfig.Main);
             SceneUIManager.Instance.OpenUI(UIConfig.Main);
         }
     }

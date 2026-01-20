@@ -50,31 +50,31 @@ public class UIMain : UIBase
     {
         if (userInfoBtn == btn)
         {
-            GameEvent.Send("UIRoot", UIConfig.UserInfo);
+            SceneUIManager.Instance.OpenUI(UIConfig.UserInfo);
         }
         else if (friendBtn == btn)
         {
-            GameEvent.Send("UIRoot", UIConfig.Friend);
+            SceneUIManager.Instance.OpenUI(UIConfig.Friend);
         }
         else if (bagBtn == btn)
         {
-            GameEvent.Send("UIRoot", UIConfig.Bag);
+            SceneUIManager.Instance.OpenUI(UIConfig.Bag);
         }
         else if (skillBtn == btn)
         {
-            GameEvent.Send("UIRoot", UIConfig.Skill);
+            SceneUIManager.Instance.OpenUI(UIConfig.Skill);
         }
         else if (settingBtn == btn)
         {
-            GameEvent.Send("UIRoot", UIConfig.Setting);
+            SceneUIManager.Instance.OpenUI(UIConfig.Setting);
         }
         else if (chatBtn == btn)
         {
-            GameEvent.Send("UIRoot", UIConfig.Chat);
+            SceneUIManager.Instance.OpenUI(UIConfig.Chat);
         }
         else if (createSceneBtn == btn)
         {
-            GameEvent.Send("UIRoot", UIConfig.CreateScene);
+            SceneUIManager.Instance.OpenUI(UIConfig.CreateScene);
         }
         else if (closeBtn == btn)
         {
