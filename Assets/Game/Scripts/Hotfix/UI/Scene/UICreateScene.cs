@@ -8,13 +8,11 @@ using UnityTimer;
 
 public class UICreateScene : UIBase
 {
-    public override string Name => "UICreateScene";
-
     public LoopListView2 sceneListView;
 
     public TMP_Text debugText;
 
-    public override void OnOpen()
+    public override void OnCreate()
     {
         this.AttachTimer(1.0f, delegate ()
         {

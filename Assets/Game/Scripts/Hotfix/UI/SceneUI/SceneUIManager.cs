@@ -7,12 +7,11 @@ public class SceneUIManager : SingletonGameObject<SceneUIManager>
 {
     public Transform Root { get; private set; }
 
-    private Dictionary<string, UISceneBase> _uiMap = new Dictionary<string, UISceneBase>();
-    private Stack<UISceneBase> _uiStack = new Stack<UISceneBase>();
+    private Stack<UIBase> _uiStack = new Stack<UIBase>();
 
     private void Awake()
     {
-        GameObject prefab = Asset.LoadAssetSync<GameObject>("UISceneRoot");
+        GameObject prefab = Asset.LoadAssetSync<GameObject>("Prefabs/UI/Root/UISceneRoot");
         GameObject rootGo;
         if (prefab != null)
         {
@@ -27,108 +26,60 @@ public class SceneUIManager : SingletonGameObject<SceneUIManager>
         Root.SetParent(transform, false);
     }
 
-    public void Register(UISceneBase ui)
+    public void OpenUI(string name)
     {
-        if (ui == null) return;
-        if (!_uiMap.ContainsKey(ui.Name))
+        if (_uiStack.Count > 0)
         {
-            _uiMap.Add(ui.Name, ui);
+            var topUI = _uiStack.Peek();
+            topUI.SetActive(false);
+        }
+
+        GameObject prefab = Asset.LoadAssetSync<GameObject>(name);
+        if (prefab != null)
+        {
+            GameObject go = Instantiate(prefab, Root);
+            UIBase ui = go.GetComponent<UIBase>();
+            if (ui != null)
+            {
+                ui.Name = name;
+                _uiStack.Push(ui);
+                UpdateRootPosition();
+                ui.SetActive(true);
+                ui.OnCreate();
+            }
+            else
+            {
+                Debug.LogError($"Prefab {name} does not have UIBase component");
+                Destroy(go);
+            }
         }
         else
         {
-            _uiMap[ui.Name] = ui;
-        }
-    }
-
-    public void Unregister(UISceneBase ui)
-    {
-        if (ui == null) return;
-        if (_uiMap.ContainsKey(ui.Name))
-        {
-            _uiMap.Remove(ui.Name);
-        }
-    }
-
-    public T GetUI<T>(string name) where T : UISceneBase
-    {
-        if (_uiMap.TryGetValue(name, out var ui))
-        {
-            return ui as T;
-        }
-        return null;
-    }
-    
-    public void OpenUI(string name)
-    {
-        if (_uiMap.TryGetValue(name, out var ui))
-        {
-            if (_uiStack.Count > 0)
-            {
-                var topUI = _uiStack.Peek();
-                if (topUI == ui) return;
-                
-                topUI.SetActive(false);
-            }
-
-            _uiStack.Push(ui);
-            UpdateRootPosition();
-            ui.SetActive(true);
-            ui.OnOpen();
+            Debug.LogError($"Failed to load UI prefab: {name}");
         }
     }
 
     public void CloseUI(string name)
     {
-        if (_uiMap.TryGetValue(name, out var ui))
+        if (_uiStack.Count > 0)
         {
-            if (_uiStack.Count > 0 && _uiStack.Peek() == ui)
+            var topUI = _uiStack.Peek();
+            if (topUI.Name == name)
             {
                 _uiStack.Pop();
-                ui.OnClose();
-                ui.SetActive(false);
+                topUI.OnClose();
+                Destroy(topUI.gameObject);
 
                 if (_uiStack.Count > 0)
                 {
-                    var topUI = _uiStack.Peek();
+                    var newTop = _uiStack.Peek();
                     UpdateRootPosition();
-                    topUI.SetActive(true);
-                    topUI.OnOpen();
+                    newTop.SetActive(true);
                 }
-            }
-            else
-            {
-                // Closing a UI that is not at the top of the stack, or just closing it generally
-                // For now, if it's not the top, we might just hide it or remove it from stack (which is hard with Stack<T>)
-                // If the user requirement implies strictly stack behavior, we usually only close the top.
-                // But if random access close is allowed, we'd need a List instead of Stack.
-                // Assuming "Close one, previous opens" implies stack operation, we'll focus on top.
-                // If it's not at top, just hide it.
-                ui.SetActive(false);
-                ui.OnClose();
             }
         }
     }
 
-    public T CreateUI<T>(string path, Transform parent = null) where T : UISceneBase
-    {
-        GameObject prefab = Asset.LoadAssetSync<GameObject>(path);
-        if (prefab != null)
-        {
-            if (parent == null)
-            {
-                parent = Root;
-            }
-            GameObject go = Instantiate(prefab, parent);
-            T ui = go.GetComponent<T>();
-            if (ui != null)
-            {
-                Register(ui);
-                return ui;
-            }
-        }
-        return null;
-    }
-    
     public void SetRootActive(bool active)
     {
         if (Root != null)

@@ -7,14 +7,11 @@ using UnityEngine.UI;
 
 public class UIUserInfo : UIBase
 {
-    public override string Name => "UIUserInfo";
+    public override void OnCreate()
+    {
 
+    }
     private void OnBtnClick(Button btn)
     {
-    }
-
-    public override void OnOpen()
-    {
-
     }
 }

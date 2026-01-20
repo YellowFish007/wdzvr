@@ -8,8 +8,7 @@ using UnityEngine.UI;
 
 public class UIFriend : UIBase
 {
-    public override string Name => "UIFriend";
-    public override void OnOpen()
+    public override void OnCreate()
     {
 
     }

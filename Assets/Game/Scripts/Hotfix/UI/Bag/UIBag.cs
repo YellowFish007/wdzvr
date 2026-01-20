@@ -8,8 +8,8 @@ using UnityEngine.UI;
 
 public class UIBag : UIBase
 {
-    public override string Name => "UIBag";
-    public override void OnOpen()
+
+    public override void OnCreate()
     {
 
     }

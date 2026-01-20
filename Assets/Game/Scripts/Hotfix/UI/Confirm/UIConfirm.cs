@@ -8,8 +8,7 @@ using UnityEngine.UI;
 
 public class UIConfirm : UIBase
 {
-    public override string Name => "UIConfirm";
-    public override void OnOpen()
+    public override void OnCreate()
     {
 
     }

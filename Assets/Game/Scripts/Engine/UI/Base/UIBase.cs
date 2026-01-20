@@ -9,7 +9,14 @@ namespace Engine
     {
         public virtual string Name { get; set; }
 
-        public virtual void OnOpen() { }
+        public virtual void OnCreate() { }
+
+        public virtual void OnClose() { }
+
+        public void Close()
+        {
+            SceneUIManager.Instance.CloseUI(Name);
+        }
 
         /// <summary>
         /// 设置可见

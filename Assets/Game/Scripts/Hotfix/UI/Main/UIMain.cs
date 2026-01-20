@@ -8,8 +8,6 @@ using UnityEngine.UI;
 
 public class UIMain : UIBase
 {
-    public override string Name => "UIMain";
-
     public Button userInfoBtn;
     public Button friendBtn;
     public Button shopBtn;
@@ -25,8 +23,10 @@ public class UIMain : UIBase
     public Button backMainSceneBtn;
 
     public Button settingBtn;
+    public Button closeBtn;
 
-    private void Awake()
+
+    public override void OnCreate()
     {
         userInfoBtn.AddOnPointerClick(OnBtnClick);
         friendBtn.AddOnPointerClick(OnBtnClick);
@@ -43,13 +43,14 @@ public class UIMain : UIBase
         backMainSceneBtn.AddOnPointerClick(OnBtnClick);
 
         settingBtn.AddOnPointerClick(OnBtnClick);
+        closeBtn.AddOnPointerClick(OnBtnClick);
     }
 
     private void OnBtnClick(Button btn)
     {
         if (userInfoBtn == btn)
         {
-            GameEvent.Send("UIRoot", UIConfig.UserInfo); 
+            GameEvent.Send("UIRoot", UIConfig.UserInfo);
         }
         else if (friendBtn == btn)
         {
@@ -70,15 +71,14 @@ public class UIMain : UIBase
         else if (chatBtn == btn)
         {
             GameEvent.Send("UIRoot", UIConfig.Chat);
-        }        
+        }
         else if (createSceneBtn == btn)
         {
             GameEvent.Send("UIRoot", UIConfig.CreateScene);
+        }
+        else if (closeBtn == btn)
+        {
+            Close();
         }        
     }
-
-    public override void OnOpen()
-    {
-    }
-
 }

@@ -9,8 +9,6 @@ using UnityEngine.UI;
 
 public class UIChat : UIBase
 {
-    public override string Name => "UIChat";
-
     // Constants
     private const float MSG_SPACING = 20f;
     private const float MSG_PADDING_BOTTOM = 50f;
@@ -30,12 +28,17 @@ public class UIChat : UIBase
 
     private int mChatRoleIndex = 0;
 
-    private void Awake()
+    public override void OnCreate()
     {
         emojiBtn.AddOnPointerClick(OnBtnClick);
         sendBtn.AddOnPointerClick(OnBtnClick);
         cancelVoiceBtn.AddOnPointerClick(OnBtnClick);
         voiceBtn.AddOnPointerClick(OnBtnClick);
+
+
+        InitRoleListView();
+        InitEmojiGridView();
+        FreshChatMsg(CURRENT_USER_ID);
     }
 
     private void OnBtnClick(Button btn)
@@ -84,13 +87,6 @@ public class UIChat : UIBase
 
         ChatData.Instance.AddMessage(CURRENT_USER_ID, ChatData.ChatMsg.CreateText(msgInputField.text));
         msgInputField.text = "";
-        FreshChatMsg(CURRENT_USER_ID);
-    }
-
-    public override void OnOpen()
-    {
-        InitRoleListView();
-        InitEmojiGridView();
         FreshChatMsg(CURRENT_USER_ID);
     }
 

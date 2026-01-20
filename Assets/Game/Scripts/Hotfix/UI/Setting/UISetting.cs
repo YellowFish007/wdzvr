@@ -8,8 +8,7 @@ using UnityEngine.UI;
 
 public class UISetting : UIBase
 {
-    public override string Name => "UISetting";
-    public override void OnOpen()
+    public override void OnCreate()
     {
 
     }

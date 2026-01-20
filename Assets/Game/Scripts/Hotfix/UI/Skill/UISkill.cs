@@ -8,8 +8,7 @@ using UnityEngine.UI;
 
 public class UISkill : UIBase
 {
-    public override string Name => "UISkill";
-    public override void OnOpen()
+    public override void OnCreate()
     {
 
     }

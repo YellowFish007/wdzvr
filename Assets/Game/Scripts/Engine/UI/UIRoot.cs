@@ -31,7 +31,7 @@ public class UIRoot : MonoBehaviour
             if (uiBase.Name == name)
             {
                 uiBase.SetActive(true);
-                uiBase.OnOpen();
+                uiBase.OnCreate();
             }
             else
             {

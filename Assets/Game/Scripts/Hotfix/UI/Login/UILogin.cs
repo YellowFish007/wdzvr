@@ -8,27 +8,20 @@ using UnityEngine.UI;
 
 public class UILogin : UIBase
 {
-    public override string Name => "UILogin";
-
     public Button loginBtn;
 
-    private void Awake()
+    public override void OnCreate()
     {
         loginBtn.AddOnPointerClick(OnBtnClick);
     }
+
 
     private void OnBtnClick(Button btn)
     {
         if (loginBtn == btn)
         {
-            GameEvent.Send("UIRoot", UIConfig.Main);
+            //GameEvent.Send("UIRoot", UIConfig.Main);
+            SceneUIManager.Instance.OpenUI(UIConfig.Main);
         }
     }
-
-    public override void OnOpen()
-    {
-        // string icon = Excel.GetSceneIcon(1001);
-        // Debug.Log("UILogin icon : " + icon);
-    }
-
 }
