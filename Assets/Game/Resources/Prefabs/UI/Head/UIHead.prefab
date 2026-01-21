@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 915687498108985929}
+  - component: {fileID: 1281281410206110913}
   m_Layer: 5
   m_Name: UIHead
   m_TagString: Untagged
@@ -36,6 +37,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1080, y: 2400}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1281281410206110913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 915687498108985928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b21d75a38d1deb441aee22bb1e0d7a76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  closeBtn: {fileID: 1551266162277471242}
 --- !u!1 &915687499057063361
 GameObject:
   m_ObjectHideFlags: 0
@@ -48,7 +62,7 @@ GameObject:
   - component: {fileID: 915687499057063372}
   - component: {fileID: 915687499057063363}
   m_Layer: 5
-  m_Name: Popup
+  m_Name: bg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -72,7 +86,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 264.09094}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1120.0901, y: 692.1785}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &915687499057063372

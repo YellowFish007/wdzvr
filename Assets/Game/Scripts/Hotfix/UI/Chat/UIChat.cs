@@ -36,6 +36,7 @@ public class UIChat : UIBase
         sendBtn.AddOnPointerClick(OnBtnClick);
         cancelVoiceBtn.AddOnPointerClick(OnBtnClick);
         voiceBtn.AddOnPointerClick(OnBtnClick);
+        closeBtn.AddOnPointerClick(OnBtnClick);
 
         Debug.Log("FriendData.Instance.GetFriendCount() : " + FriendData.Instance.GetFriendCount());
 

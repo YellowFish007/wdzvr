@@ -8,6 +8,9 @@ using UnityEngine.UI;
 
 public class UIMain : UIBase
 {
+    
+    public Button headBtn;
+
     public Button userInfoBtn;
     public Button friendBtn;
     public Button shopBtn;
@@ -28,6 +31,8 @@ public class UIMain : UIBase
 
     public override void OnCreate()
     {
+        headBtn.AddOnPointerClick(OnBtnClick);
+
         userInfoBtn.AddOnPointerClick(OnBtnClick);
         friendBtn.AddOnPointerClick(OnBtnClick);
         shopBtn.AddOnPointerClick(OnBtnClick);
@@ -48,7 +53,11 @@ public class UIMain : UIBase
 
     private void OnBtnClick(Button btn)
     {
-        if (userInfoBtn == btn)
+        if (headBtn == btn)
+        {
+            SceneUIManager.Instance.OpenUI(UIConfig.Head);
+        }
+        else if (userInfoBtn == btn)
         {
             SceneUIManager.Instance.OpenUI(UIConfig.UserInfo);
         }

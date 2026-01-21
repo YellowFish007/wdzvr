@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using Engine;
@@ -6,9 +5,11 @@ using RbEngine;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UIFriend : UIBase
+public class UIHead : UIBase
 {
+
     public Button closeBtn;
+
     public override void OnCreate()
     {
         closeBtn.AddOnPointerClick(OnBtnClick);
@@ -21,5 +22,4 @@ public class UIFriend : UIBase
             Close();
         }
     }
-
 }
