@@ -1,27 +1,32 @@
 using System.Collections;
 using System.Collections.Generic;
 using Engine;
+using RbEngine;
 using SuperScrollView;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityTimer;
 
 public class UICreateScene : UIBase
 {
     public LoopListView2 sceneListView;
-
-    public TMP_Text debugText;
+    public Button closeBtn;
 
     public override void OnCreate()
     {
-        this.AttachTimer(1.0f, delegate ()
+        sceneListView.InitListView(0, OnGetItemByIndex);
+        sceneListView.SetListItemCount(Excel.GetSceneDataList().Count);
+        sceneListView.RefreshAllShownItem();
+        closeBtn.AddOnPointerClick(OnBtnClick);
+    }
+
+    private void OnBtnClick(Button btn)
+    {
+        if (btn == closeBtn)
         {
-
-            sceneListView.InitListView(0, OnGetItemByIndex);
-            sceneListView.SetListItemCount(Excel.GetSceneDataList().Count);
-            sceneListView.RefreshAllShownItem();
-
-        });
+            Close();
+        }
     }
 
     LoopListViewItem2 OnGetItemByIndex(LoopListView2 listView, int index)

@@ -6,7 +6,7 @@ using System;
 
 namespace Engine
 {
-    public class SceneManager : Singleton<SceneManager>
+    public class SceneManager : SingletonGameObject<SceneManager>
     {
         private SceneBase m_CurrentScene;
 
@@ -29,7 +29,8 @@ namespace Engine
                 GameObject obj = FindRootObjectByName(sceneName);
                 completedCallback?.Invoke();
                 m_CurrentScene = obj.GetComponent<SceneBase>();
-                OnPreloadSceneRes(args);
+                m_CurrentScene.OnCreate(args);
+
             });
         }
 
@@ -41,9 +42,21 @@ namespace Engine
         /// <summary>
         /// 异步加载场景
         /// </summary>
-        private void LoadSceneAsync(string scenePath, Action<float> progressCallback = null, Action completedCallback = null)
+        private void LoadSceneAsync(string sceneName, Action<float> progressCallback = null, Action completedCallback = null)
         {
-            Asset.LoadSceneAsync(scenePath, progressCallback, completedCallback);
+            StartCoroutine(DoLoadSceneAsync(sceneName, progressCallback, completedCallback));
+        }
+
+        private IEnumerator DoLoadSceneAsync(string sceneName, Action<float> progressCallback, Action completedCallback)
+        {
+            AsyncOperation op = UnityEngine.SceneManagement.SceneManager.LoadSceneAsync(sceneName);
+            while (!op.isDone)
+            {
+                progressCallback?.Invoke(op.progress);
+                yield return null;
+            }
+            progressCallback?.Invoke(1.0f);
+            completedCallback?.Invoke();
         }
 
         /// <summary>
@@ -66,14 +79,6 @@ namespace Engine
                     return obj;
             }
             return null;
-        }
-
-        private void OnPreloadSceneRes(params object[] args)
-        {
-            m_CurrentScene.OnPreload(delegate ()
-             {
-                 m_CurrentScene.OnCreate(args);
-             });
         }
 
         private void Update()

@@ -13,12 +13,10 @@ public class Scene1001 : SceneBase
         this.AttachTimer(1.0f, delegate ()
         {
             GameManager.Instance.InitTables();
-            //uiRoot.OpenUI(UIConfig.Login);
+            GameManager.Instance.InitChatTestData();
+            GameManager.Instance.InitFriendTestData();
+
             SceneUIManager.Instance.OpenUI(UIConfig.Login);
         });
     }
-    public override void OnCreate(params object[] args)
-    {
-    }
-
 }

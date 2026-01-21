@@ -22,12 +22,6 @@ public class GameManager : SingletonGameObject<GameManager>
         //初始化Excel
         Debug.Log("InitGame: InitTables...");
 
-        // 添加聊天测试数据
-        InitChatTestData();
-
-        // 添加好友测试数据
-        InitFriendTestData();
-
         this.AttachTimer(1.0f, delegate ()
         {
 
@@ -59,7 +53,7 @@ public class GameManager : SingletonGameObject<GameManager>
         mTables = new(LoadJsonFile);
     }
 
-    private void InitChatTestData()
+    public void InitChatTestData()
     {
         int friendId = 1001; // 测试好友ID
         ChatData.Instance.AddMessage(friendId, ChatData.ChatMsg.CreateText("你好，最近怎么样？"));
@@ -70,7 +64,7 @@ public class GameManager : SingletonGameObject<GameManager>
         Debug.Log("Chat test data initialized.");
     }
 
-    private void InitFriendTestData()
+    public void InitFriendTestData()
     {
         // 添加几个测试好友
         FriendData.Instance.AddFriend(new FriendData.FriendInfo(1001, "Alice", "icon_avatar_01", 10, true, "Hello World!"));

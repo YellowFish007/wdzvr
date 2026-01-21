@@ -7,11 +7,17 @@ using UnityEngine.UI;
 
 public class UIUserInfo : UIBase
 {
+    public Button closeBtn;
+
     public override void OnCreate()
     {
-
+        closeBtn.AddOnPointerClick(OnBtnClick);
     }
     private void OnBtnClick(Button btn)
     {
+        if (btn == closeBtn)
+        {
+            Close();
+        }
     }
 }

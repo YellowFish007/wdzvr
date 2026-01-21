@@ -29,6 +29,11 @@ public class UIDebugConsole : MonoBehaviour
 
     void HandleLog(string logString, string stackTrace, LogType type)
     {
+        if (type == LogType.Warning)
+        {
+            return;
+        }
+
         string color = "white";
         switch (type)
         {

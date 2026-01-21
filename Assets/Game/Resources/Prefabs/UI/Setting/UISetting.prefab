@@ -906,6 +906,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 469df177fb19cd4458952ae2adc2e937, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  closeBtn: {fileID: 1567920699894576741}
 --- !u!1 &1567920700476577843
 GameObject:
   m_ObjectHideFlags: 0
@@ -918,7 +919,7 @@ GameObject:
   - component: {fileID: 1567920700476577870}
   - component: {fileID: 1567920700476577841}
   m_Layer: 5
-  m_Name: Popup
+  m_Name: bg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

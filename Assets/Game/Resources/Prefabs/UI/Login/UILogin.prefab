@@ -498,6 +498,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   loginBtn: {fileID: 967883052245283685}
+  registerBtn: {fileID: 915687498912064349}
+  forgetPasswordBtn: {fileID: 967883053856072799}
+  sendNumBtn: {fileID: 6725763983155517305}
 --- !u!1 &915687498306966663
 GameObject:
   m_ObjectHideFlags: 0
@@ -3960,7 +3963,7 @@ GameObject:
   - component: {fileID: 912081049182491669}
   - component: {fileID: 6725763983155517305}
   m_Layer: 5
-  m_Name: YanZhengMa
+  m_Name: sendNumBtn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -26,6 +26,8 @@ public class UIChat : UIBase
     public Button cancelVoiceBtn;
     public Button voiceBtn;
 
+    public Button closeBtn;
+
     private int mChatRoleIndex = 0;
 
     public override void OnCreate()
@@ -35,6 +37,7 @@ public class UIChat : UIBase
         cancelVoiceBtn.AddOnPointerClick(OnBtnClick);
         voiceBtn.AddOnPointerClick(OnBtnClick);
 
+        Debug.Log("FriendData.Instance.GetFriendCount() : " + FriendData.Instance.GetFriendCount());
 
         InitRoleListView();
         InitEmojiGridView();
@@ -71,7 +74,10 @@ public class UIChat : UIBase
             cancelVoiceBtn.SetActive(true);
             voiceBtn.SetActive(false);
         }
-
+        else if (btn == closeBtn)
+        {
+            Close();
+        }
 
     }
 
