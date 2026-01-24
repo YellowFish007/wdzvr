@@ -40,6 +40,15 @@ namespace Engine
         }
 
         /// <summary>
+        /// 判断是否有网络连接
+        /// </summary>
+        /// <returns>true: 有网络, false: 无网络</returns>
+        public bool IsNetworkAvailable()
+        {
+            return Application.internetReachability != NetworkReachability.NotReachable;
+        }
+
+        /// <summary>
         /// 添加返回按钮监听
         /// </summary>
         /// <returns></returns>

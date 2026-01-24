@@ -3,12 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using Engine;
 using RbEngine;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class UIMain : UIBase
 {
-    
+
     public Button headBtn;
 
     public Button userInfoBtn;
@@ -28,6 +29,16 @@ public class UIMain : UIBase
     public Button settingBtn;
     public Button closeBtn;
 
+    public TMP_Text timeText;
+    public GameObject wifiCloseObj;
+
+    public TMP_Text lvText;
+    public TMP_Text idText;
+
+    public Image headImg;
+
+    public TMP_InputField roomIdInputField;
+    public TMP_InputField roomPassInputField;
 
     public override void OnCreate(params object[] args)
     {
@@ -49,6 +60,22 @@ public class UIMain : UIBase
 
         settingBtn.AddOnPointerClick(OnBtnClick);
         closeBtn.AddOnPointerClick(OnBtnClick);
+
+        InvokeRepeating(nameof(UpdateTime), 0f, 1f);
+
+        wifiCloseObj.SetActive(!SDKManager.Instance.IsNetworkAvailable());
+
+        lvText.text = "Lv." + AccountData.Instance.GetLevel();
+        idText.text = "ID:" + AccountData.Instance.GetId();
+        headImg.SetSprite("RawAssets/Texture/Icon/Avatar/" + AccountData.Instance.GetHeadIcon());
+    }
+
+    private void UpdateTime()
+    {
+        if (timeText != null)
+        {
+            timeText.text = TimeUtils.GetNowDateTime();
+        }
     }
 
     private void OnBtnClick(Button btn)
@@ -93,6 +120,11 @@ public class UIMain : UIBase
         else if (closeBtn == btn)
         {
             Close();
-        }        
+        }
+        else if (joinRoomBtn == btn)
+        {
+
+        }
+        
     }
 }

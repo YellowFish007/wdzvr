@@ -17,6 +17,15 @@ namespace Engine
         }
 
         /// <summary>
+        /// 获取当前时间字符串，格式：yyyy/MM/dd HH:mm:ss
+        /// </summary>
+        /// <returns></returns>
+        public static string GetNowDateTime()
+        {
+            return DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss");
+        }
+
+        /// <summary>
         /// 将秒数转换为倒计时格式 MM:SS
         /// </summary>
         /// <param name="seconds">总秒数</param>
