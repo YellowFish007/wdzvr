@@ -25,8 +25,9 @@ public class UILogin : UIBase
         forgetPasswordBtn.AddOnPointerClick(OnBtnClick);
         sendNumBtn.AddOnPointerClick(OnBtnClick);
 
-        Data.Get<LocalData>();
-
+        var localData = Data.Get<LocalData>();
+        phoneNumInputField.text = localData.UserName;
+        passwordInputField.text = localData.Password;
     }
 
 
@@ -34,7 +35,18 @@ public class UILogin : UIBase
     {
         if (loginBtn == btn)
         {
-            SceneUIManager.Instance.OpenUI(UIConfig.Main);
+            string phone = phoneNumInputField.text;
+            string pwd = passwordInputField.text;
+
+            if (LoginUtils.ValidateCredentials(phone, pwd))
+            {
+                var localData = Data.Get<LocalData>();
+                localData.UserName = phone;
+                localData.Password = pwd;
+                Data.Save<LocalData>();
+
+                SceneUIManager.Instance.OpenUI(UIConfig.Main);
+            }
         }
         else if (registerBtn == btn)
         {
@@ -46,12 +58,18 @@ public class UILogin : UIBase
         }
         else if (sendNumBtn == btn)
         {
-            //GameManager.Instance.ShowFlyTip("发送验证码");
+            string phone = phoneNumInputField.text;
+            if (string.IsNullOrEmpty(phone) || phone.Length != 11)
+            {
+                GameManager.Instance.ShowFlyTip("请输入正确的手机号");
+                return;
+            }
+
             GameManager.Instance.ShowConfirm("是否发送验证码？", () =>
             {
-                Debug.Log("是否发送验证码");
+                GameManager.Instance.ShowFlyTip("验证码已发送");
             });
-            
+
         }
     }
 }

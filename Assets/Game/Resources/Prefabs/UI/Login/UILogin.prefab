@@ -501,6 +501,9 @@ MonoBehaviour:
   registerBtn: {fileID: 915687498912064349}
   forgetPasswordBtn: {fileID: 967883053856072799}
   sendNumBtn: {fileID: 6725763983155517305}
+  phoneNumInputField: {fileID: 915687497950900655}
+  passwordInputField: {fileID: 7902328990763368120}
+  codeInputField: {fileID: 967883052928558434}
 --- !u!1 &915687498306966663
 GameObject:
   m_ObjectHideFlags: 0

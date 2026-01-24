@@ -5,8 +5,8 @@ using UnityEngine;
 public class LocalData
 {
     //用户名
-    public string UserName = "cn";
+    public string UserName = "";
     //密码
-    public string Password = "123";
+    public string Password = "";
 
 }

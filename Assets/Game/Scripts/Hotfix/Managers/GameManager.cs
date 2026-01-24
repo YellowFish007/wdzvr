@@ -86,7 +86,7 @@ public class GameManager : SingletonGameObject<GameManager>
 
     public void ShowConfirm(string content, Action action)
     {
-        SceneUIManager.Instance.OpenPersistentUI(UIConfig.Confirm, "是否确认退出？", action);
+        SceneUIManager.Instance.OpenPersistentUI(UIConfig.Confirm, content, action);
     }
 
     public Tables GetTables()
