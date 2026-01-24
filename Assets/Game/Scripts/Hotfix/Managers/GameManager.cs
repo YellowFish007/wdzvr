@@ -75,6 +75,15 @@ public class GameManager : SingletonGameObject<GameManager>
         Debug.Log("Friend test data initialized.");
     }
 
+    /// <summary>
+    /// 显示飘字提示
+    /// </summary>
+    /// <param name="content">提示内容</param>
+    public void ShowFlyTip(string content)
+    {
+        GameEvent.Send(EventConfig.UI_SHOW_FLYTIP, content);
+    }
+
     public Tables GetTables()
     {
         return mTables;

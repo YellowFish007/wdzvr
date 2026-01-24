@@ -38,6 +38,7 @@ public class UILogin : UIBase
         }
         else if (sendNumBtn == btn)
         {
+            GameManager.Instance.ShowFlyTip("发送验证码");
         }
     }
 }

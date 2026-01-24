@@ -12,4 +12,7 @@ public class EventConfig
 
     //主界面怪物刷新
     public static string MAIN_MONSTER_ADD = "MAIN_MONSTER_ADD";
+
+    //Pico4 Grip键按下
+    public static string PICO_GRIP_PRESS = "PICO_GRIP_PRESS";
 }

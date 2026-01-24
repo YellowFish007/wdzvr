@@ -17,4 +17,5 @@ public static class UIConfig
     public static string Setting = "Prefabs/UI/Setting/UISetting";
     public static string Skill = "Prefabs/UI/Skill/UISkill";
     public static string UserInfo = "Prefabs/UI/UserInfo/UIUserInfo";
+    public static string FlyTip = "Prefabs/UI/Tip/UIFlyTip";
 }

@@ -55,7 +55,9 @@ public class UIMain : UIBase
     {
         if (headBtn == btn)
         {
-            SceneUIManager.Instance.OpenUI(UIConfig.Head);
+            GameManager.Instance.ShowFlyTip("头像");
+
+            //SceneUIManager.Instance.OpenUI(UIConfig.Head);
         }
         else if (userInfoBtn == btn)
         {
