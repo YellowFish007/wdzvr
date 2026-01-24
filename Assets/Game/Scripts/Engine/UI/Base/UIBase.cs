@@ -9,7 +9,7 @@ namespace Engine
     {
         public virtual string Name { get; set; }
 
-        public virtual void OnCreate() { }
+        public virtual void OnCreate(params object[] args) { }
 
         public virtual void OnClose() { }
 

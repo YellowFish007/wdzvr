@@ -11,7 +11,7 @@ public class UIFlyTip : UIBase
 {
     public GameObject ui_tipNode;
 
-    public override void OnCreate()
+    public override void OnCreate(params object[] args)
     {
         GameEvent.AddEventListener<string>(EventConfig.UI_SHOW_FLYTIP, ShowFlyTip);
     }

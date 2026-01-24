@@ -21,7 +21,10 @@ public class Scene1001 : SceneBase
             GameManager.Instance.InitChatTestData();
             GameManager.Instance.InitFriendTestData();
 
+            Data.Load<LocalData>();
+
             SceneUIManager.Instance.OpenPersistentUI(UIConfig.FlyTip);
+
             SceneUIManager.Instance.OpenUI(UIConfig.Login);
         });
     }

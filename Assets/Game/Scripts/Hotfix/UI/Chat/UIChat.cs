@@ -30,7 +30,7 @@ public class UIChat : UIBase
 
     private int mChatRoleIndex = 0;
 
-    public override void OnCreate()
+    public override void OnCreate(params object[] args)
     {
         emojiBtn.AddOnPointerClick(OnBtnClick);
         sendBtn.AddOnPointerClick(OnBtnClick);

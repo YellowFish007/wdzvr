@@ -13,7 +13,7 @@ public class UICreateScene : UIBase
     public LoopListView2 sceneListView;
     public Button closeBtn;
 
-    public override void OnCreate()
+    public override void OnCreate(params object[] args)
     {
         sceneListView.InitListView(0, OnGetItemByIndex);
         sceneListView.SetListItemCount(Excel.GetSceneDataList().Count);

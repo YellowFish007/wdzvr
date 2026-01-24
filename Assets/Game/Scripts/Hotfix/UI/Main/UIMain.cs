@@ -29,7 +29,7 @@ public class UIMain : UIBase
     public Button closeBtn;
 
 
-    public override void OnCreate()
+    public override void OnCreate(params object[] args)
     {
         headBtn.AddOnPointerClick(OnBtnClick);
 
@@ -55,8 +55,11 @@ public class UIMain : UIBase
     {
         if (headBtn == btn)
         {
-            GameManager.Instance.ShowFlyTip("头像");
-
+            //GameManager.Instance.ShowFlyTip("头像");
+            GameManager.Instance.ShowConfirm("是否发送验证码？", () =>
+            {
+                Debug.Log("是否发送验证码");
+            });
             //SceneUIManager.Instance.OpenUI(UIConfig.Head);
         }
         else if (userInfoBtn == btn)

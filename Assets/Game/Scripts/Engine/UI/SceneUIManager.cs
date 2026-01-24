@@ -29,7 +29,7 @@ public class SceneUIManager : SingletonGameObject<SceneUIManager>
         _rootCanvas = rootGo.GetComponent<Canvas>();
     }
 
-    public void OpenUI(string name)
+    public UIBase OpenUI(string name, params object[] args)
     {
         if (_uiStack.Count > 0)
         {
@@ -48,8 +48,9 @@ public class SceneUIManager : SingletonGameObject<SceneUIManager>
                 _uiStack.Push(ui);
                 UpdateRootPosition();
                 ui.SetActive(true);
-                ui.OnCreate();
+                ui.OnCreate(args);
                 go.transform.SetAsFirstSibling();
+                return ui;
             }
             else
             {
@@ -61,6 +62,7 @@ public class SceneUIManager : SingletonGameObject<SceneUIManager>
         {
             Debug.LogError($"Failed to load UI prefab: {name}");
         }
+        return null;
     }
 
     public void CloseUI(string name)
@@ -80,11 +82,19 @@ public class SceneUIManager : SingletonGameObject<SceneUIManager>
                     UpdateRootPosition();
                     newTop.SetActive(true);
                 }
+                return;
             }
+        }
+
+        if (_persistentUIs.ContainsKey(name))
+        {
+            var ui = _persistentUIs[name];
+            ui.OnClose();
+            ui.SetActive(false);
         }
     }
 
-    public void OpenPersistentUI(string name)
+    public void OpenPersistentUI(string name, params object[] args)
     {
         if (_persistentUIs.ContainsKey(name))
         {
@@ -101,7 +111,7 @@ public class SceneUIManager : SingletonGameObject<SceneUIManager>
                 ui.Name = name;
                 _persistentUIs.Add(name, ui);
                 ui.SetActive(true);
-                ui.OnCreate();
+                ui.OnCreate(args);
                 go.transform.SetAsLastSibling();
             }
             else

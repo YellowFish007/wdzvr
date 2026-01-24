@@ -14,7 +14,7 @@ public class GameManager : SingletonGameObject<GameManager>
     public void Init()
     {
         Application.targetFrameRate = 60;
-        
+
         SoundManager.Instance.Init();
 
         Debug.Log("InitGame Start");
@@ -29,7 +29,7 @@ public class GameManager : SingletonGameObject<GameManager>
 
         });
 
-        
+
         //UnityEngine.SceneManagement.SceneManager.LoadScene("SceneTest");
     }
 
@@ -82,6 +82,11 @@ public class GameManager : SingletonGameObject<GameManager>
     public void ShowFlyTip(string content)
     {
         GameEvent.Send(EventConfig.UI_SHOW_FLYTIP, content);
+    }
+
+    public void ShowConfirm(string content, Action action)
+    {
+        SceneUIManager.Instance.OpenPersistentUI(UIConfig.Confirm, "是否确认退出？", action);
     }
 
     public Tables GetTables()

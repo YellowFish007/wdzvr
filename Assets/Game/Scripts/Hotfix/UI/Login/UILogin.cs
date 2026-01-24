@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Engine;
 using RbEngine;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -13,12 +14,19 @@ public class UILogin : UIBase
     public Button forgetPasswordBtn;
     public Button sendNumBtn;
 
-    public override void OnCreate()
+    public TMP_InputField phoneNumInputField;
+    public TMP_InputField passwordInputField;
+    public TMP_InputField codeInputField;
+
+    public override void OnCreate(params object[] args)
     {
         loginBtn.AddOnPointerClick(OnBtnClick);
         registerBtn.AddOnPointerClick(OnBtnClick);
         forgetPasswordBtn.AddOnPointerClick(OnBtnClick);
         sendNumBtn.AddOnPointerClick(OnBtnClick);
+
+        Data.Get<LocalData>();
+
     }
 
 
@@ -27,7 +35,7 @@ public class UILogin : UIBase
         if (loginBtn == btn)
         {
             SceneUIManager.Instance.OpenUI(UIConfig.Main);
-        }           
+        }
         else if (registerBtn == btn)
         {
             SceneUIManager.Instance.OpenUI(UIConfig.Register);
@@ -38,7 +46,12 @@ public class UILogin : UIBase
         }
         else if (sendNumBtn == btn)
         {
-            GameManager.Instance.ShowFlyTip("发送验证码");
+            //GameManager.Instance.ShowFlyTip("发送验证码");
+            GameManager.Instance.ShowConfirm("是否发送验证码？", () =>
+            {
+                Debug.Log("是否发送验证码");
+            });
+            
         }
     }
 }

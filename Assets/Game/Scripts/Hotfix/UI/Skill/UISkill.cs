@@ -10,7 +10,7 @@ public class UISkill : UIBase
 {
     public Button closeBtn;
 
-    public override void OnCreate()
+    public override void OnCreate(params object[] args)
     {
         closeBtn.AddOnPointerClick(OnBtnClick);
     }

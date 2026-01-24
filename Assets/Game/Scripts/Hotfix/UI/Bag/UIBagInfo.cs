@@ -12,7 +12,7 @@ public class UIBagInfo : UIBase
     public Button useBtn;
     public Button discardBtn;
 
-    public override void OnCreate()
+    public override void OnCreate(params object[] args)
     {
         closeBtn.AddOnPointerClick(OnBtnClick);
         useBtn.AddOnPointerClick(OnBtnClick);
