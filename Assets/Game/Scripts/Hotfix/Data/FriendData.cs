@@ -34,6 +34,8 @@ public class FriendData : Singleton<FriendData>
     // 存储好友申请列表
     private List<FriendInfo> friendApplyList = new List<FriendInfo>();
 
+
+    //--------------------------好友--------------------------
     /// <summary>
     /// 获取好友数量
     /// </summary>
@@ -96,12 +98,29 @@ public class FriendData : Singleton<FriendData>
         return friendMap.ContainsKey(id);
     }
 
+    //--------------------------好友申请--------------------------
+
     /// <summary>
     /// 获取申请列表
     /// </summary>
     public List<FriendInfo> GetApplyList()
     {
         return friendApplyList;
+    }
+
+    /// <summary>
+    /// 获取申请信息
+    /// </summary>
+    public FriendInfo GetApply(int id)
+    {
+        for (int i = 0; i < friendApplyList.Count; i++)
+        {
+            if (friendApplyList[i].Id == id)
+            {
+                return friendApplyList[i];
+            }
+        }
+        return null;
     }
 
     /// <summary>

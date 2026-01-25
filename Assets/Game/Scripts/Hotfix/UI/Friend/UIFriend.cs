@@ -111,39 +111,4 @@ public class UIFriend : UIBase
         return item;
     }
 
-    private void OnApplyItemAction(int id, bool isAccept)
-    {
-        // Find info by ID from apply list (or FriendData helpers if improved)
-        FriendInfo info = null;
-        foreach (var item in _applyList)
-        {
-            if (item.Id == id)
-            {
-                info = item;
-                break;
-            }
-        }
-
-        // Fallback to friend data if needed, but apply list items should be in apply list
-        if (info == null) info = FriendData.Instance.GetFriend(id);
-
-        if (info == null) return;
-
-        if (isAccept)
-        {
-            // 同意好友申请
-            Debug.Log($"Accept friend: {info.Name}");
-            // 逻辑处理：添加到好友，从申请列表移除
-            FriendData.Instance.AddFriend(info);
-            FriendData.Instance.RemoveApply(info.Id);
-            RefreshApplyList();
-        }
-        else
-        {
-            // 拒绝好友申请
-            Debug.Log($"Refuse friend: {info.Name}");
-            FriendData.Instance.RemoveApply(info.Id);
-            RefreshApplyList();
-        }
-    }
 }

@@ -46,6 +46,8 @@ public class UIFriendItem : UIScollItem
         levelText.text = $"Lv.{data.Level}";
         onlineText.text = data.IsOnline ? "在线" : "离线";
         onlineText.color = data.IsOnline ? Color.green : Color.gray;
+        grayBgObj.SetActive(!data.IsOnline);
+        lightBgObj.SetActive(data.IsOnline);
         headImg.SetHeadSprite(data.HeadIcon);
     }
 

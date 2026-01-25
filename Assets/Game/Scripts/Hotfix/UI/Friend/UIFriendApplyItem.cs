@@ -27,51 +27,13 @@ public class UIFriendApplyItem : UIScollItem
     {
         _id = id;
 
-        FriendInfo data = null;
-        var applyList = FriendData.Instance.GetApplyList();
-        foreach (var item in applyList)
-        {
-            if (item.Id == id)
-            {
-                data = item;
-                break;
-            }
-        }
-        
-        // If not found in apply list, check friend list? (Unlikely for ApplyItem)
-        if (data == null) data = FriendData.Instance.GetFriend(id);
-        
-        if (data == null) return;
-
-        if (nameText != null) nameText.text = data.Name;
-        if (levelText != null) levelText.text = $"等级:{data.Level}";
-        if (onlineText != null) onlineText.text = data.IsOnline ? "在线" : "离线";
-        
-        if (headImg != null)
-        {
-            headImg.SetHeadSprite(data.HeadIcon);
-        }
-
-        if (refuseBtn != null)
-        {
-            refuseBtn.onClick.RemoveAllListeners();
-            refuseBtn.onClick.AddListener(OnRefuse);
-        }
-
-        if (acceptBtn != null)
-        {
-            acceptBtn.onClick.RemoveAllListeners();
-            acceptBtn.onClick.AddListener(OnAccept);
-        }
-    }
-
-    private void OnRefuse()
-    {
-        _onActionCallback?.Invoke(_id, false);
-    }
-
-    private void OnAccept()
-    {
-        _onActionCallback?.Invoke(_id, true);
+        FriendInfo data = FriendData.Instance.GetApply(id);
+        nameText.text = data.Name;
+        levelText.text = $"Lv.{data.Level}";
+        onlineText.text = data.IsOnline ? "在线" : "离线";
+        onlineText.color = data.IsOnline ? Color.green : Color.gray;
+        grayBgObj.SetActive(!data.IsOnline);
+        lightBgObj.SetActive(data.IsOnline);
+        headImg.SetHeadSprite(data.HeadIcon);
     }
 }
