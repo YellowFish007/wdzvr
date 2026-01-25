@@ -72,6 +72,9 @@ public class GameManager : SingletonGameObject<GameManager>
         FriendData.Instance.AddFriend(new FriendData.FriendInfo(1003, "Charlie", "icon_avatar_03", 20, true, "Gaming time"));
         FriendData.Instance.AddFriend(new FriendData.FriendInfo(1004, "David", "icon_avatar_04", 1, false, "Newbie"));
 
+        FriendData.Instance.AddApply(new FriendData.FriendInfo(1005, "David1", "icon_avatar_04", 1, true, "Newbie2"));
+        FriendData.Instance.AddApply(new FriendData.FriendInfo(1006, "David2", "icon_avatar_04", 1, false, "Newbie1"));
+
         Debug.Log("Friend test data initialized.");
     }
 
