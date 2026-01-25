@@ -10,18 +10,18 @@ public class FriendData : Singleton<FriendData>
     {
         public int Id;              // 好友ID
         public string Name;         // 昵称
-        public string Avatar;       // 头像图标路径或ID
+        public string HeadIcon;       // 头像图标路径或ID
         public bool IsOnline;       // 是否在线
         public int Level;           // 等级
         public string Signature;    // 个性签名
 
         public FriendInfo() { }
 
-        public FriendInfo(int id, string name, string avatar, int level, bool isOnline = false, string signature = "")
+        public FriendInfo(int id, string name, string headIcon, int level, bool isOnline = false, string signature = "")
         {
             this.Id = id;
             this.Name = name;
-            this.Avatar = avatar;
+            this.HeadIcon = headIcon;
             this.Level = level;
             this.IsOnline = isOnline;
             this.Signature = signature;

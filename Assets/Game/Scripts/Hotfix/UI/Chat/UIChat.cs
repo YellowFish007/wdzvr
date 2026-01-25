@@ -135,7 +135,7 @@ public class UIChat : UIBase
         itemScript.SetIndex(index);
 
         List<FriendData.FriendInfo> friends = FriendData.Instance.GetAllFriends();
-        itemScript.FreshItem(friends[index].Name, friends[index].Avatar, index == mChatRoleIndex);
+        itemScript.FreshItem(friends[index].Name, friends[index].HeadIcon, index == mChatRoleIndex);
         return item;
     }
 
