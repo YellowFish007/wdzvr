@@ -26,7 +26,7 @@ namespace Engine
 
         public static void SetHeadSprite(this Image img, string iconName, bool setNative = true)
         {
-            img.SetHeadSprite("RawAssets/Texture/Icon/Avatar/" + iconName, setNative);
+            img.SetSprite("RawAssets/Texture/Icon/Avatar/" + iconName, setNative);
         }
     }
 }

@@ -51,7 +51,7 @@ public class UIFriend : UIBase
     {
         if (index == 0)
         {
-            friendListView.gameObject.SetActive(true);            
+            friendListView.gameObject.SetActive(true);
             friendApplyListView.gameObject.SetActive(false);
             RefreshFriendList();
         }
@@ -105,7 +105,7 @@ public class UIFriend : UIBase
         UIFriendApplyItem script = item.GetComponent<UIFriendApplyItem>();
         if (!script.isInit)
         {
-            script.Init(friendListView.gameObject);
+            script.Init(friendApplyListView.gameObject);
         }
         script.FreshItem(_applyList[index].Id);
         return item;

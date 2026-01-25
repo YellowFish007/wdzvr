@@ -1592,6 +1592,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47b5fd8c74ec4334696ad73df0c1a640, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInit: 0
   grayBgObj: {fileID: 8906898055174120796}
   lightBgObj: {fileID: 1755766099062275318}
   headImg: {fileID: 2067033679600198729}
@@ -2812,7 +2813,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   closeBtn: {fileID: 7135446276269505986}
   tabGroup: {fileID: 5131587422001685351}
-  friendlListView: {fileID: 8261134502652259660}
+  friendListView: {fileID: 8261134502652259660}
   friendApplyListView: {fileID: 5438241637419040511}
 --- !u!1 &7452159980566100871
 GameObject:
@@ -3420,6 +3421,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0883219f8a90614aa0ec78339b85dcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInit: 0
   grayBgObj: {fileID: 5212503856073622270}
   lightBgObj: {fileID: 7969229842721715527}
   headImg: {fileID: 2913475771576181764}
@@ -3441,7 +3443,7 @@ GameObject:
   - component: {fileID: 6723093774328001513}
   - component: {fileID: 8261134502652259660}
   m_Layer: 5
-  m_Name: friendlListView
+  m_Name: friendListView
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
