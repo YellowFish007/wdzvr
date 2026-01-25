@@ -2813,6 +2813,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   closeBtn: {fileID: 7135446276269505986}
   tabGroup: {fileID: 5131587422001685351}
+  searchInputField: {fileID: 118237357382907886}
+  searchBtn: {fileID: 4691143918056019009}
   friendListView: {fileID: 8261134502652259660}
   friendApplyListView: {fileID: 5438241637419040511}
 --- !u!1 &7452159980566100871

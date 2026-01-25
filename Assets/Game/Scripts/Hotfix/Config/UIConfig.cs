@@ -12,6 +12,8 @@ public static class UIConfig
     public static string CreateScene = "Prefabs/UI/Scene/Create/UICreateScene";
     public static string Main = "Prefabs/UI/Main/UIMain";
     public static string Friend = "Prefabs/UI/Friend/UIFriend";
+    public static string FriendInfo = "Prefabs/UI/Friend/UIFriendInfo";
+    
     public static string Chat = "Prefabs/UI/Chat/UIChat";
     public static string Confirm = "Prefabs/UI/Confirm/UIConfirm";
     public static string Setting = "Prefabs/UI/Setting/UISetting";

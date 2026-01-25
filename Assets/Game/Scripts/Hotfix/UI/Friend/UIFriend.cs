@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Engine;
 using RbEngine;
 using SuperScrollView;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using static FriendData;
@@ -12,6 +13,9 @@ public class UIFriend : UIBase
 {
     public Button closeBtn;
     public UITabGroup tabGroup;
+
+    public TMP_InputField searchInputField;
+    public Button searchBtn;
 
     public LoopListView2 friendListView;
     public LoopListView2 friendApplyListView;
@@ -22,6 +26,7 @@ public class UIFriend : UIBase
     public override void OnCreate(params object[] args)
     {
         closeBtn.AddOnPointerClick(OnBtnClick);
+        searchBtn.AddOnPointerClick(OnBtnClick);
 
         if (friendListView != null)
         {
@@ -45,6 +50,10 @@ public class UIFriend : UIBase
         {
             Close();
         }
+        else if (btn == searchBtn)
+        {
+            SceneUIManager.Instance.OpenUI(UIConfig.FriendInfo);
+        }        
     }
 
     private void OnTabChanged(int index)

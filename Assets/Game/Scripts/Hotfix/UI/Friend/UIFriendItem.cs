@@ -28,7 +28,7 @@ public class UIFriendItem : UIScollItem
     {
         if (btn == chatBtn)
         {
-
+            SceneUIManager.Instance.OpenUI(UIConfig.Chat);
         }
         else if (btn == delBtn)
         {
