@@ -66,6 +66,15 @@ public class UIFriend : UIBase
     private void RefreshFriendList()
     {
         _friendList = FriendData.Instance.GetAllFriends();
+        _friendList.Sort((a, b) =>
+        {
+            if (a.IsOnline != b.IsOnline)
+            {
+                return b.IsOnline.CompareTo(a.IsOnline);
+            }
+            return 0;
+        });
+
         if (friendListView != null)
         {
             friendListView.SetListItemCount(_friendList.Count);
@@ -75,7 +84,16 @@ public class UIFriend : UIBase
 
     private void RefreshApplyList()
     {
-        _applyList = FriendData.Instance.GetApplyList();
+        _applyList = new List<FriendInfo>(FriendData.Instance.GetApplyList());
+        _applyList.Sort((a, b) =>
+        {
+            if (a.IsOnline != b.IsOnline)
+            {
+                return b.IsOnline.CompareTo(a.IsOnline);
+            }
+            return 0;
+        });
+
         if (friendApplyListView != null)
         {
             friendApplyListView.SetListItemCount(_applyList.Count);
