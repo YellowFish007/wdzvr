@@ -22,14 +22,11 @@ namespace Engine
             {
                 img.SetNativeSize();
             }
+        }
 
-            //Asset.LoadSpriteAsync(iconName, delegate (Sprite sp)
-            //{
-            //    if (setNative)
-            //    {
-            //        img.SetNativeSize();
-            //    }
-            //});
+        public static void SetHeadSprite(this Image img, string iconName, bool setNative = true)
+        {
+            img.SetHeadSprite("RawAssets/Texture/Icon/Avatar/" + iconName, setNative);
         }
     }
 }

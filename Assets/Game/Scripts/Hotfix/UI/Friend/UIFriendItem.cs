@@ -1,11 +1,12 @@
 using System;
 using Engine;
+using RbEngine;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using static FriendData;
 
-public class UIFriendItem : MonoBehaviour
+public class UIFriendItem : UIScollItem
 {
     public GameObject grayBgObj, lightBgObj;
     public Image headImg;
@@ -14,31 +15,38 @@ public class UIFriendItem : MonoBehaviour
     public TMP_Text onlineText;
     public Button chatBtn, delBtn;
 
-    private FriendInfo _data;
-    private Action<FriendInfo> _onClickCallback;
+    private int _id;
 
-    public void Init(FriendInfo data, Action<FriendInfo> onClick)
+
+    private void Awake()
     {
-        _data = data;
-        _onClickCallback = onClick;
+        chatBtn.AddOnPointerClick(OnBtnClick);
+        delBtn.AddOnPointerClick(OnBtnClick);
+    }
 
-        if (nameText != null) nameText.text = data.Name;
-        if (levelText != null) levelText.text = $"Lv.{data.Level}";
-        
-        if (onlineText != null)
+    private void OnBtnClick(Button btn)
+    {
+        if (btn == chatBtn)
         {
-            onlineText.text = data.IsOnline ? "在线" : "离线";
-            onlineText.color = data.IsOnline ? Color.green : Color.gray;
+
         }
-
-        if (headImg != null)
+        else if (btn == delBtn)
         {
-            headImg.SetSprite(data.HeadIcon);
+
         }
     }
 
-    private void OnClick()
+    public void FreshItem(int id)
     {
-        _onClickCallback?.Invoke(_data);
+        _id = id;
+
+        FriendInfo data = FriendData.Instance.GetFriend(id);
+
+        nameText.text = data.Name;
+        levelText.text = $"Lv.{data.Level}";
+        onlineText.text = data.IsOnline ? "在线" : "离线";
+        onlineText.color = data.IsOnline ? Color.green : Color.gray;
+        headImg.SetHeadSprite(data.HeadIcon);
     }
+
 }

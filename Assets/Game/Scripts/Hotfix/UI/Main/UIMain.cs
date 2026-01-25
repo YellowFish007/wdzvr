@@ -67,7 +67,7 @@ public class UIMain : UIBase
 
         lvText.text = "Lv." + AccountData.Instance.GetLevel();
         idText.text = "ID:" + AccountData.Instance.GetId();
-        headImg.SetSprite("RawAssets/Texture/Icon/Avatar/" + AccountData.Instance.GetHeadIcon());
+        headImg.SetHeadSprite(AccountData.Instance.GetHeadIcon());
     }
 
     private void UpdateTime()
@@ -125,6 +125,6 @@ public class UIMain : UIBase
         {
 
         }
-        
+
     }
 }

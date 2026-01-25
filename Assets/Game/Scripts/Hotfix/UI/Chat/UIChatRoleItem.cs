@@ -12,10 +12,10 @@ public class UIChatRoleItem : UIScollItem
 
     public GameObject selectImg;
 
-    public void FreshItem(string name, string avatar,bool showSelect)
+    public void FreshItem(string name, string avatar, bool showSelect)
     {
         nameText.text = name;
-        headImage.SetSprite("RawAssets/Texture/Icon/Avatar/" + avatar, false);
+        headImage.SetHeadSprite(avatar, false);
         selectImg.SetActive(showSelect);
     }
 }

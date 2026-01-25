@@ -6,7 +6,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using static FriendData;
 
-public class UIFriendApplyItem : MonoBehaviour
+public class UIFriendApplyItem : UIScollItem
 {
     public GameObject grayBgObj, lightBgObj;
     public Image headImg;
@@ -15,13 +15,33 @@ public class UIFriendApplyItem : MonoBehaviour
     public TMP_Text onlineText;
     public Button refuseBtn, acceptBtn;
 
-    private FriendInfo _data;
-    private Action<FriendInfo, bool> _onActionCallback; // bool: true=accept, false=refuse
+    private int _id;
+    private Action<int, bool> _onActionCallback; // bool: true=accept, false=refuse
 
-    public void Init(FriendInfo data, Action<FriendInfo, bool> callback)
+    public void SetClickCallback(Action<int, bool> callback)
     {
-        _data = data;
         _onActionCallback = callback;
+    }
+
+    public void FreshItem(int id)
+    {
+        _id = id;
+
+        FriendInfo data = null;
+        var applyList = FriendData.Instance.GetApplyList();
+        foreach (var item in applyList)
+        {
+            if (item.Id == id)
+            {
+                data = item;
+                break;
+            }
+        }
+        
+        // If not found in apply list, check friend list? (Unlikely for ApplyItem)
+        if (data == null) data = FriendData.Instance.GetFriend(id);
+        
+        if (data == null) return;
 
         if (nameText != null) nameText.text = data.Name;
         if (levelText != null) levelText.text = $"等级:{data.Level}";
@@ -29,7 +49,7 @@ public class UIFriendApplyItem : MonoBehaviour
         
         if (headImg != null)
         {
-            headImg.SetSprite(data.HeadIcon);
+            headImg.SetHeadSprite(data.HeadIcon);
         }
 
         if (refuseBtn != null)
@@ -47,11 +67,11 @@ public class UIFriendApplyItem : MonoBehaviour
 
     private void OnRefuse()
     {
-        _onActionCallback?.Invoke(_data, false);
+        _onActionCallback?.Invoke(_id, false);
     }
 
     private void OnAccept()
     {
-        _onActionCallback?.Invoke(_data, true);
+        _onActionCallback?.Invoke(_id, true);
     }
 }

@@ -13,7 +13,7 @@ public class UIFriend : UIBase
     public Button closeBtn;
     public UITabGroup tabGroup;
 
-    public LoopListView2 friendlListView;
+    public LoopListView2 friendListView;
     public LoopListView2 friendApplyListView;
 
     private List<FriendInfo> _friendList = new List<FriendInfo>();
@@ -23,9 +23,9 @@ public class UIFriend : UIBase
     {
         closeBtn.AddOnPointerClick(OnBtnClick);
 
-        if (friendlListView != null)
+        if (friendListView != null)
         {
-            friendlListView.InitListView(0, OnGetFriendItem);
+            friendListView.InitListView(0, OnGetFriendItem);
         }
 
         if (friendApplyListView != null)
@@ -51,14 +51,14 @@ public class UIFriend : UIBase
     {
         if (index == 0)
         {
-            if (friendlListView != null) friendlListView.gameObject.SetActive(true);
-            if (friendApplyListView != null) friendApplyListView.gameObject.SetActive(false);
+            friendListView.gameObject.SetActive(true);            
+            friendApplyListView.gameObject.SetActive(false);
             RefreshFriendList();
         }
         else if (index == 1)
         {
-            if (friendlListView != null) friendlListView.gameObject.SetActive(false);
-            if (friendApplyListView != null) friendApplyListView.gameObject.SetActive(true);
+            friendListView.gameObject.SetActive(false);            
+            friendApplyListView.gameObject.SetActive(true);
             RefreshApplyList();
         }
     }
@@ -66,10 +66,10 @@ public class UIFriend : UIBase
     private void RefreshFriendList()
     {
         _friendList = FriendData.Instance.GetAllFriends();
-        if (friendlListView != null)
+        if (friendListView != null)
         {
-            friendlListView.SetListItemCount(_friendList.Count);
-            friendlListView.RefreshAllShownItem();
+            friendListView.SetListItemCount(_friendList.Count);
+            friendListView.RefreshAllShownItem();
         }
     }
 
@@ -89,17 +89,12 @@ public class UIFriend : UIBase
 
         LoopListViewItem2 item = listView.NewListViewItem("UIFriendItem");
         UIFriendItem script = item.GetComponent<UIFriendItem>();
-        if (script != null)
+        if (!script.isInit)
         {
-            script.Init(_friendList[index], OnFriendItemClick);
+            script.Init(friendListView.gameObject);
         }
+        script.FreshItem(_friendList[index].Id);
         return item;
-    }
-
-    private void OnFriendItemClick(FriendInfo info)
-    {
-        // 点击好友列表项
-        Debug.Log($"Clicked friend: {info.Name}");
     }
 
     private LoopListViewItem2 OnGetApplyItem(LoopListView2 listView, int index)
@@ -108,15 +103,32 @@ public class UIFriend : UIBase
 
         LoopListViewItem2 item = listView.NewListViewItem("UIFriendApplyItem");
         UIFriendApplyItem script = item.GetComponent<UIFriendApplyItem>();
-        if (script != null)
+        if (!script.isInit)
         {
-            script.Init(_applyList[index], OnApplyItemAction);
+            script.Init(friendListView.gameObject);
         }
+        script.FreshItem(_applyList[index].Id);
         return item;
     }
 
-    private void OnApplyItemAction(FriendInfo info, bool isAccept)
+    private void OnApplyItemAction(int id, bool isAccept)
     {
+        // Find info by ID from apply list (or FriendData helpers if improved)
+        FriendInfo info = null;
+        foreach (var item in _applyList)
+        {
+            if (item.Id == id)
+            {
+                info = item;
+                break;
+            }
+        }
+
+        // Fallback to friend data if needed, but apply list items should be in apply list
+        if (info == null) info = FriendData.Instance.GetFriend(id);
+
+        if (info == null) return;
+
         if (isAccept)
         {
             // 同意好友申请
