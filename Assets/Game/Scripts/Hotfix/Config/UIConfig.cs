@@ -15,6 +15,9 @@ public static class UIConfig
     public static string FriendInfo = "Prefabs/UI/Friend/UIFriendInfo";
     
     public static string Chat = "Prefabs/UI/Chat/UIChat";
+    public static string ChatEmoji = "Prefabs/UI/Chat/UIChatEmoji";
+
+
     public static string Confirm = "Prefabs/UI/Confirm/UIConfirm";
     public static string Setting = "Prefabs/UI/Setting/UISetting";
     public static string Skill = "Prefabs/UI/Skill/UISkill";

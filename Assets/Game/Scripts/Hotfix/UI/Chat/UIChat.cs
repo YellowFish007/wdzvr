@@ -16,7 +16,6 @@ public class UIChat : UIBase
 
     // UI Components
     public LoopListView2 chatRoleListView;
-    public LoopGridView chatEmojiGridView;
     public ScrollRect chatMsgScrollRect;
     public GameObject chatMsgContent;
     public Button emojiBtn;
@@ -41,7 +40,7 @@ public class UIChat : UIBase
         Debug.Log("FriendData.Instance.GetFriendCount() : " + FriendData.Instance.GetFriendCount());
 
         InitRoleListView();
-        InitEmojiGridView();
+        
         FreshChatMsg(CURRENT_USER_ID);
     }
 
@@ -49,7 +48,7 @@ public class UIChat : UIBase
     {
         if (btn == emojiBtn)
         {
-            ToggleEmojiPanel();
+            SceneUIManager.Instance.OpenPersistentUI(UIConfig.ChatEmoji);
         }
         else if (btn == sendBtn)
         {
@@ -82,11 +81,6 @@ public class UIChat : UIBase
 
     }
 
-    private void ToggleEmojiPanel()
-    {
-        bool isActive = !chatEmojiGridView.gameObject.activeSelf;
-        chatEmojiGridView.gameObject.SetActive(isActive);
-    }
 
     private void SendTextMessage()
     {
@@ -104,25 +98,6 @@ public class UIChat : UIBase
         chatRoleListView.RefreshAllShownItem();
     }
 
-    private void InitEmojiGridView()
-    {
-        chatEmojiGridView.InitGridView(0, OnGetEmojjItemByRowColumn);
-        chatEmojiGridView.SetListItemCount(160);
-        chatEmojiGridView.RefreshAllShownItem();
-    }
-
-    private LoopGridViewItem OnGetEmojjItemByRowColumn(LoopGridView gridView, int itemIndex, int row, int column)
-    {
-        LoopGridViewItem item = gridView.NewListViewItem("UIChatEmojiItem");
-        UIChatEmojiItem itemScript = item.GetComponent<UIChatEmojiItem>();
-        if (!itemScript.isInit)
-        {
-            itemScript.Init(chatEmojiGridView.gameObject, OnTouchEmojiItem);
-        }
-        itemScript.SetIndex(itemIndex);
-        itemScript.FreshItem(itemIndex);
-        return item;
-    }
 
     private LoopListViewItem2 OnGetItemByIndex(LoopListView2 listView, int index)
     {
@@ -143,13 +118,6 @@ public class UIChat : UIBase
     {
         mChatRoleIndex = index;
         chatRoleListView.RefreshAllShownItem();
-    }
-
-    private void OnTouchEmojiItem(int index)
-    {
-        ChatData.Instance.AddMessage(CURRENT_USER_ID, ChatData.ChatMsg.CreateEmoji(index.ToString()));
-        FreshChatMsg(CURRENT_USER_ID);
-        chatEmojiGridView.gameObject.SetActive(false);
     }
 
     private void FreshChatMsg(int friendId)
