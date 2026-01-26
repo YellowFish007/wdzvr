@@ -5,7 +5,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UIBagItem : MonoBehaviour
+public class UIBagItem : UIScollItem
 {
     public Image propImg;
 
