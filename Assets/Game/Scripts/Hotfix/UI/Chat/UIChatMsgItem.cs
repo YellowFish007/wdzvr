@@ -1,41 +1,49 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using Engine;
-using System;
 using RbEngine;
 
 public class UIChatMsgItem : MonoBehaviour
 {
-    // UI Elements
+    #region Fields
+
+    [Header("UI Elements")]
     public Image msgImg;
     public TMP_Text msgText;
     public Image emojiImg;
     public Button chatVoiceBtn;
     public TMP_Text voiceText;
 
-    // Configuration
+    [Header("Configuration")]
     public float maxWidth = 600f; // Max text width
+    
     private const float TEXT_PADDING_X = 50f;
     private const float TEXT_PADDING_Y = 20f;
     private const float EMOJI_HEIGHT_PADDING = 60f;
 
     private ChatData.ChatMsg chatMsg;
+
+    #endregion
+
+    #region Unity Events
+
     private void Awake()
     {
-        chatVoiceBtn.AddOnPointerClick(OnBtnClick);
+        if (chatVoiceBtn != null)
+        {
+            chatVoiceBtn.AddOnPointerClick(OnBtnClick);
+        }
     }
 
-    private void OnBtnClick(Button button)
-    {
-        VoiceManager.Instance.PlayRecord(this.chatMsg.VoiceData);
-    }
+    #endregion
 
-    public void FreshItem(ChatData.ChatMsg chatMsg)
+    #region Public Methods
+
+    public void FreshItem(ChatData.ChatMsg data)
     {
-        this.chatMsg = chatMsg;
+        this.chatMsg = data;
 
         if (chatMsg == null) return;
 
@@ -43,33 +51,47 @@ public class UIChatMsgItem : MonoBehaviour
 
         if (chatMsg.IsEmoji)
         {
-            ShowEmoji(chatMsg);
+            ShowEmoji();
         }
         else if (chatMsg.IsVoice)
         {
-            ShowVoice(chatMsg);
+            ShowVoice();
         }
         else
         {
-            ShowText(chatMsg);
+            ShowText();
         }
     }
 
+    #endregion
+
+    #region Private Methods
+
     private void ResetUI()
     {
-        emojiImg.gameObject.SetActive(false);
-        msgImg.gameObject.SetActive(false);
-        msgText.gameObject.SetActive(false);
-        chatVoiceBtn.SetActive(false);
+        if (emojiImg) emojiImg.gameObject.SetActive(false);
+        if (msgImg) msgImg.gameObject.SetActive(false);
+        if (msgText) msgText.gameObject.SetActive(false);
+        if (chatVoiceBtn) chatVoiceBtn.SetActive(false);
     }
 
-    private void ShowEmoji(ChatData.ChatMsg chatMsg)
+    private void OnBtnClick(Button button)
     {
+        if (chatMsg != null)
+        {
+            VoiceManager.Instance.PlayRecord(this.chatMsg.VoiceData);
+        }
+    }
+
+    private void ShowEmoji()
+    {
+        if (emojiImg == null) return;
+
         emojiImg.gameObject.SetActive(true);
 
         int index = 0;
-        int.TryParse(chatMsg.Content, out index); // Safer parsing
-        string iconPath = GetEmojjSpritePath(index);
+        int.TryParse(chatMsg.Content, out index);
+        string iconPath = GetEmojiSpritePath(index);
         emojiImg.SetSprite(iconPath, false);
 
         UpdateEmojiLayout();
@@ -85,18 +107,23 @@ public class UIChatMsgItem : MonoBehaviour
         }
     }
 
-    private void ShowVoice(ChatData.ChatMsg chatMsg)
+    private void ShowVoice()
     {
+        if (chatVoiceBtn == null) return;
+
         chatVoiceBtn.SetActive(true);
         float duration = VoiceManager.Instance.GetAudioDuration(chatMsg.VoiceData);
-
-        voiceText.text = Math.Ceiling(duration) + "\"";
+        
+        if (voiceText != null)
+        {
+            voiceText.text = $"{Math.Ceiling(duration)}\"";
+        }
     }
 
-    private void ShowText(ChatData.ChatMsg chatMsg)
+    private void ShowText()
     {
-        msgImg.gameObject.SetActive(true);
-        msgText.gameObject.SetActive(true);
+        if (msgImg) msgImg.gameObject.SetActive(true);
+        if (msgText) msgText.gameObject.SetActive(true);
 
         SetTextContent(chatMsg.Content);
     }
@@ -127,32 +154,16 @@ public class UIChatMsgItem : MonoBehaviour
             layoutElement.preferredWidth = -1; // Disable override
         }
 
-        // Force rebuild and sync size
-        LayoutRebuilder.ForceRebuildLayoutImmediate(transform as RectTransform);
-        StartCoroutine(SyncTextSizeNextFrame());
+        // Force rebuild and sync size immediately
+        LayoutRebuilder.ForceRebuildLayoutImmediate(msgText.rectTransform);
+        
+        UpdateTextSizeSynchronous();
     }
 
-    private T GetOrAddComponent<T>(GameObject go) where T : Component
+    private void UpdateTextSizeSynchronous()
     {
-        T comp = go.GetComponent<T>();
-        if (comp == null) comp = go.AddComponent<T>();
-        return comp;
-    }
-
-    private IEnumerator SyncTextSizeNextFrame()
-    {
-        yield return null;
-
         if (msgImg != null && msgText != null)
         {
-            // Wait for valid dimensions
-            float timer = 0f;
-            while ((msgText.rectTransform.rect.width <= 0 || msgText.rectTransform.rect.height <= 0) && timer < 0.5f)
-            {
-                yield return null;
-                timer += Time.deltaTime;
-            }
-
             var textWidth = msgText.rectTransform.rect.width;
             var textHeight = msgText.rectTransform.rect.height;
 
@@ -167,7 +178,7 @@ public class UIChatMsgItem : MonoBehaviour
     private void UpdateRootHeightForText()
     {
         var rootRect = transform as RectTransform;
-        if (rootRect != null)
+        if (rootRect != null && msgImg != null)
         {
             float bgHeight = msgImg.rectTransform.sizeDelta.y;
             float yOffset = Mathf.Abs(msgImg.rectTransform.anchoredPosition.y);
@@ -175,8 +186,21 @@ public class UIChatMsgItem : MonoBehaviour
         }
     }
 
-    private string GetEmojjSpritePath(int index)
+    private string GetEmojiSpritePath(int index)
     {
-        return "RawAssets/Texture/Icon/Emoji/emoji_" + (index + 1).ToString("00");
+        return $"RawAssets/Texture/Icon/Emoji/emoji_{(index + 1):00}";
     }
+
+    #endregion
+
+    #region Helpers
+
+    private T GetOrAddComponent<T>(GameObject go) where T : Component
+    {
+        T comp = go.GetComponent<T>();
+        if (comp == null) comp = go.AddComponent<T>();
+        return comp;
+    }
+
+    #endregion
 }

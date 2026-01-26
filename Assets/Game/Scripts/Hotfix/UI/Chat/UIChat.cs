@@ -148,7 +148,7 @@ public class UIChat : UIBase
             createdItems.Add(chatMsgItem);
         }
 
-        StartCoroutine(LayoutChatItems(createdItems));
+        LayoutChatItems(createdItems);
     }
 
     private void ClearChatMessages()
@@ -159,13 +159,8 @@ public class UIChat : UIBase
         }
     }
 
-    private IEnumerator LayoutChatItems(List<UIChatMsgItem> items)
+    private void LayoutChatItems(List<UIChatMsgItem> items)
     {
-        // Wait for items to initialize their sizes
-        // UIChatMsgItem uses coroutines to size text, so we need to wait a bit
-        yield return new WaitForEndOfFrame();
-        yield return new WaitForEndOfFrame();
-
         float currentY = 0;
 
         foreach (var item in items)
@@ -173,9 +168,6 @@ public class UIChat : UIBase
             if (item == null) continue;
 
             RectTransform itemRect = item.transform as RectTransform;
-
-            // Ensure we have the latest size if possible, though UIChatMsgItem handles its own size
-            // LayoutRebuilder.ForceRebuildLayoutImmediate(itemRect);
 
             float height = itemRect.sizeDelta.y;
             float pivotOffset = height * (1 - itemRect.pivot.y);
@@ -185,16 +177,11 @@ public class UIChat : UIBase
             currentY += height + MSG_SPACING;
         }
 
-        UpdateContentHeight(currentY);
-
-        // Scroll to bottom after layout update
-        yield return null;
-        chatMsgScrollRect.verticalNormalizedPosition = 0;
-    }
-
-    private void UpdateContentHeight(float height)
-    {
         RectTransform contentRect = chatMsgContent.transform as RectTransform;
-        contentRect.sizeDelta = new Vector2(contentRect.sizeDelta.x, height + MSG_PADDING_BOTTOM);
+        contentRect.sizeDelta = new Vector2(contentRect.sizeDelta.x, currentY + MSG_PADDING_BOTTOM);
+
+        // Ensure layout is updated before scrolling
+        Canvas.ForceUpdateCanvases();
+        chatMsgScrollRect.verticalNormalizedPosition = 0;
     }
 }
