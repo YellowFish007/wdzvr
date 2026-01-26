@@ -1,0 +1,205 @@
+[
+  {
+    "id": 200001,
+    "name": "道具-玫瑰",
+    "desc": "道具-玫瑰",
+    "icon": "icon_item_200001",
+    "type": 1
+  },
+  {
+    "id": 200002,
+    "name": "道具-口红",
+    "desc": "道具-口红",
+    "icon": "icon_item_200002",
+    "type": 1
+  },
+  {
+    "id": 200003,
+    "name": "道具-钻戒",
+    "desc": "道具-钻戒",
+    "icon": "icon_item_200003",
+    "type": 1
+  },
+  {
+    "id": 200004,
+    "name": "道具-纲手（碎片）",
+    "desc": "道具-纲手（碎片）",
+    "icon": "icon_item_200004",
+    "type": 1
+  },
+  {
+    "id": 200005,
+    "name": "道具-项圈",
+    "desc": "道具-项圈",
+    "icon": "icon_item_200005",
+    "type": 1
+  },
+  {
+    "id": 200006,
+    "name": "道具-项链",
+    "desc": "道具-项链",
+    "icon": "icon_item_200006",
+    "type": 1
+  },
+  {
+    "id": 200007,
+    "name": "道具-手表",
+    "desc": "道具-手表",
+    "icon": "icon_item_200007",
+    "type": 1
+  },
+  {
+    "id": 200008,
+    "name": "道具-巧克力",
+    "desc": "道具-巧克力",
+    "icon": "icon_item_200008",
+    "type": 1
+  },
+  {
+    "id": 200009,
+    "name": "道具-发饰",
+    "desc": "道具-发饰",
+    "icon": "icon_item_200009",
+    "type": 1
+  },
+  {
+    "id": 200010,
+    "name": "道具-挎包",
+    "desc": "道具-挎包",
+    "icon": "icon_item_200010",
+    "type": 1
+  },
+  {
+    "id": 200011,
+    "name": "角色2碎片",
+    "desc": "角色2碎片",
+    "icon": "icon_item_200011",
+    "type": 1
+  },
+  {
+    "id": 200012,
+    "name": "角色3碎片",
+    "desc": "角色3碎片",
+    "icon": "icon_item_200012",
+    "type": 2
+  },
+  {
+    "id": 200013,
+    "name": "角色4碎片",
+    "desc": "角色4碎片",
+    "icon": "icon_item_200013",
+    "type": 2
+  },
+  {
+    "id": 200014,
+    "name": "角色5碎片",
+    "desc": "角色5碎片",
+    "icon": "icon_item_200014",
+    "type": 2
+  },
+  {
+    "id": 200015,
+    "name": "角色6碎片",
+    "desc": "角色6碎片",
+    "icon": "icon_item_200015",
+    "type": 2
+  },
+  {
+    "id": 200016,
+    "name": "角色7碎片",
+    "desc": "角色7碎片",
+    "icon": "icon_item_200016",
+    "type": 2
+  },
+  {
+    "id": 200017,
+    "name": "角色8碎片",
+    "desc": "角色8碎片",
+    "icon": "icon_item_200017",
+    "type": 2
+  },
+  {
+    "id": 200018,
+    "name": "角色9碎片",
+    "desc": "角色9碎片",
+    "icon": "icon_item_200018",
+    "type": 2
+  },
+  {
+    "id": 200019,
+    "name": "角色10碎片",
+    "desc": "角色10碎片",
+    "icon": "icon_item_200019",
+    "type": 2
+  },
+  {
+    "id": 200020,
+    "name": "角色11碎片",
+    "desc": "角色11碎片",
+    "icon": "icon_item_200020",
+    "type": 2
+  },
+  {
+    "id": 200021,
+    "name": "棒棒糖",
+    "desc": "棒棒糖",
+    "icon": "icon_item_200021",
+    "type": 3
+  },
+  {
+    "id": 200022,
+    "name": "炸弹",
+    "desc": "炸弹",
+    "icon": "icon_item_200022",
+    "type": 3
+  },
+  {
+    "id": 200023,
+    "name": "交换道具",
+    "desc": "交换道具",
+    "icon": "icon_item_200023",
+    "type": 3
+  },
+  {
+    "id": 200024,
+    "name": "巧克力球",
+    "desc": "巧克力球",
+    "icon": "icon_item_200024",
+    "type": 3
+  },
+  {
+    "id": 200025,
+    "name": "无限精力",
+    "desc": "无限精力",
+    "icon": "icon_item_200025",
+    "type": 3
+  },
+  {
+    "id": 200026,
+    "name": "金币",
+    "desc": "金币",
+    "icon": "icon_item_200026",
+    "type": 3
+  },
+  {
+    "id": 200027,
+    "name": "调教币",
+    "desc": "调教币",
+    "icon": "icon_item_200027",
+    "type": 3
+  },
+  {
+    "id": 200028,
+    "name": "精力",
+    "desc": "精力",
+    "icon": "icon_item_200028",
+    "type": 3
+  },
+  {
+    "id": 200029,
+    "name": "充值货币",
+    "desc": "充值货币",
+    "icon": "icon_item_200029",
+    "type": 3
+  }
+]

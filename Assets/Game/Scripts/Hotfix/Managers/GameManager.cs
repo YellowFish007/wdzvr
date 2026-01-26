@@ -21,6 +21,12 @@ public class GameManager : SingletonGameObject<GameManager>
 
         //初始化Excel
         Debug.Log("InitGame: InitTables...");
+        InitTables();
+
+        // 初始化测试数据
+        InitChatTestData();
+        InitFriendTestData();
+        InitBagTestData();
 
         this.AttachTimer(1.0f, delegate ()
         {
@@ -76,6 +82,18 @@ public class GameManager : SingletonGameObject<GameManager>
         FriendData.Instance.AddApply(new FriendData.FriendInfo(1006, "David2", "icon_avatar_04", 1, false, "Newbie1"));
 
         Debug.Log("Friend test data initialized.");
+    }
+
+    public void InitBagTestData()
+    {
+        // 添加测试背包数据
+        for (int i = 200001; i <= 200029; i++)
+        {
+            // 随机数量 1-100
+            BagData.Instance.AddItem(i, UnityEngine.Random.Range(1, 101));
+        }
+
+        Debug.Log("Bag test data initialized.");
     }
 
     /// <summary>

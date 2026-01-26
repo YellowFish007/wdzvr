@@ -28,5 +28,10 @@ namespace Engine
         {
             img.SetSprite("RawAssets/Texture/Icon/Avatar/" + iconName, setNative);
         }
+
+        public static void SetItemSprite(this Image img, string iconName, bool setNative = true)
+        {
+            img.SetSprite("RawAssets/Texture/Icon/Item/" + iconName, setNative);
+        }
     }
 }

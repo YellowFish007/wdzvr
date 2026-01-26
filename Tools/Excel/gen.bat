@@ -8,6 +8,6 @@ dotnet %LUBAN_DLL% ^
     -c cs-simple-json ^
     --conf %CONF_ROOT%\luban.conf ^
     -x outputCodeDir=../../Assets/Game/Scripts/HotFix/_generate/LubanExcel ^
-    -x outputDataDir=../../Assets/Game/Res/RawAssets/Text/Excel
+    -x outputDataDir=../../Assets/Game/Resources/RawAssets/Text/Excel
 
 pause

@@ -9,10 +9,14 @@ public class UIHead : UIBase
 {
 
     public Button closeBtn;
+    public UITabGroup tabGroup;
 
     public override void OnCreate(params object[] args)
     {
         closeBtn.AddOnPointerClick(OnBtnClick);
+
+        tabGroup.defaultIndex = 1;
+        tabGroup.Init(OnTabChanged);
     }
 
     private void OnBtnClick(Button btn)
@@ -21,5 +25,11 @@ public class UIHead : UIBase
         {
             Close();
         }
+    }
+
+
+    private void OnTabChanged(int index)
+    {
+        Debug.Log("OnTabChanged : " + index);
     }
 }

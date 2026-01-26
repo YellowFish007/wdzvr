@@ -53,4 +53,37 @@ public static partial class Excel
         return GetScene(id)?.Video;
     }
     #endregion
+
+    #region TbItem 物品表
+    public static cfg.game.Item GetItem(int id)
+    {
+        return Tables.TbItem.GetOrDefault(id);
+    }
+
+    public static System.Collections.Generic.List<cfg.game.Item> GetItemDataList()
+    {
+        return Tables.TbItem.DataList;
+    }
+
+    public static string GetItemName(int id)
+    {
+        return GetItem(id)?.Name;
+    }
+
+    public static string GetItemDesc(int id)
+    {
+        return GetItem(id)?.Desc;
+    }
+
+    public static string GetItemIcon(int id)
+    {
+        return GetItem(id)?.Icon;
+    }
+
+    public static int GetItemType(int id)
+    {
+        var item = GetItem(id);
+        return item != null ? item.Type : 0;
+    }
+    #endregion
 }

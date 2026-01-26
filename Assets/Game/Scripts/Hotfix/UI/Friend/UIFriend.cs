@@ -28,20 +28,9 @@ public class UIFriend : UIBase
         closeBtn.AddOnPointerClick(OnBtnClick);
         searchBtn.AddOnPointerClick(OnBtnClick);
 
-        if (friendListView != null)
-        {
-            friendListView.InitListView(0, OnGetFriendItem);
-        }
-
-        if (friendApplyListView != null)
-        {
-            friendApplyListView.InitListView(0, OnGetApplyItem);
-        }
-
-        if (tabGroup != null)
-        {
-            tabGroup.Init(OnTabChanged);
-        }
+        friendListView.InitListView(0, OnGetFriendItem);
+        friendApplyListView.InitListView(0, OnGetApplyItem);
+        tabGroup.Init(OnTabChanged);
     }
 
     private void OnBtnClick(Button btn)
@@ -53,7 +42,7 @@ public class UIFriend : UIBase
         else if (btn == searchBtn)
         {
             SceneUIManager.Instance.OpenUI(UIConfig.FriendInfo);
-        }        
+        }
     }
 
     private void OnTabChanged(int index)
@@ -66,7 +55,7 @@ public class UIFriend : UIBase
         }
         else if (index == 1)
         {
-            friendListView.gameObject.SetActive(false);            
+            friendListView.gameObject.SetActive(false);
             friendApplyListView.gameObject.SetActive(true);
             RefreshApplyList();
         }
