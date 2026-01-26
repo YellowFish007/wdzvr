@@ -24,6 +24,7 @@ public class UIChat : UIBase
 
     public Button cancelVoiceBtn;
     public Button voiceBtn;
+    public Button delChatBtn;
 
     public Button closeBtn;
 
@@ -36,11 +37,10 @@ public class UIChat : UIBase
         cancelVoiceBtn.AddOnPointerClick(OnBtnClick);
         voiceBtn.AddOnPointerClick(OnBtnClick);
         closeBtn.AddOnPointerClick(OnBtnClick);
-
-        Debug.Log("FriendData.Instance.GetFriendCount() : " + FriendData.Instance.GetFriendCount());
+        delChatBtn.AddOnPointerClick(OnBtnClick);
 
         InitRoleListView();
-        
+
         FreshChatMsg(CURRENT_USER_ID);
     }
 
@@ -48,7 +48,7 @@ public class UIChat : UIBase
     {
         if (btn == emojiBtn)
         {
-            SceneUIManager.Instance.OpenPersistentUI(UIConfig.ChatEmoji);
+            SceneUIManager.Instance.OpenPersistentUI(UIConfig.ChatEmoji, (Action<int>)OnEmojiSelected);
         }
         else if (btn == sendBtn)
         {
@@ -73,6 +73,11 @@ public class UIChat : UIBase
 
             cancelVoiceBtn.SetActive(true);
             voiceBtn.SetActive(false);
+
+        }
+        else if (btn == delChatBtn)
+        {
+
         }
         else if (btn == closeBtn)
         {
@@ -81,6 +86,14 @@ public class UIChat : UIBase
 
     }
 
+
+    private void OnEmojiSelected(int index)
+    {
+        Debug.Log("OnEmojiSelected : " + index);
+
+        ChatData.Instance.AddMessage(CURRENT_USER_ID, ChatData.ChatMsg.CreateEmoji(index.ToString()));
+        FreshChatMsg(CURRENT_USER_ID);
+    }
 
     private void SendTextMessage()
     {

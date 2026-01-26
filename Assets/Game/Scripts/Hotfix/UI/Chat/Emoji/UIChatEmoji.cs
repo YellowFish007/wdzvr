@@ -8,8 +8,14 @@ public class UIChatEmoji : UIBase
 {
     public LoopGridView chatEmojiGridView;
 
+    private System.Action<int> _onEmojiClick;
+
     public override void OnCreate(params object[] args)
     {
+        if (args != null && args.Length > 0 && args[0] is System.Action<int> callback)
+        {
+            _onEmojiClick = callback;
+        }
         InitEmojiGridView();
     }
 
@@ -35,8 +41,7 @@ public class UIChatEmoji : UIBase
 
     private void OnTouchEmojiItem(int index)
     {
-        //ChatData.Instance.AddMessage(CURRENT_USER_ID, ChatData.ChatMsg.CreateEmoji(index.ToString()));
-        Debug.Log("OnTouchEmojiItem : " + index);
+        _onEmojiClick?.Invoke(index);
         SceneUIManager.Instance.ClosePersistentUI(UIConfig.ChatEmoji);
     }
 
