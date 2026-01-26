@@ -62,10 +62,10 @@ public class GameManager : SingletonGameObject<GameManager>
     public void InitChatTestData()
     {
         int friendId = 1001; // 测试好友ID
-        ChatData.Instance.AddMessage(friendId, ChatData.ChatMsg.CreateText("你好，最近怎么样？"));
-        ChatData.Instance.AddMessage(friendId, ChatData.ChatMsg.CreateText("我正在测试聊天功能。"));
-        ChatData.Instance.AddMessage(friendId, ChatData.ChatMsg.CreateText("这是一个非常长的文本消息，用来测试聊天气泡的自动换行和高度适配功能是否正常工作。如果一切正常，背景图应该会随着文字内容自动拉伸。"));
-        ChatData.Instance.AddMessage(friendId, ChatData.ChatMsg.CreateEmoji("1"));
+        ChatData.Instance.AddMessage(friendId, ChatData.ChatMsg.CreateText(friendId, "你好，最近怎么样？"));
+        ChatData.Instance.AddMessage(friendId, ChatData.ChatMsg.CreateText(friendId, "我正在测试聊天功能。"));
+        ChatData.Instance.AddMessage(friendId, ChatData.ChatMsg.CreateText(friendId, "这是一个非常长的文本消息，用来测试聊天气泡的自动换行和高度适配功能是否正常工作。如果一切正常，背景图应该会随着文字内容自动拉伸。"));
+        ChatData.Instance.AddMessage(friendId, ChatData.ChatMsg.CreateEmoji(friendId, "1"));
 
         Debug.Log("Chat test data initialized.");
     }

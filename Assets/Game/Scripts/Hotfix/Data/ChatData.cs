@@ -37,19 +37,19 @@ public class ChatData : Singleton<ChatData>
         // 构造函数
         public ChatMsg() { }
         
-        public static ChatMsg CreateText(string text)
+        public static ChatMsg CreateText(int senderId, string text)
         {
-            return new ChatMsg { Type = ChatType.Text, Content = text };
+            return new ChatMsg { Type = ChatType.Text, SenderId = senderId, Content = text };
         }
         
-        public static ChatMsg CreateEmoji(string emojiId)
+        public static ChatMsg CreateEmoji(int senderId, string emojiId)
         {
-            return new ChatMsg { Type = ChatType.Emoji, Content = emojiId };
+            return new ChatMsg { Type = ChatType.Emoji, SenderId = senderId, Content = emojiId };
         }
         
-        public static ChatMsg CreateVoice(byte[] data, float duration)
+        public static ChatMsg CreateVoice(int senderId, byte[] data, float duration)
         {
-            return new ChatMsg { Type = ChatType.Voice, VoiceData = data, VoiceDuration = duration };
+            return new ChatMsg { Type = ChatType.Voice, SenderId = senderId, VoiceData = data, VoiceDuration = duration };
         }
     }
 

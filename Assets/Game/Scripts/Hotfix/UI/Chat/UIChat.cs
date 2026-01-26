@@ -12,7 +12,8 @@ public class UIChat : UIBase
     // Constants
     private const float MSG_SPACING = 20f;
     private const float MSG_PADDING_BOTTOM = 50f;
-    private const int CURRENT_USER_ID = 1001;
+    private const int CURRENT_USER_ID = 1001; // The friend we are chatting with
+    // private const int MY_PLAYER_ID = 0; // Removed constant, use AccountData.Instance.GetId()
 
     // UI Components
     public LoopListView2 chatRoleListView;
@@ -57,11 +58,11 @@ public class UIChat : UIBase
         else if (btn == cancelVoiceBtn)
         {
             byte[] voivceBt = VoiceManager.Instance.StopRecord();
-            ChatData.Instance.AddMessage(1001, ChatData.ChatMsg.CreateVoice(voivceBt, 5));
+            ChatData.Instance.AddMessage(CURRENT_USER_ID, ChatData.ChatMsg.CreateVoice(AccountData.Instance.GetId(), voivceBt, 5));
 
             Debug.Log("voivceBt : " + voivceBt.Length);
 
-            FreshChatMsg(1001);
+            FreshChatMsg(CURRENT_USER_ID);
 
             cancelVoiceBtn.SetActive(false);
             voiceBtn.SetActive(true);
@@ -91,7 +92,7 @@ public class UIChat : UIBase
     {
         Debug.Log("OnEmojiSelected : " + index);
 
-        ChatData.Instance.AddMessage(CURRENT_USER_ID, ChatData.ChatMsg.CreateEmoji(index.ToString()));
+        ChatData.Instance.AddMessage(CURRENT_USER_ID, ChatData.ChatMsg.CreateEmoji(AccountData.Instance.GetId(), index.ToString()));
         FreshChatMsg(CURRENT_USER_ID);
     }
 
@@ -99,7 +100,7 @@ public class UIChat : UIBase
     {
         if (string.IsNullOrEmpty(msgInputField.text)) return;
 
-        ChatData.Instance.AddMessage(CURRENT_USER_ID, ChatData.ChatMsg.CreateText(msgInputField.text));
+        ChatData.Instance.AddMessage(CURRENT_USER_ID, ChatData.ChatMsg.CreateText(AccountData.Instance.GetId(), msgInputField.text));
         msgInputField.text = "";
         FreshChatMsg(CURRENT_USER_ID);
     }
@@ -142,7 +143,8 @@ public class UIChat : UIBase
 
         foreach (var msg in friendMsgList)
         {
-            GameObject obj = chatMsgContent.AddPrefab("Prefabs/UI/Chat/UIChatMsgRItem");
+            string prefabPath = (msg.SenderId == AccountData.Instance.GetId()) ? "Prefabs/UI/Chat/UIChatMsgRItem" : "Prefabs/UI/Chat/UIChatMsgLItem";
+            GameObject obj = chatMsgContent.AddPrefab(prefabPath);
             UIChatMsgItem chatMsgItem = obj.GetComponent<UIChatMsgItem>();
             chatMsgItem.FreshItem(msg);
             createdItems.Add(chatMsgItem);
