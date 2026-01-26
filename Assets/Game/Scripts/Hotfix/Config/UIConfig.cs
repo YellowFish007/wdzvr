@@ -20,6 +20,8 @@ public static class UIConfig
 
     public static string Confirm = "Prefabs/UI/Confirm/UIConfirm";
     public static string Setting = "Prefabs/UI/Setting/UISetting";
+    public static string SceneSetting = "Prefabs/UI/Setting/UISceneSetting";
+
     public static string Skill = "Prefabs/UI/Skill/UISkill";
     public static string UserInfo = "Prefabs/UI/UserInfo/UIUserInfo";
     public static string FlyTip = "Prefabs/UI/Tip/UIFlyTip";

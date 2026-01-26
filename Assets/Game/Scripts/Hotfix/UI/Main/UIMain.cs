@@ -112,6 +112,10 @@ public class UIMain : UIBase
         {
             SceneUIManager.Instance.OpenUI(UIConfig.CreateScene);
         }
+        else if (sceneSettingBtn == btn)
+        {
+            SceneUIManager.Instance.OpenUI(UIConfig.SceneSetting);
+        }        
         else if (closeBtn == btn)
         {
             Close();
