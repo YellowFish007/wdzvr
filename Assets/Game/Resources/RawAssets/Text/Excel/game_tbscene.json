@@ -5,7 +5,8 @@
     "name_id": "场景1",
     "scene_res": "Scene1001",
     "icon": "icon_scene_1001",
-    "video": "vedio_scene_1001"
+    "video": "vedio_scene_1001",
+    "audio": "music_bg1001"
   },
   {
     "id": 1002,
@@ -13,7 +14,8 @@
     "name_id": "场景2",
     "scene_res": "Scene1002",
     "icon": "icon_scene_1002",
-    "video": "vedio_scene_1002"
+    "video": "vedio_scene_1002",
+    "audio": "music_bg1002"
   },
   {
     "id": 1003,
@@ -21,7 +23,8 @@
     "name_id": "场景3",
     "scene_res": "Scene1003",
     "icon": "icon_scene_1003",
-    "video": "vedio_scene_1003"
+    "video": "vedio_scene_1003",
+    "audio": "music_bg1003"
   },
   {
     "id": 1004,
@@ -29,6 +32,7 @@
     "name_id": "场景4",
     "scene_res": "Scene1004",
     "icon": "icon_scene_1004",
-    "video": "vedio_scene_1004"
+    "video": "vedio_scene_1004",
+    "audio": "music_bg1004"
   }
 ]

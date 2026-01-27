@@ -23,6 +23,7 @@ public sealed partial class Scene : Luban.BeanBase
         { if(!_buf["scene_res"].IsString) { throw new SerializationException(); }  SceneRes = _buf["scene_res"]; }
         { if(!_buf["icon"].IsString) { throw new SerializationException(); }  Icon = _buf["icon"]; }
         { if(!_buf["video"].IsString) { throw new SerializationException(); }  Video = _buf["video"]; }
+        { if(!_buf["audio"].IsString) { throw new SerializationException(); }  Audio = _buf["audio"]; }
     }
 
     public static Scene DeserializeScene(JSONNode _buf)
@@ -54,6 +55,10 @@ public sealed partial class Scene : Luban.BeanBase
     /// 场景图标
     /// </summary>
     public readonly string Video;
+    /// <summary>
+    /// 声音资源
+    /// </summary>
+    public readonly string Audio;
    
     public const int __ID__ = -462478480;
     public override int GetTypeId() => __ID__;
@@ -71,6 +76,7 @@ public sealed partial class Scene : Luban.BeanBase
         + "sceneRes:" + SceneRes + ","
         + "icon:" + Icon + ","
         + "video:" + Video + ","
+        + "audio:" + Audio + ","
         + "}";
     }
 }
