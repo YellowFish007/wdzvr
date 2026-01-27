@@ -47,4 +47,21 @@ public static class LoginUtils
         return true;
     }
 
+    public static bool ValidateEmail(string email)
+    {
+        if (string.IsNullOrEmpty(email))
+        {
+            GameManager.Instance.ShowFlyTip("邮箱不能为空");
+            return false;
+        }
+
+        // 简单的邮箱格式验证
+        if (!System.Text.RegularExpressions.Regex.IsMatch(email, @"^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$"))
+        {
+            GameManager.Instance.ShowFlyTip("邮箱格式不正确");
+            return false;
+        }
+
+        return true;
+    }
 }
