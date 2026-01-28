@@ -6,14 +6,16 @@ using UnityTimer;
 
 public class Scene1001 : SceneBase
 {
-    //public UIRoot uiRoot;
-
     private void Awake()
     {
         // Initialize VR Input Manager
         VRInputManager.Instance.Init();
 
         GameEvent.AddEventListener(EventConfig.PICO_GRIP_PRESS, OnGripPress);
+
+        Sound.PlayMusic("music_bg1001");
+
+        Debug.Log("Sound.IsGameMusicOpen() : " + Sound.IsGameMusicOpen());
 
         this.AttachTimer(1.0f, delegate ()
         {

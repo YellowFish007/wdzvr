@@ -32,6 +32,15 @@ public class AccountData : Singleton<AccountData>
     // 上次登录时间
     public long lastLoginTime;
 
+    // 身高
+    public int height = 170;
+    // 邮箱
+    public string email = "";
+    // 手机号
+    public string phone = "";
+    // 密码
+    public string password = "";
+
     public int GetId()
     {
         return id;
@@ -75,6 +84,26 @@ public class AccountData : Singleton<AccountData>
     public long GetLastLoginTime()
     {
         return lastLoginTime;
+    }
+
+    public int GetHeight()
+    {
+        return height;
+    }
+
+    public string GetEmail()
+    {
+        return email;
+    }
+
+    public string GetPhone()
+    {
+        return phone;
+    }
+
+    public string GetPassword()
+    {
+        return password;
     }
 
 }

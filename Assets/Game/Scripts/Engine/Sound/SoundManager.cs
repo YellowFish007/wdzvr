@@ -10,8 +10,6 @@ namespace Engine
         AudioSource m_MusicAudioSource;
         //音效源
         AudioSource m_ShotAudioSource;
-        //循环音效源
-        AudioSource m_LoopShotAudioSource;
 
         //4个Key
         private const string KEY_MUSIC = "MUSIC_TOOGLE";
@@ -21,13 +19,17 @@ namespace Engine
 
         AudioListener m_AudioListener;
 
-        public void Init() 
+        public void Init()
         {
-        
+
         }
 
         private void Awake()
         {
+            if (!PlayerPrefs.HasKey(KEY_MUSIC))
+            {
+                PlayerPrefs.SetInt(KEY_MUSIC, 1);
+            }
             if (!PlayerPrefs.HasKey(KEY_SOUND))
             {
                 PlayerPrefs.SetInt(KEY_SOUND, 1);
@@ -45,7 +47,6 @@ namespace Engine
 
             m_MusicAudioSource = obj.AddComponent<AudioSource>();
             m_ShotAudioSource = obj.AddComponent<AudioSource>();
-            m_LoopShotAudioSource = obj.AddComponent<AudioSource>();
 
             m_AudioListener = obj.AddComponent<AudioListener>();
         }
@@ -67,7 +68,7 @@ namespace Engine
             }
             m_MusicAudioSource.loop = true;
 
-            Asset.LoadAudioClipAsync(audioName, delegate (AudioClip audioClip)
+            Asset.LoadAudioClipAsync("RawAssets/Audio/" + audioName, delegate (AudioClip audioClip)
             {
                 m_MusicAudioSource.clip = audioClip;
                 m_MusicAudioSource.Play();
@@ -169,7 +170,6 @@ namespace Engine
         {
             PlayerPrefs.SetFloat(KEY_SHOT_VOLUME, volume);
             m_ShotAudioSource.volume = volume;
-            m_LoopShotAudioSource.volume = volume; // 同步设置循环音效音量
         }
         //获取音效音量大小
         public float GetSoundVolume()

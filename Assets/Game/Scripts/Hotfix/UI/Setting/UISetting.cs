@@ -22,7 +22,6 @@ public class UISetting : UIBase
     public Button registerBtn;
     public Button sureBtn;
 
-    private int m_CurrentHeight = 170;
     private const int MIN_HEIGHT = 165;
     private const int MAX_HEIGHT = 190;
 
@@ -34,8 +33,18 @@ public class UISetting : UIBase
         sureBtn.AddOnPointerClick(OnBtnClick);
         registerBtn.AddOnPointerClick(OnBtnClick);
 
+        RefreshView();
+    }
+
+    private void RefreshView()
+    {
+        var accountData = AccountData.Instance;
+        if (emailInputField != null) emailInputField.text = accountData.GetEmail();
+        if (phoneInputField != null) phoneInputField.text = accountData.GetPhone();
+        if (passwordInputField != null) passwordInputField.text = accountData.GetPassword();
         UpdateHeightText();
     }
+
     private void OnBtnClick(Button btn)
     {
         if (btn == closeBtn)
@@ -44,17 +53,17 @@ public class UISetting : UIBase
         }
         else if (btn == minusHeightBtn)
         {
-            if (m_CurrentHeight > MIN_HEIGHT)
+            if (AccountData.Instance.height > MIN_HEIGHT)
             {
-                m_CurrentHeight--;
+                AccountData.Instance.height--;
                 UpdateHeightText();
             }
         }
         else if (btn == plusHeightBtn)
         {
-            if (m_CurrentHeight < MAX_HEIGHT)
+            if (AccountData.Instance.height < MAX_HEIGHT)
             {
-                m_CurrentHeight++;
+                AccountData.Instance.height++;
                 UpdateHeightText();
             }
         }
@@ -79,6 +88,11 @@ public class UISetting : UIBase
                 return;
             }
 
+            // 验证通过后再保存到 AccountData
+            AccountData.Instance.email = email;
+            AccountData.Instance.phone = phone;
+            AccountData.Instance.password = password;
+
             // 验证通过，执行注册逻辑
             GameManager.Instance.ShowFlyTip("验证通过");
         }
@@ -88,7 +102,7 @@ public class UISetting : UIBase
     {
         if (heightText != null)
         {
-            heightText.text = m_CurrentHeight.ToString();
+            heightText.text = AccountData.Instance.GetHeight().ToString();
         }
     }
 }
