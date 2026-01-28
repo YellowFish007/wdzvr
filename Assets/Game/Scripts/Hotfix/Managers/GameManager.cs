@@ -27,6 +27,7 @@ public class GameManager : SingletonGameObject<GameManager>
         InitChatTestData();
         InitFriendTestData();
         InitBagTestData();
+        InitSceneHistoryTestData();
 
         this.AttachTimer(1.0f, delegate ()
         {
@@ -94,6 +95,23 @@ public class GameManager : SingletonGameObject<GameManager>
         }
 
         Debug.Log("Bag test data initialized.");
+    }
+
+    public void InitSceneHistoryTestData()
+    {
+        if (SceneHistoryData.Instance.GetAllHistory().Count == 0)
+        {
+            var scenes = Excel.GetSceneDataList();
+            if (scenes != null && scenes.Count > 0)
+            {
+                // Add a few random scenes to history
+                for (int i = 0; i < Mathf.Min(5, scenes.Count); i++)
+                {
+                    SceneHistoryData.Instance.AddHistory(scenes[i].Id);
+                }
+            }
+            Debug.Log("Scene History test data initialized.");
+        }
     }
 
     /// <summary>

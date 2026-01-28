@@ -10,6 +10,9 @@ public static class UIConfig
     public static string Head = "Prefabs/UI/Head/UIHead";
 
     public static string CreateScene = "Prefabs/UI/Scene/Create/UICreateScene";
+    public static string HistoryScene = "Prefabs/UI/Scene/History/UIHistoryScene";
+
+
     public static string Main = "Prefabs/UI/Main/UIMain";
     public static string Friend = "Prefabs/UI/Friend/UIFriend";
     public static string FriendInfo = "Prefabs/UI/Friend/UIFriendInfo";
